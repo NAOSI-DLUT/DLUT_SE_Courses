@@ -1,4 +1,4 @@
-#DLUT_SE_Courses
+# DLUT_SE_Courses
 
 # 大连理工大学软件工程系课程攻略
 
