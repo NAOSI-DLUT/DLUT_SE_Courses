@@ -4,7 +4,9 @@
 
 受[清华大学](https://github.com/Salensoft/thu-cst-cracker)相关项目的影响，为方便学弟们的学习，特建立此课程攻略，祝大家都有美好的大学生活！！！！
 
-如果你不善于提issue，欢迎加入我们的聊天室[<img src="https://badges.gitter.im/Join Chat.svg"  alt="gitter" />](https://gitter.im/DLUT_SE_Courses/Ask_For_Me_Anything)
+如果你不善于提issue，欢迎加入我们的聊天室
+
+​    [<img src="https://badges.gitter.im/Join Chat.svg"  alt="gitter" />](https://gitter.im/DLUT_SE_Courses/Ask_For_Me_Anything)
 
 如果对 Github 的使用还有疑问，请自行查阅CSDN，或参考 [官方教程](https://guides.github.com/activities/hello-world/)
 
