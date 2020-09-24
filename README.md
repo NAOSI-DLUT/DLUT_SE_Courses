@@ -8,7 +8,7 @@
 
 如果对 Github 的使用还有疑问，请自行查阅CSDN，或参考 [官方教程](https://guides.github.com/activities/hello-world/)
 
-如果想下载部分文件夹，可使用 [DownGit](https://minhaskamal.github.io/DownGit/#/home) - 复制文件/夹 网址，粘贴并download即可
+如果想下载部分文件夹，可使用 [DownGit](http://zhoudaxiaa.gitee.io/downgit/#/home) - 复制文件/夹 网址，粘贴并download即可
 
 ## 感谢
 
