@@ -1,0 +1,134 @@
+ø™ º∑÷Œˆ ±º‰£∫18-12-17
+
+msg ”Ô—‘∞¸
+c.wnry ¥Ê¥¢¡À±»Ãÿ±“’Àªß “ª∏ˆœ¬‘ÿ¡¥Ω” ∏˙¿’À˜œ‡πÿ  
+t.wnry “˛≤ÿ¡À“ª∏ˆdllŒƒº˛ dllµƒµº≥ˆ∫Ø ˝ «≤°∂æµƒ∫À–ƒ¥˙¬Î 
+u.wnry Ω‚√‹∆˜
+r.wrny ¿’À˜Œƒµµ
+@WanaDecryptor@.exe Ω‚√‹∆˜
+taskse.exe Ã·»®
+taskdl.exe…æ≥˝¡Ÿ ±Œƒº˛∫Õªÿ ’’æµƒ.WNCRYŒƒº˛
+
+
+00000000.pky π´‘ø
+00000000.eky ±ª—≠ª∑º”√‹µƒÀΩ‘ø 
+00000000.res ∞À∏ˆ◊÷Ω⁄µƒÀÊª˙ ˝∫Õµ±«∞ ±º‰
+
+dll»Îø⁄µÿ÷∑
+00402158 
+
+
+≈˙¥¶¿ÌΩ≈±æ
+1.@echo off  			//“‘“˛≤ÿµƒ∑Ω Ω÷¥––œ¬√Êº∏Ãı÷∏¡Ó
+2.echo SET ow = WScript.CreateObject("WScript.Shell")> m.vbs	//¥¥Ω®“ª∏ˆΩ≈±æ√¸¡Ó¥∞ø⁄
+3.echo SET om = ow.CreateShortcut("C:\Users\GuiShou\Desktop\@WanaDecryptor@.exe.lnk")>> m.vbs
+4.echo om.TargetPath = "C:\Users\GuiShou\Desktop\@WanaDecryptor@.exe">> m.vbs
+5.echo om.Save>> m.vbs		//Ω´…œ√Êº∏Ãı÷∏¡Ó ‰≥ˆµΩm.vbs	
+6.cscript.exe //nologo m.vbs	// π”√Cscript.exe‘À––m.vbsΩ≈±æ
+del m.vbs			//…æ≥˝ m.vbs
+
+
+
+º”√‹Œƒº˛∏Ò Ω
+.der, .pfx, .key, .crt, .csr, .p12, .pem, .odt, .ott, .sxw, .stw, .uot, .3ds, .max, .3dm, .ods, .ots, .sxc, .stc, .dif, .slk, .wb2, .odp, .otp, .sxd, .std, .uop, .odg, .otg, .sxm, .mml, .lay, .lay6, .asc, .sqlite3, .sqlitedb, .sql, .accdb, .mdb, .dbf, .odb, .frm, .myd, .myi, .ibd, .mdf, .ldf, .sln, .suo, .cpp, .pas, .asm, .cmd, .bat, .ps1, .vbs, .dip, .dch, .sch, .brd, .jsp, .php, .asp, .java, .jar, .class, .mp3, .wav, .swf, .fla, .wmv, .mpg, .vob, .mpeg, .asf, .avi, .mov, .mp4, .3gp, .mkv, .3g2, .flv, .wma, .mid, .m3u, .m4u, .djvu, .svg, .psd, .nef, .tiff, .tif, .cgm, .raw, .gif, .png, .bmp, .jpg, .jpeg, .vcd, .iso, .backup, .zip, .rar, .tgz, .tar, .bak, .tbk, .bz2, .PAQ, .ARC, .aes, .gpg, .vmx, .vmdk, .vdi, .sldm, .sldx, .sti, .sxi, .602, .hwp, .snt, .onetoc2, .dwg, .pdf, .wk1, .wks, .123, .rtf, .csv, .txt, .vsdx, .vsd, .edb, .eml, .msg, .ost, .pst, .potm, .potx, .ppam, .ppsx, .ppsm, .pps, .pot, .pptm, .pptx, .ppt, .xltm, .xltx, .xlc, .xlm, .xlt, .xlw, .xlsb, .xlsm, .xlsx, .xls, .dotx, .dotm, .dot, .docm, .docb, .docx, .doc
+
+
+±ª—≠ª∑º”√‹µƒRSAÀΩ‘ø
+0018E584  07 02 00 00 00 A4 00 00 52 53 41 32 00 08 00 00  ...?.RSA2...
+0018E594  01 00 01 00 73 F6 BE B8 C8 55 17 87 6A F8 0D 55  ..sˆæ∏»Uáj?U
+0018E5A4  CF FD 1A F8 1B 4B F4 17 FC 14 F4 D4 EE 25 DD C0  œ˝?K??Ù‘?›¿
+0018E5B4  CD 0F A3 BB 63 32 AE 1D E3 47 34 2B CB D8 C5 FD  ?£ªc2?„G4+Àÿ≈˝
+0018E5C4  90 69 2F C1 F3 0B BD 91 CB E1 96 26 03 52 E3 9C  êi/¡ÛΩëÀ·?R„ú
+0018E5D4  D2 F0 89 1A 36 66 87 FC 75 09 63 05 75 44 37 AF  “?6fá¸u.cuD7?
+0018E5E4  E0 44 85 87 10 CF 0A 5B 89 4C 91 45 90 69 7F F8  ‡DÖá?[âLëEêi?
+0018E5F4  31 58 35 31 2B 0C 8B D8 C6 85 16 C2 8D C4 C1 EF  1X51+.ãÿ∆Ö¬çƒ¡?
+0018E604  EF 10 10 1D ED AA 53 E6 79 65 83 2D 36 4B C8 68  ?Ì™SÊye?6K»h
+0018E614  DD AD 99 02 2D 18 87 BE CB 08 F9 23 A4 27 6E DA  ›≠?-áæ???n?
+0018E624  BA C1 E9 14 55 FF 61 E8 41 54 08 07 AD F5 8F C8  ∫¡?UˇaËAT≠ıè»
+0018E634  FB 83 5D 87 5D 09 67 71 B2 9F 7B A5 C3 5C 23 2F  ˚É]á].gq≤ü{•√\#/
+0018E644  1A E0 8C 6C 26 B1 99 39 6E 68 9F 20 1D FF DE 5C  ‡ål&±ô9nh?ˇﬁ\
+0018E654  05 79 A5 72 72 32 4C CE BF 90 F5 F8 00 E4 8C E3  y•rr2LŒøêı?‰å?
+0018E664  F2 AE 33 FB 03 A4 DA 1C 5C EC D3 3E C7 12 FE B3  ÚÆ3?§⁄\Ï”>?˛≥
+0018E674  6E A6 2A 9A 5C 00 00 00 00 00 00 00 00 00 00 00  n?ö\...........
+
+
+
+
+
+◊ ‘¥¥Û–° 349635
+Ω‚√‹t.wnryµƒÀΩ‘ø£∫
+0040EBF8 >07 02 00 00 00 A4 00 00 52 53 41 32 00 08 00 00  ...?.RSA2...
+0040EC08  01 00 01 00 43 2B 4D 2B 04 9C 0A D9 9F 1E DA 5F  ..C+M+?Ÿü⁄_
+0040EC18  ED 32 A9 EF E1 CE 1A 50 F4 15 E7 51 7B EC B0 27  ?©Ô·ŒP?ÁQ{Ï∞'
+0040EC28  56 05 58 B4 F6 83 C9 B6 77 5B 80 61 18 1C AB 14  VX¥ˆÉ…∂w[Äa?
+0040EC38  D5 6A FD 3B 70 9D 13 3F 2E 21 13 F1 E7 AF E3 FB  ’j?p??.!ÒÁØ„?
+0040EC48  AB 6E 43 71 25 6D 1D 52 D6 05 5F 13 27 9E 28 89  ´nCq%mR?_'??
+0040EC58  F6 CA 90 93 0A 68 C4 DE 82 9B AA C2 82 02 B1 18  ˆ êì.hƒﬁÇõ™¬??
+0040EC68  60 01 63 1B BC 71 8D BE 64 88 5E D5 0D 6C C1 9C  `cºqçædà^?l¡ú
+0040EC78  C9 01 36 89 C9 80 37 8F 1D 89 67 4F 0C B1 3C 61  ?6â…Ä7?âgO.?a
+0040EC88  09 3A 02 5D B8 4E F5 88 0A 9F 8C 0A 86 DF 91 FE  .:]∏Nıà.üå.Üﬂë˛
+0040EC98  CD 9F A3 A0 13 D3 2D 30 77 D1 F0 A8 D7 AB 96 E5  Õü£†?0w—®◊´ñ?
+0040ECA8  48 96 37 03 69 64 97 06 5C 27 50 8C 91 76 67 85  H?id?\'Påëvg?
+0040ECB8  3A 6C 6A B2 59 12 0A 61 F2 A1 EE A8 24 C8 E4 B1  :lj≤Y.aÚ°Ó®$»‰?
+0040ECC8  11 6D D6 CC F7 8F 4C 5E B0 55 84 81 6D 60 45 84  m÷Ã˜èL^∞UÑÅm`E?
+0040ECD8  0F FC DF F9 27 A5 52 C9 5B 06 28 A3 DE 74 03 D6  ¸ﬂ?•R…[(£ﬁt?
+0040ECE8  C7 72 66 DC BE A4 1E FF 20 96 ED 51 84 00 CC 9C  «rf‹æ?ˇ ñÌQ?Ãú
+0040ECF8  36 64 F2 85 4D CF 36 60 DD C8 B0 F1 91 DB 7A 0B  6dÚÖM?`›»∞Òë€z
+0040ED08  83 EE CF EF 19 D7 12 DA AE 86 D9 F9 0E BE 02 AF  ÉÓœÔ?⁄ÆÜŸ???
+0040ED18  78 F3 5B 49 BE 0C 98 AF B5 5F D6 8A 4C 05 48 64  xÛ[I?òØµ_÷äLHd
+0040ED28  9C 40 E1 1C F9 3C C4 E4 42 08 2D B2 B8 8A E6 0B  ú@??ƒ‰B-≤∏äÊ
+0040ED38  6D DF 93 CC 34 E8 48 30 93 5D DF 8D 2E B3 3D 35  mﬂì?ËH0ì]ﬂç.?5
+0040ED48  E4 66 30 AD 8B E7 20 3D E0 C9 D9 6C 36 4B 79 B9  ‰f0≠ã?=‡…Ÿl6Ky?
+0040ED58  64 CD BC 5E 24 48 D4 88 90 1C 3D 17 4E 65 0C EC  dÕº^$H‘à?=Ne.?
+0040ED68  FB 1B 2B EC 5C C3 06 D6 6C 39 D8 6C 7E 23 9F 40  ?+Ï\?÷l9ÿl~#ü@
+0040ED78  AF 40 61 B4 FB B1 F6 82 CD A1 26 B8 8D C8 38 8F  Ø@a¥˚±ˆÇÕ?∏ç??
+0040ED88  94 03 4E FB BB EC 17 5E DD 46 F7 E7 FB DF 25 21  ?N˚ª?^›F˜Á˚ﬂ%!
+0040ED98  AD 35 BD 9B 1D B5 01 3F 4E B0 20 B7 23 36 79 81  ?Ωõ??N??6y?
+0040EDA8  29 3C DE E2 76 D7 E6 1F 9F EA 2D A5 C4 6A AA 40  )<ﬁ‚v◊ÊüÍ-•ƒj™@
+0040EDB8  30 0D CC FE 58 E9 89 28 CB D7 E4 9C 7B B9 50 17  0.Ã˛XÈâ(À◊‰ú{πP
+0040EDC8  A7 31 21 3B B4 91 F3 84 A6 BD 9E 03 CA E9 CD EE  ?!;¥ëÛÑ¶Ω? ÈÕÓ
+0040EDD8  4D 2B 29 FA 02 0F E7 2C AE 30 BD 85 CC 2D 13 83  M+)???ΩÖ??
+0040EDE8  12 53 D3 F3 41 4E F5 23 D6 CE 5F 41 CD 81 7C 3B  S”ÛAN?÷Œ_AÕÅ|;
+0040EDF8  F0 49 81 B8 EE 8D 35 3C BA EC 92 C7 EE CF 24 63  IÅ∏Óç5<∫Ïí«Óœ$c
+0040EE08  01 F3 4A F4 D9 DA 8B E2 C0 A4 A5 7F DA 8F 3C 50  ÛJÙŸ⁄ã‚¿§•⁄è<P
+0040EE18  19 EC C2 33 5A 8F EE 7B 5A E9 83 7A 96 FD 94 4B  Ï¬3ZèÓ{ZÈÉzñ˝îK
+0040EE28  69 50 9A D2 34 D1 09 61 45 96 7D D8 12 5E A8 AE  iPö“4?aEñ}?^®Æ
+0040EE38  7A C0 26 A5 6F D6 E5 64 93 03 13 A3 29 6D 03 24  z?•o÷Âd??m$
+0040EE48  F7 C2 89 E9 46 46 72 AB 54 DC D8 C7 75 0F 2D 13  ˜¬âÈFFr´T‹ÿ«u-
+0040EE58  31 E7 6D 88 A1 3E A1 2D BE FF DB 94 D1 BD 6D E3  1Ámà°>??€î—Ωm?
+0040EE68  C2 55 C7 CA FB 2B 63 31 17 97 42 91 93 21 DD 53  ¬U« ?c1óBëì!›S
+0040EE78  25 1D 64 C9 95 64 D9 B5 7A 9F A3 CA E2 0F 19 66  %d…ïdŸµzü£ ‚f
+0040EE88  E4 04 B5 4D 6F 5D 33 76 1C E9 20 71 4B 22 E0 55  ?µMo]3v?qK"‡U
+0040EE98  5E 91 56 54 94 3C 36 3B FD FE A1 62 D0 DF D3 6E  ^ëVT?6;˝˛°b–ﬂ”n
+0040EEA8  95 8B E1 96 CE 4F 7C 78 38 2B 5E 5F 1B 8C 93 80  ïã·ñŒO|x8+^_åìÄ
+0040EEB8  5A 6D 23 6F 6D F7 19 88 F1 8C 3D 52 1B D8 AB B4  Zm#om?àÒ?Rÿ´?
+0040EEC8  D4 A0 88 0D AC FB 7A FA C2 35 C4 A7 A9 50 62 4A  ‘†?¨˚z˙¬5ƒß©PbJ
+0040EED8  AC 98 9B 30 E1 59 37 51 0C 6D 28 74 AC 11 D9 70  ¨ò?·Y7Q.m(t?Ÿp
+0040EEE8  38 2C 35 D3 B8 D9 F1 B7 4F A1 34 36 8B 29 61 39  8,5”∏ŸÒ∑O?6?a9
+0040EEF8  35 00 70 DE 73 E5 D5 1C BB 5E B8 60 B6 70 49 85  5.pﬁsÂ’ª^∏`∂pI?
+0040EF08  79 65 46 7A 94 81 D6 CC 12 05 84 43 40 6D FC 77  yeFzîÅ÷ÃÑC@m¸w
+0040EF18  55 8E 45 F8 3D B9 87 A7 89 D2 59 28 CE 16 9A 53  UéE?πáßâ“Y(?öS
+0040EF28  DC 9D 82 93 AD B1 3C B9 A6 2D AA 9D 43 EC E2 7D  ‹ùÇì≠±<π¶-™ùCÏ‚}
+0040EF38  CA 32 2F 4F 2D 5F 2E 58 38 77 2E 2B 1B 0A FA FE  ?/O-_.X8w.+.˙˛
+0040EF48  79 5A 80 E1 8D 23 67 40 FF D3 D3 95 7A 14 BE 93  yZÄ·ç#g@ˇ””ïzæì
+0040EF58  1B F8 EF 37 C2 EE C8 BF 59 3C 9C 5D 25 B6 44 FF  ¯Ô7¬Ó»øY<ú]%∂Dˇ
+0040EF68  6B 9B E9 B4 FD 59 85 BA F1 3A 01 05 F1 3E 62 0D  kõÈ¥˝YÖ∫??b.
+0040EF78  7F 1F E2 81 97 66 63 90 20 BB 96 B4 CF 44 C7 7C  ‚Åófc?ªñ¥œD«|
+0040EF88  7E 7D 25 2E 31 35 8B 2A 18 AB D2 41 C9 32 AA 4B  ~}%.15?´“A?™K
+0040EF98  CA EF 28 1D BF 2A 9C 1C 36 02 6B 02 0F A7 ED 10   Ô(??6kßÌ
+0040EFA8  C0 A0 DA CF 09 72 59 5B C6 3C F9 15 7F AA 22 00  ¿†⁄œ.rY[???.
+0040EFB8  72 E0 A5 5C 79 06 6E 62 35 33 89 56 AB 5F F1 FD  r‡•\ynb53âV´_Ò˝
+0040EFC8  93 62 4E 81 1E 3D FC 05 69 A4 2F 51 1B E2 C8 0E  ìbN?=?i?Q‚»
+0040EFD8  A6 86 A2 BF 9D A4 9C B3 DC 89 B3 E3 B0 F0 D7 60  ¶Ü¢øù§ú≥‹â≥„∞◊`
+0040EFE8  D6 6C DE 69 1E C9 B0 02 85 96 D7 35 86 36 16 5B  ÷lﬁi…∞Öñ??[
+0040EFF8  E6 05 E1 F9 0B ED 25 80 E0 0A 04 C5 96 5D 34 6C  ?·˘?Ä?≈ñ]4l
+0040F008  4C F0 E0 C7 B7 8A 90 3C 98 A2 7A 92 EA 51 E9 05  L‡«∑äê<ò¢zíÍQ?
+0040F018  EC 7D 3C C9 CD AA B6 66 B3 DB 48 CF 7D FB 6D DD  Ï}<…Õ™∂f≥€Hœ}˚m?
+0040F028  04 B9 1B 97 9E BE E1 58 66 FD E9 70 AC F9 FF B6  ?óûæ·Xf˝Èp¨˘ˇ?
+0040F038  23 17 FD F0 35 0C 41 3A 38 9A 2F 3F 16 2A E8 A9  #˝5.A:8??*Ë©
+0040F048  73 30 7C 38 C9 C4 7E C6 68 A4 78 FE 6D 00 28 4E  s0|8…ƒ~∆h§x˛m.(N
+0040F058  33 87 E5 B6 C9 C5 3D EC 0E 92 03 EB 15 9B 38 73  3áÂ∂…?????s
+0040F068  BF 0F C1 7B 5A 89 51 F1 97 71 F5 D5 CA 44 9F 87  ?¡{ZâQÒóqı’ Düá
+0040F078  E7 DD 35 6D C0 1F CD 5B 93 C1 00 0E F1 A9 25 C8  Á›5m?Õ[ì¡.Ò©%?
+0040F088  F6 E8 8B C7                                      ˆËã«Mi
+
