@@ -12,11 +12,13 @@
 
 如果想下载部分文件夹，可使用 [DownGit](http://zhoudaxiaa.gitee.io/downgit/#/home) - 复制文件/夹 网址，粘贴并download即可
 
+如果想对项目进行贡献，推荐学习 Git 工具 bash 命令行的使用 - [ProGit](https://www.progit.cn/)
+
 ## 感谢
 
 #### 欢迎贡献！！ 欢迎贡献！！ 欢迎贡献！！
 
-感谢对本项目贡献的同学（无论排名）：[徐志](https://github.com/1999John)、崔良睍、武文轩……以及电脑前的您！
+感谢对本项目贡献的同学（无论排名）：[徐志](https://github.com/1999John)、[张恩泽](https://github.com/FrancisGrace)、崔良睍、武文轩……以及电脑前的您！
 
 ## 前言
 
