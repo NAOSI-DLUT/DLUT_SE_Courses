@@ -1,0 +1,35 @@
+.highlight {
+  position: relative;
+}
+.btn-copy {
+  z-index: 1;
+  display: inline-block;
+  cursor: pointer;
+  border: none;
+  -webkit-appearance: none;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 3px 6px;
+  color: #333;
+  background: rgba(255,255,255,0.8);
+  border-radius: 2px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  transition: all linear 0.2s;
+}
+.btn-copy >i {
+  margin-right: 4px;
+  font-size: 10px;
+  transform: translateY(1px);
+}
+.btn-copy:hover {
+  background: rgba(255,255,255,0.7);
+}
+.highlight:hover .btn-copy {
+  opacity: 1;
+}
+.article pre:hover .btn-copy {
+  opacity: 1;
+}
