@@ -18,7 +18,7 @@
 
 #### 欢迎贡献！！ 欢迎贡献！！ 欢迎贡献！！
 
-感谢对本项目贡献的同学（无论排名）：[徐志](https://github.com/1999John)、[张恩泽](https://github.com/FrancisGrace)、崔良睍、武文轩……以及电脑前的您！
+感谢对本项目贡献的同学（无论排名）：[徐志](https://github.com/1999John)、[张恩泽](https://github.com/FrancisGrace)、崔良睍、武文轩，方念华……以及电脑前的您！
 
 ## 前言
 
