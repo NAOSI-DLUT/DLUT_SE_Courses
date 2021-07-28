@@ -279,9 +279,7 @@
 
 
 <script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/DLUT_SE_Courses/medias/banner/" + new Date().getDay() + '.jpg';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+    $('.bg-cover').css('background-image', 'url(/DLUT_SE_Courses/medias/banner/0.jpg)');
 </script>
 
 
@@ -318,6 +316,15 @@
                     </span>
                 </a>
                 
+                
+                <a href="/DLUT_SE_Courses/tags/%E7%A1%AC%E4%BB%B6/" title="硬件: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="硬件" style="background-color: #D5F5E3;">硬件
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
             </div>
         </div>
     </div>
@@ -342,7 +349,7 @@
 <script type="text/javascript">
     
 
-    $('#tag-wordcloud').jQCloud([{"text":"数学","weight":2,"link":"/DLUT_SE_Courses/tags/数学/"},{"text":"网络","weight":1,"link":"/DLUT_SE_Courses/tags/网络/"}], {
+    $('#tag-wordcloud').jQCloud([{"text":"数学","weight":2,"link":"/DLUT_SE_Courses/tags/数学/"},{"text":"网络","weight":1,"link":"/DLUT_SE_Courses/tags/网络/"},{"text":"硬件","weight":1,"link":"/DLUT_SE_Courses/tags/硬件/"}], {
         autoResize: true
     });
 </script>

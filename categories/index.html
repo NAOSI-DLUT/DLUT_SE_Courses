@@ -279,9 +279,7 @@
 
 
 <script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/DLUT_SE_Courses/medias/banner/" + new Date().getDay() + '.jpg';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+    $('.bg-cover').css('background-image', 'url(/DLUT_SE_Courses/medias/banner/0.jpg)');
 </script>
 
 
@@ -302,11 +300,11 @@
                 
                 
                 
-                <a href="/DLUT_SE_Courses/categories/%E5%A4%A7%E4%B8%80/" title="大一: 1">
+                <a href="/DLUT_SE_Courses/categories/%E5%A4%A7%E4%B8%80/" title="大一: 2">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
                             style="background-color: #F9EBEA;">大一
-                        <span class="tag-length">1</span>
+                        <span class="tag-length">2</span>
                     </span>
                 </a>
                 
@@ -362,7 +360,7 @@
                     color: '#3C4858'
                 }
             },
-            indicator: [{"name":"大一","max":3},{"name":"大二","max":3}],
+            indicator: [{"name":"大一","max":4},{"name":"大二","max":4}],
             nameGap: 5,
             center: ['50%','55%'],
             radius: '66%'
@@ -373,7 +371,7 @@
             itemStyle: {normal: {areaStyle: {type: 'default'}}},
             data : [
                 {
-                    value : [1,2],
+                    value : [2,2],
                     name : 'Number of Categories'
                 }
             ]
