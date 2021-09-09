@@ -27,6 +27,12 @@
     <link rel="stylesheet" type="text/css" href="/DLUT_SE_Courses/css/matery.css">
     <link rel="stylesheet" type="text/css" href="/DLUT_SE_Courses/css/my.css">
 
+    <!-- ChatRobot  -->
+    <link rel="stylesheet" type="text/css" href="/DLUT_SE_Courses/css/chat.css">
+    <link rel="stylesheet" href="https://unpkg.com/botui/build/botui.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/botui/build/botui-theme-default.css" />
+
+
     <script src="/DLUT_SE_Courses/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 5.3.0"></head>
@@ -35,6 +41,39 @@
 
 
 <body>
+    <!-- ChatRobot -->
+    <div class="chatContainer">
+        <div class="chatBtn"></div>
+        <div class="chat-message-num">❤️</div>
+        <div class="chatBox" ref="chatBox" style="background-color: rgba(255, 255, 255, 0.5); display: none;">
+            <div class="chatBox-head">
+                <div class="chatBox-head-one">
+                    <div class="chatBox-head-title-container">
+                        <b class="chatBox-head-title">DLUT_SE-Coursesの问答机器人</b>
+                    </div>
+                    <a class="chat-close">
+                        <div class="chat-close-icon"></div>
+                    </a>
+                </div>
+            </div>
+    
+            <div id="Chat-bot" class="botui-app-container" style="min-height: 500px; height: 600px;
+             padding: 76px 0px 0px; background-color: rgba(242, 242, 242, 0.5); border-radius: 10px;">
+                <div class="botui botui-container ">
+                    <bot-ui></botui>
+                </div>
+            </div>      
+    
+        </div>
+    </div>
+        
+    
+    <script src="https://cdn.jsdelivr.net/vue/2.0.5/vue.min.js"></script>
+    <script src="https://unpkg.com/botui/build/botui.js"></script>
+    <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+    <script src="/DLUT_SE_Courses/js/Chat-bot.js "></script>
+    <!-- ChatRobot End -->
+    
     <header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
@@ -91,17 +130,6 @@
       <i class="fas fa-archive" style="zoom: 0.6;"></i>
       
       <span>文件</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/DLUT_SE_Courses/ChatBot" class="waves-effect waves-light">
-      
-      <i class="fas fa-comments" style="zoom: 0.6;"></i>
-      
-      <span>Robot</span>
     </a>
     
   </li>
@@ -172,17 +200,6 @@
 			    <i class="fa-fw fas fa-archive"></i>
 			
 			文件
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/DLUT_SE_Courses/ChatBot" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-comments"></i>
-			
-			Robot
 		</a>
           
         </li>
@@ -1220,9 +1237,9 @@
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2019-2021</span>
+                <span id="year">2021</span>
             
-            <span id="year">2019</span>
+            <span id="year">2021</span>
             <a href="/DLUT_SE_Courses/about" target="_blank">NAOSI-DLUT</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>

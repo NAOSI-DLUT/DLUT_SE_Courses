@@ -23,8 +23,8 @@ function init() {
     return botui.action.text({
       delay: 1000,
       action: {
-        value: 'moinism/botui',
-        placeholder: 'moinism/botui'
+        value: '您的问题',
+        placeholder: '请输入您的问题'
       }
     })
   }).then(function (res) {
@@ -53,3 +53,11 @@ botui.message
   });
   
 init();
+
+//打开/关闭聊天框
+$(".chatBtn").click(function () {
+  $(".chatBox").toggle(300);
+})
+$(".chat-close").click(function () {
+  $(".chatBox").toggle(300);
+})
