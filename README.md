@@ -10,7 +10,13 @@
 
 如果对 Github 的使用还有疑问，请自行查阅CSDN，或参考 [官方教程](https://guides.github.com/activities/hello-world/)
 
-如果想下载部分文件夹，可使用 [DownGit](http://zhoudaxiaa.gitee.io/downgit/#/home) - 复制文件/夹 网址，粘贴并download即可
+如果想下载部分文件夹，可以选择
+
+* [文件服务器](http://123.56.68.177:6868/)（最快）
+
+*  [DownGit](http://zhoudaxiaa.gitee.io/downgit/#/home) - 复制文件/夹 网址，粘贴并download即可
+
+* [GitZip](https://chrome.google.com/webstore/detail/gitzip-for-github/ffabmkklhbepgcgfonabamgnfafbdlkn?hl=en) - 浏览器扩展，需要安装，自行学习
 
 如果想对项目进行贡献，推荐学习 Git 工具 bash 命令行的使用 - [ProGit](https://www.progit.cn/)
 
@@ -42,22 +48,22 @@
 
 ## 上传及阅读指南
 
-本项目的阅读指南：
+本项目的文件命名格式：
 
-- 课程攻略：readme.md
+- 课程攻略：README.md
 - 电子版参考教材：ebook_ [教学年份]_[老师姓名]/（因版权产生问题，请及时issue提醒我）
 - 电子版课件 ppt_ [教学年份]_[老师姓名]/
 - 平时作业答案与大作业资料：hw/[学号]/ （为保证大家的隐私）
-- 历年试卷和复习资料：exam/
+- 历年试卷和复习资料：exam_ [年份]_ [后缀]/
 - 其他请标明用处：  比如编程练习 Excersize/[学号]/
 
-希望项目已经覆盖大多数我系的课程。
+希望大家遵守命名，给予他人良好的使用体验。
 
-比如我是2020年上单世民老师的数据库，想上传一下老师的作业，即在数据库系统文件夹下新建文件夹`2020`，如果有双语课，则为 `2020_双语`，然后往里面填东西即可
+比如我是2020年上单世民老师的数据库，想上传一下老师的PPT，即在数据库系统文件夹下新建文件夹`PPT_2020_单世民`，如果有双语课，则为 `PPT_2020_单世民_双语`，然后往里面上传即可
 
 >  当然，欢迎往对应的`readme.md`里面放自己的GitHub对应仓库链接 :kissing_closed_eyes:
 
-**PS：** 由于本仓库未启用`git-lfs`，因此请不要上传单个超过100M的文件，否则commit无效。
+**PS：** 由于本仓库未启用`git-lfs`，因此==请不要上传单个超过100M的文件==，否则commit无效。
 
 同时请尽量不要上传二进制文件例如 `.exe`  ,这会为`github`带来错误
 
