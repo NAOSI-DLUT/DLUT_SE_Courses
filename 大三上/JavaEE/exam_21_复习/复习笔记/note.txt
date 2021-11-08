@@ -1,0 +1,693 @@
+class A{
+	public void a() {}
+}
+
+
+class B extends A {
+	public void a() throws Exception {  语法错误，覆盖的函数抛出了被覆盖函数所没有的异常(运行异常没关系，因为编译器不做语法检查)
+		覆盖函数不能抛出被覆盖函数没有声明的检查异常
+	}
+}
+
+
+java类的属性名 一定是小写的
+
+Exception
+ RuntimeException 运行异常，不做任何语法检查。运行异常可以通过程序员主观避免。好的程序员不会抛出运行异常
+ 	ClassCastException
+ 	NullPointerException
+ 	ArithmeticException
+ 除去运行异常之外，其他的所有异常，都叫 检查异常，编译器会检查
+ 如java.io.IOException
+
+
+Package a;
+import java.io.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+
+静态成员不能被继承
+继承时，权限只能越继承越大(大于或等于)，不能小于
+public class HelloWorldServlet implements Servlet {
+ 	public void service(ServletRequest request, ServletResponse response) throws ServletException {
+
+ 	}
+ }
+
+Java是个平台platform，按照规模分类为以下三类:
+ JavaSE 
+ JavaEE enterprise企业版本，大量数据大量运算，互联网企业级应用
+ JavaME 小规模，很多数据类型、很多类都取消了
+
+List<Object> l = new List<Object>;
+l.add("aaaaa"); 错误，只能放入Object
+
+
+JavaEE: Java5中出现范型。J2EE是早期叫法，现在的叫法是JavaEE
+是一个抽象的平台，大部分都是Interface和抽象类，没有给出实现
+
+开源：tomcat、JBoss
+收费：
+IBM WebSphere Application Server 简称 WAS
+Bea WebLogic
+Oracle
+
+
+web archive: war文件, 把相关文件都打包了, 若要运行则需要JDK、Web服务器部署(把文件打包后放在tomcat服务器上，再运行服务器便可)
+
+作业：查看HTTP协议,SMTP协议
+
+
+
+考试：URL包括哪三部分: http(交流语言)\host(ip地址)+port(一般都使用默认端口,不用写)\文件，或文件路径(默认是主页文件,homepage)
+
+服务器收到两次“回车换行”时表示header传输完成
+
+ServletRequest：服务器接收浏览器的请求，获取浏览器发送来的数据
+ServletResponse：服务器向浏览器发消息
+都包含两部分：header 和 content
+
+getParameter() 必考，每年都考
+服务器获取浏览器提交的参数。从请求对象中获取客户端提交的数据
+
+getParameterValues()
+
+
+
+https://www.baidu.com/s?wd=%E4%B8%AD%E5%9B%BD&rsv_spt=1&rsv_iqid=0x8107971900000321&issp=1&f=8&rsv_bp=1&rsv_idx=2&ie=utf-8&tn=baiduhome_pg&rsv_enter=1&rsv_dl=tb&rsv_sug2=0&inputT=1852&rsv_sug4=1920
+
+s 是 文件，或文件路径
+
+wd=%E4%B8%AD%E5%9B%BD&rsv_spt=1&rsv_iqid=0x8107971900000321&issp=1&f=8&rsv_bp=1&rsv_idx=2&ie=utf-8&tn=baiduhome_pg&rsv_enter=1&rsv_dl=tb&rsv_sug2=0&inputT=1852&rsv_sug4=1920
+是 Query String 查询字符串
+
+UCS 包含了所有国家语言、但是是固定长度编码
+UTF-8 包含了所有国家语言、同时是变长编码、节省流量
+
+%E4%B8%AD%E5%9B%BD 是 “中国”的 UTF-8编码，占6字节
+
+
+GET方式：获取服务器的资源
+POST方式：更新服务器的资源
+
+
+浏览器缓存机制会考
+服务器给浏览器发送的“调用本地缓存”的响应代码必考
+
+
+服务器响应 ： 首先发送响应代码
+
+
+text/json : json格式的文本
+text/plain : 无格式的文本
+
+application/x-download : 从服务器下载文件
+
+header考试会考
+
+服务器向浏览器只会输出字节流、或者字符流
+
+用编译器提供的默认构造函数就够了，以后都不要自己写构造函数
+用初始化函数便可
+
+
+
+package a;
+
+import java.io.*;
+import java.util.*;
+
+import javax.servlet.*;
+import javax.servlet.http.*;
+
+//类的命名一定要按照 xxxServlet来写，显得正规
+//HttpServlet已经实现了Servlet的接口函数，我们只需要继承便可以，不用每次都实现Servlet的接口。如init()等等我们都不用写，只要写service()函数便可
+public class HelloServlet extends HttpServlet {
+
+	@Override  //应该覆盖没有参数的初始化函数
+	public void init() {
+		...
+	}
+
+	@Override  //覆盖带参数的init函数时，有风险，应该调用父类的初始化函数super
+	public void init(ServletConfig config) {
+		super.init(config);
+		...
+	}
+
+	//
+	public void service(ServletRequest request, ServletResponse response) throws ServletException, IOException{
+		HttpServletRequest req = (HttpServletRequest) request;
+		HttpServletResponse res = (HttpServletResponse) response;
+		String method = req.getMethod();
+
+		if ("POST".equals(method)) {
+			doPost(req, res);
+		}
+		else if ("GET".equals(method)) {
+			doGet(req, res);
+		}
+	}
+
+	//若要同时响应GET和POST，应该覆盖 service()
+	//若只响应GET，则只覆盖 doGet(); 若只响应POST，则覆盖doPost()
+	public void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+		response.setContentType("text/html;charset=gbk");
+		PrintWriter out = response.getWriter();
+		out.print("<h1>hello</h1>");
+
+
+		response.setContentType("image/jepg;charset=utf-8");
+		OutputStream out = response.getOutputStream();
+		
+		HttpSession session = request.getSession();
+	}
+}
+
+
+construct web application
+	d:\abc\xyz\first
+					WEB-INF
+						classes
+						lib
+						web.xml
+
+
+一定要有全大写的
+WEB-INF
+	classes: 已经编译好的类
+	lib: 可以不编译成类, 而是打包成jar文件放在lib中
+	web.xml: 相当于配置文件，告诉服务器，有哪些组件
+
+
+web.xml文件:
+
+<?xml version="1.0" ?>
+
+<web-app>
+	<servlet>
+		<servlet-name>hello</servlet-name>
+		<serlet-class>a.HelloServlet</serlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>hello</servlet-name>
+		<url-pattern>/abc/h.html</url-pattern>
+	</servlet-mapping>
+
+</web-app>
+
+
+
+
+deploy
+	%tomcat home% \webapps\first
+http://localhost:8080/first/abc/h.html
+
+
+
+Session 会话有独一无二的标识，每一个不同的Session都有不同的ID来标识，并且是随机数
+
+getMaxInactiveInterval(int interval)
+setMaxInactiveInterval(int interval)
+避免不用服务器时，占用服务器资源。在interval时间内若没有任何操作，则自动释放Session
+
+interval的单位是min，分钟。一般是30分钟、10分钟
+
+removeAttribute()
+getAttribute()
+setAttribute()
+这几个函数极为重要,考试一定会考,一定要看
+getAttribute()得到对象时，一定要强制类型转化，强制类型转化别忘记了
+
+
+由于HTTP协议是无状态的，所以要建立Session的话，就需要在服务器和浏览器之间不断地相互发送Session ID
+实现Session的手段：cookie、url rewrite、隐藏域
+
+
+RequestDispatcher 请求分发、请求派发。包含两个函数：
+forward(request, response):直接交给另一个组件执行，本组件不再经手该request
+include(request, response):先交给另一个组件执行一下，把结果再发回给本组件继续执行
+
+假如是 forward()方法，在forward()前或后都不可以使用response的输出流。 include()方法可以。
+
+
+ServletConct、ServletConfig是考试重点，一定要看群中的文件
+
+Cookie:要自学，考试一定考
+是名值对
+Cookie在header中发送
+
+
+<web-app>
+	<servlet>
+		<servlet-name>hello</servlet-name>
+		<servlet-class>a.LoginServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>hello</servlet-name>
+		<url-pattern>/form/servlet/a</url-pattern>
+	</servlet-mapping>
+</web-app>
+
+
+
+"/form/servlet/a" 从 服务器根文件夹开始写
+<form action="/form/servlet/a" method="post">
+	<input type="text" name="wd" />
+	<input type="submit"
+</form>
+
+
+
+ServletConfig,
+ServletContext,
+考试一定考，一定要看
+
+
+"/servlet/b" 从 web应用的根文件夹下开始写。不可以写上下文
+RequestDispatcher rd = request.getRequestDispatcher("/servlet/b");
+
+
+该函数必考，一定要看
+RequestDispatcher 与 sendRedirect
+HttpServletResponse response.sendRedirect("/servlet/b");
+
+
+doFilter
+过滤器一般完成身份验证和数据格式转换
+
+
+public class AuditFilter implements Filter {
+
+	public void doFilter(ServletRequest r1, ServletResponse r2, FilterChain chain) throws ServletException, IOException {
+		HttpServletRequest request = (HttpServletRequest) r1;
+		HttpServletResponse response = (HttpServletResponse) r2;
+		chain.doFilter(request, response);
+	}
+}
+
+
+
+<filter-mapping>
+	<filter-name>f4</filter-name>
+	<servlet-name>hello</servlet-name>
+	<dispatcher>REQUEST</dispatcher>
+</filter-mapping>
+
+
+变量命名要求见文知义
+
+"/WEB-INF/contact/data.txt"
+
+
+getServletContext().getResourceAsStream("")
+
+getServletContext().setAttribute("contact", list);
+
+
+for (int i = 0; i < list.size(); i++) {
+
+}
+
+
+
+int start = 0, end = 0;
+
+String page = request.getParameter("page");
+if (page == null) {start = 0;}
+else {
+	start = 5 * (Integer.parseInt(page) - 1);
+}
+end = start + 5;
+if (end>result.getSize()) {
+	end = result.getSize();
+}
+
+List<Duter> displayResult = result.subList(start, end);
+
+
+
+Listener
+JSP
+
+web.xml
+<listener>
+	<listener
+</listener>
+
+两种部署方式：
+1. 在web.xml文件中声明，如上
+2. 在该对象的定义前，用annotation声明
+
+ServletContextEvent 
+Event对象都有getSource()函数，返回事件发生时的现场
+
+public class ApplicationIntializer implements ServletContextListener {
+
+}
+
+
+JSP继承了servlet，从本质上来说，它就属于一种servlet
+
+time.jsp 会被自动转化成一个java类: time_jsp.java
+
+jsp 是服务器端的组件，不是客户端的
+
+隐含的out不是PrintWriter(response.getWriter), 而是 JspWriter, 相当于加了一个缓存
+
+在写普通JAVA程序时
+response.getWriter.println()
+System.out.println()
+不会抛出异常
+但是
+JspWriter.out.println()
+会抛出异常，需要try catch
+
+
+JSP隐含的9个对象，考试一定会考
+HttpServletRequest request
+HttpServletResponse response
+HttpSession session
+ServletConfig config
+ServletContext application
+JspWriter out
+PageContext pageContext
+page 等价于 this
+exception 
+
+
+PageContext是门面，封装了JSP运行中的所有对象，用于传参数
+是考试重点
+
+
+http://localhost:8080/form/a.jsp?index=
+若jsp参数没有传入值，只写了=，传入的是空串
+完全没写赋值时，传入的是null
+
+
+动态包，可以包含"/servlet/a"此类动态文件
+<jsp:include page="/servlet/a">
+</jsp:include>
+
+静态包含，只能include静态文件。发生在JSP转化为JAVA过程中，相当于宏替换
+<%@ include file="a.html"  %>
+
+
+
+JSP文件中不应该出现JAVA代码，应该封装在Bean中，在JSP中调用Bean便可
+
+
+
+<jsp:getProperty name="a" property="age"/>
+<jsp:setProperty name="a" property="age" value="28" />
+<jsp:setProperty name="a" property="*"/>
+
+
+javaBean中的属性名一定是小写开头的
+
+
+
+
+public class NumberCuessBean {
+	private int numCount;
+	private String hint;
+	private int answer;
+	boolean success;
+
+	public NumberCuessBean() {
+		answer = (int) (Math.random()*100 + 1);
+		numCount = 0;
+		success = false;
+	}
+
+	public void setGuess(String guess) {
+		int g = Integer.parseInt(guess);
+		if (g == answer) {
+			success = true;
+		}
+		else if (g < answer) {
+			hint = "higher";
+		}
+		else {
+			hint = "lower";
+		}
+	}
+
+	public String getHint() {
+		return hint;
+	}
+
+
+}
+
+
+<jsp:useBean id = "n" class = "NumberCuessBean"
+	scope="session"/>
+
+<jsp:setProperty name="n" property="hint"/>
+
+
+welcome
+
+good guess but nope, try <%=  %>
+
+
+
+<%@ 指令
+<%! 声明
+<%= 表达式
+
+
+
+public class TimeTag extends TagSupport {
+	public int doStartTag() throws JspException {
+		//Fascade
+		JspWriter out = pageContext.getOut();
+		out.println(new java.util.Date());
+	}
+}
+
+
+
+public class TimeTag extends SimpleTagSupport {
+	public void doTag() throws JspException, IOException {
+		((PageContext)getJspContext()).getOut().println(new java.util.Date());
+	}
+}
+
+
+public class ResetTag extends SimpleTagSupport {
+	public void doTag() throws JspException, IOException {
+		((PageContext)getJspContext()).getOut().println(new java.util.Date());
+		PageContext pc = (PageContext) getJspContext();
+
+		NumberCuessBean numguess = (NumberCuessBean) pc.getSession().getAttribute("numg");
+		numguess.reset();
+	}
+}
+
+
+<t:author 
+xmlns:p="abc"
+xmlns:p2="www.xyz.com"
+xmlns:t="不是URL，是URI，只是一个标识，能保证全球唯一便可。一般用该公司、项目的域名作为前缀"
+	<t:book/>
+	<p2:book/>
+	<p:book/>
+</t:author>
+
+
+
+1. tag handler
+	import javax.servlet.jsp.tagext.*;
+
+	public class Atag extends SimpleTagSupport {
+		.....
+	}
+
+2. tld
+/WEB-INF/page.tld
+	<tag-lib>
+		<uri>mypage<uri>
+		<tag>
+			<name>page</name>
+			<tag-class>PageTag</tag-class>
+			<body-content>JSP</body-content>
+		</tag>
+		<attribute>
+			<name>data</name>
+			<type>java.util.List</type>
+
+		</attribute>
+	</tag-lib>
+
+
+3. 
+<%@ taglib uri="/WEB-INF/page.tld" prefix="x" %>
+ 	<x:page color="${}" />
+
+
+
+
+SQL:
+
+import java.sql.*;
+
+Properties p = new Properties();
+
+InputStream in = new FileInputStream("jdbc.properties");
+或者，用此加载方法更好：InputStream in = this.getClass().getResourceAsStream("jdbc.properties")
+
+p.load(in);
+
+或用此方法，但是很不好，不应该写死，而是应该用字符串。此方法在编译时就需要该库，而用字符串，编译时不需要库，只有在执行时需要。Driver driver = new com.mysql.jdbc.Driver();
+
+String driverClassName = null;
+
+Class.forName(driverClassName);
+
+Connection con = DriverManager.getConnection(
+	"jdbc:mysql://localhost:3306/test",
+	"java",
+	"java1234"
+);
+
+
+DataSource ds = 
+Connection con = ds.getConnection();
+
+
+
+配置链接池
+
+/META-INF
+
+
+lookup(".../env/Acc") 注意，考试必考，把下面文件中的 name 写入此处
+<Resource name="Acc" ....>
+
+
+
+struts 1
+a rapid framework for web development based on JavaEE
+基于MVC设计模式的框架
+
+为了提高软件的复用性，可以降低软件的粒度
+
+
+getServletConfig().getInitParameter("config");
+
+struts项目的配置文件名称不一定叫 struts-config.xml,可以任意改
+
+前端控制器，基本考问答题、选择题
+
+
+DispatchAction该类，是考试的重点，必考，要看源代码
+
+calc.add(5,6);
+
+method m = ....
+m.invoke(calc,5,6);
+
+
+struct1与struct2的区别
+struct1
+mvc
+v:view 1.html 2.jsp 3. ...
+c:controller 1.处理request  2.调用model
+
+
+import struct1
+
+
+web.xml 
+
+<web-app>
+	<servlet>
+		<servlet-name>s</servlet-name>
+		<servlet-class>org.apache.struts.action.ActionServlet</servlet-class>   包名正好是倒置的
+		<init-param>
+			<param-name>config</param-name>
+			<param-value>/WEB-INF/struts.xml</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>s</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+</web-app>
+
+
+
+Object o = Beans.instantiate(
+		getClass().getClassLoader(),
+		className
+	);
+
+Method method= o.getClass().getMethod(methodName);
+method.invoke(a,....);
+
+考试题型：给出两段代码，问哪一段代码效率更高
+
+
+考试重点：Servlet  Listener  Filter  JSP  Tag  ServletConfig  ServletContext  HttpServletRequest  HttpServletResponse
+
+
+
+DispatchAction该类，是考试的重点，必考，要看源代码
+
+
+public class DynaActionForm extends ActionForm {
+	private Map<String, Object> data;
+
+	public Object get(String name) {
+		return data.get(name);
+	}
+
+	public void set(String v1, Object value) {
+		map.put(v1, value);
+	}
+}
+
+
+考试：
+
+选择题
+问答题(软件设计、一些概念)
+填空题(量大、全是程序填空题)
+
+
+写structs主要就是写action类，就是写一堆类去继承action类。
+action中不应该出现任何业务逻辑。业务逻辑是写在模型中的，在action类中调用模型即可。
+
+
+DispatchAction该类，是考试的重点，必考，要看源代码
+老师要求，需要能达到 能背下来 的程度
+
+输入数据、输出数据都在form中
+
+
+structs的资源文件，默认全都是unicode编码
+
+structs1的缺点
+1. 出现了request和response
+2. 
+
+
+structs1和structs2的区别，会考2分，选择题
+
+
+xml物理格式错误：
+就是xml语法错误，如<a>只有半个，后面半个没写。
+或 <a 少写了一个">"
+
+逻辑格式错误：
+物理格式正确，没有错误。但是有地方不符合应用的业务逻辑。每次要声明一下，执行什么样的逻辑格式错误检查
+如：<a>-1</a>，假如应用的业务逻辑规定，不能为负数，则有逻辑格式错误。
+
+
+
+
+

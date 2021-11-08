@@ -1,0 +1,35 @@
+import java.io.*;
+
+import javax.servlet.*;
+import javax.servlet.http.*;
+
+HttpServlet
+HttpConfig
+HttpContext
+HttpServletRequest,    ServletRequest
+HttpServletResponse,   ServletResponse
+request.getParameter有关的都必考!!!,比如getParameterMap()
+//考名字函数和函数参数
+public class HelloServlet  //空构建函数
+	implement Servlet {
+	public void init(ServletConfig config) {//主键初始化
+		
+	}
+	public void service(
+		ServletRequest r1, ServletResponse r2) throws ServletException，IOException{
+			
+		}
+
+	}
+
+
+public class HelloServlet extends HttpServlet{
+	
+	String value = getInitParameter("rate");//考参数，配置信息
+	public void service(
+		ServletRequest r1, ServletResponse r2) throws ServletException，IOException{
+			HttpServletRequest request = (HttpServletRequest) r1;
+			HttpServletResponse response = (HttpServletResponse) r2;
+		}
+	
+	}

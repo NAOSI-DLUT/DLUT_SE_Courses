@@ -1,0 +1,77 @@
+//前端控制器
+struts
+
+
+
+http://8080/abc/xyz/a.jsp      上下文地址不一定是abc   考！！！！！！！！！！<% response.sendRedirect %> 这个与<jsp:forward>是服务器处理请求的，网页地址不会变的区别  考！
+
+http://localhost:8080/dl/download?fileid=1234
+file(id,filename,length,category,count,...);
+
+@controller
+public class DownloadController {
+	@RequestMapping("/download")
+	public String d(HttpServletRequest reg,ModeMap map) {
+		String fileid = "1234";
+		//jdbc
+		select
+		String filename = "";
+		reg
+		map
+	}
+}
+
+
+public class DownloadView implement View{
+	public String getContentType() {
+		return "application/x-download"; //MIMEtypes
+		"text/html",
+		"text/plain";
+		"text/xml"
+		text/json"
+		"application/json"
+	}
+	public  render(Map<String,?> model,
+				HttpServletRequest request,
+				HttpServletResponse response){
+				
+				
+	}
+}
+
+		
+ServletContext（难）,ServeletConfig （就两个函数）考试各考一道题，API函数
+//考！！！
+ServletContextListener   HttpSessionEvent
+public void contextInitialized(ServletContextEvent sce) {
+	DataSource ds = ;
+	sce.getServletContext().setAttribute("ds",ds);
+	Connection con = ds.getConnection();//阻塞机制，会等待 ，考
+	con.close();//释放回链接池
+}
+
+
+//jdbc
+imoprt java.sql.*;
+import javax.sql.*;//jdbc datasource扩展包,考试题 javax.sql.*
+
+public class TestJdbc {
+
+	public void test() {   //jdbc直连,不可取，采用链接池
+		//考DataSource，出现在配置文件里
+		DataSource ds = new BasicDataSource();//DriverManagerDataSource();
+		
+		Class.forName("com.mysql.jdbc,Driver");
+		Connection con = DriverManager.getConnection("jdbc:mysql://localhost","java","jav1234");
+		PreparedStatement pstmt = con.prepareStatement("select * from student where j2ee<?");
+		pstmt.setInt(1,60);//1 记位数从1开始
+		RequestSet rs = pstmt
+	}
+}	
+		
+		
+		
+JSTL 考
+对主键的读写操作
+out set 流程控制 标签
+if标记和 when 考试

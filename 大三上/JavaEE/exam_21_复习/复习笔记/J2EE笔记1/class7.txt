@@ -1,0 +1,122 @@
+hello
+C:/abc/hello
+		WEB-INF
+			lib
+			classes
+			web.xml
+		META-INF
+			context.xml
+			<Context path=""/>
+jar cvf hello.war -C c:\abc\hello  //打包把这些文件归档
+1.copy hello folder to tomcat_installation\webapps
+												hello   //发布时放在服务器的根目录下
+	http://localhost:8080/abc/hello/s    !!!!!
+	
+	<Context path="/abc" docBase="C:\abc\hello"/>   !!!!!!!!!
+
+------------------------------------------------------------	
+	//Session怎么写
+	
+	NumberGuessBean bean = null;
+
+	HttpSession session = request.getSession();
+	Object o = session.getAttribute("bean");
+	if(o==null) {
+		bean = new NumberGuessBean();
+		session.setAttribute("bean:,bean);
+	}
+	else {
+		bean = (NumberGuessBean) o;
+	}
+	
+	String guess = reguest.getParameter("guess");
+	if(guess!=null){
+		bean.setGuess(guess);
+	}
+-----------------------------------------------------------	
+public class NumberGuessBean {
+	private int count;
+	private String hint;
+	private int answer;
+	private boolean success;
+	
+	public int getCount(){return count;}
+	public String getHint() {retun hint;}
+	public BunberGuessBean(){
+		reset();
+	}
+	public void reset() {
+		success = false;
+		count=0;
+		answer= (int)(Math.random()*100+1);
+	}
+	public void setGuess(String guess) {
+		count++;
+		int g =0;
+		try {
+			g=Integer.parseINt(guess);
+		}
+		catch(NumberFormatException){
+			g=-1;
+		}
+			if(g==-1){
+			hint = "a number nex time";
+			}else{
+			
+			}
+		}
+	}
+	
+}
+
+JSP 
+JavaServer Pages
+<h1>now: <%=new java.util.Date()%>
+
+a.jsp  a_jsp.java a_jsp.class
+
+
+http://localhost:8080/first/a.jsp
+
+<%@ page contextType="text/html;charset=gbk"//现在已过时，都涌pageEncoding
+			pageEncoding="gbk"
+			import="java.util.*,java.io.*"
+			isErrorPager="false"//是否为错误页面,默认值为false    可以不写
+			errorPage="/error.jsp"
+			session="true"//默认值是true   可以不写
+			buffer = "8kb" //默认值为8kb   可以不写
+%>
+
+<%@ include file="a.jsp" %> // 发生在jsp转换成java文件中的操作 
+
+表达式
+<%= new Student() %>  new Student()可以替代为任何合法的java 表达式
+
+声明变量
+
+<%！ int i; %>//jsp成员声明
+<%! public void a() %>
+
+<% int i; %>//函数内的局部变量
+------------------------------------------------------------------------------
+
+<%
+	String s = null;
+	s.toUpperCase();
+	
+%>
+
+jsp 定义了9隐含对象，可以直接使用 <>
+implicit object
+
+HttpServletRequest request
+HttpServletResponse response
+
+HttpSession session
+ServletConfig config
+ServletContext application
+
+JspWriter out  ？PrintWriter ?
+PageContext pageContext   //重点！！！看一下它的函数  param values!!!重点
+page this
+Exception exception 只能在errorpage中使用

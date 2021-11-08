@@ -1,0 +1,48 @@
+jsp action
+
+
+<jsp:forward page="/a.jsp"/>
+<jsp:include page="/b.jsp"/>  //动态包含(在运行的时候)
+<%@ include file = "b.jsp"/>//静态包含(在转换文件的时候)
+
+request.getRequestDispatcher("/a.jsp").forward(request,response)
+
+<jsp:useBan id ="a" class ="A" scope="page|request|session|application/> // a （1）函数局部变量名；（2）作用域关联名称
+
+_jspService(request,response) {
+	A a = new A()
+	session.setAttribute("a",a);
+}
+
+<jsp:getProperty name="a" property="name"/>
+<jsp:getProperty name="a" property="name" value="zs"/> //name()函数，参数为zs
+<jsp:getProperty name="a" property="*"/>
+<jsp:getProperty name="numguess" property="guess" param ="guess"/>//获取参数guess写入guess中  属性名首字母是小写!!!!
+
+a.setName(request.getParameter("name"));
+
+${param.name}
+
+
+<%@ page import = "num.NumberGuessBean" %>
+ <jsp : useBean id = "numguess" class="num.NumberGuessBean"
+ scope = "session"/>   //page,request,session,application
+ 
+ <% 
+	NumberGuessBean numguess = null;
+	Object o = session.getAttribute("numguess");
+	if(o==null) {
+		numguess = new NumberGuessBean();
+		session.setAttribute("session",numguess);
+		
+	}
+	else {
+		numguess = (NumGuessBean) o;
+	}
+%>
+
+<%= numguess.getNumGuesses() %>
+${param.numGuesses}
+<jsp:getProperty name="numguess"
+	property="numGuesses"/>
+${numguess["numGuesses"]}

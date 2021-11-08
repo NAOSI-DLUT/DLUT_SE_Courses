@@ -1,0 +1,43 @@
+xml
+
+
+
+web application(j2ee)
+	
+	root_folder
+			WEB_INF
+						classes
+						lib
+						tags
+						web.xml(deployment descriptor)
+						
+
+//xml区分大小写
+<?xml version="1.0" encoding="iso-8859-1"?>
+//元素内容为空的时候与<b/>等价
+<a    color="blue" at="loc">   //根元素
+	//可以为任意内容
+	<b>123</b>
+	<b>  </b>
+	<c>  </c>                  //xml不解析空格和回车,所以内容依旧为空
+	
+</a>
+
+
+<students>
+
+	<student>
+		<id>007</id>
+		<name>james</name>
+		<age>65</age>
+		<gender>male</gender>
+	</student>
+	
+	<student>
+		<id>008</id>
+		<name>jakeke</name>
+		<age>55</age>
+		<gender>female</female>
+	</student>
+	
+</students>

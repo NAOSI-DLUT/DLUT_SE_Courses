@@ -1,0 +1,11 @@
+Sevelet class 文件改为 TAG FILE  
+<%@ taglib tagdir="/WEB-INF/tags" prefix="a"%> //考试考这个tagdir="/WEB-INF/tags"不用写.tld
+
+/WEB-INF/tags/
+				time.tag
+				string.tag
+		classes
+		lib
+
+time.jsp
+time.tag

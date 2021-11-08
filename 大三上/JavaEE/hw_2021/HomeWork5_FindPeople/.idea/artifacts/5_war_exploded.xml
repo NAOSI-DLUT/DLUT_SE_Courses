@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="5:war exploded">
+    <output-path>$PROJECT_DIR$/classes/artifacts/5_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="5" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="weblib" />
+          <element id="library" level="project" name="commons-dbcp2-2.7.0" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="5/web/Web" />
+    </root>
+  </artifact>
+</component>

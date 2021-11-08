@@ -1,0 +1,91 @@
+考
+HttpServlet
+	service(ServletRequest,servletResponse);
+	service(HttpServletRequest, HttpServletResponse);
+		String method = request.getMethod();
+		
+		if("POST".equals(method)){
+			doPost();
+		}else if("GET".equals(method)){
+			doGet(request,response);
+		}
+
+HttpServletRequest
+HttpServletResponse
+
+RequestDispatcher
+ forward, include 两个函数都考：区别 转发/这个主键包含另外一个主键的操作输出输入等，结束之后返回到原来主键
+ 
+ include:
+ response.getWriter().println("test");
+ RequestDispatcher rd = request.getRequestDispatcher("/b");
+ rd.include(request,response_;
+ response.getWriter().println("over");
+ 输出结果为 text hello(/b输出的) over
+ 
+ forward:把请求转发给其他主键，但是结束后不返回原来主键操作
+ rd.forward(request,response);
+ 之后不应该再有response.getWriter().println();
+ 但转发请求到那个主键不能用close函数，谁开的谁关
+ !!!如果使用forward，不允许在原来转发的函数中输出内容,所以输出的是 hello，而不应该是text hello
+ 
+ 
+HttpSession
+通过cookie实现session   把session id写入cookie header中   cookie
+通过URL重写实现session									  url rewriting
+隐藏域													  hiden field
+
+share data 这两个函数必考
+getAttribute(String name) Object
+setAttribute(String name, Object o)
+
+		
+考 getCookies()返回值是 cookies()
+考Cookie  这个类是什么,名值对
+client
+		try{
+			Socket s = new Socket ("localhost",8080);
+			OutputStream out = s.getOutputStream():
+			
+			PrintWriter pw = 
+			new PrintWriter(
+			new OutputStreamWriter(out, "ISO-8859-1"));
+			
+			BufferedReader br =
+			new BufferedReader(
+			new InputStreamReader(in, "ISO-8859-1"));
+			
+			//get post put delete HTTP 获取协议的方法，共七个 考！！
+			option trims,head
+			pw.print("GET /a.jpg HTTP/1.1\r\n");
+			pw.print("Host: localhost:8080\r\n");
+			pw.print("Connection: keep-alive\r\n");
+			pw.print("Upgrade-Insecure-Requests: 1\r\n");
+			pw.print("User-Agent:   ");
+			pw.print("Accept:text/html,*/*");
+			pw.print("Accept-Encoding:gzip,deflate,br\r\n");
+			pw.print("Accept-Language: zh-CN,zh");
+			Content-Length
+			pw.print("\r\n");//告诉服务器header结束了
+			
+			pw.flush();
+			long length = 0;
+			while (true) {
+				发送数据
+				Content-Length>0?
+				
+			}
+			
+server
+	print("HTTP/1.1 200 OK\r\n);// HTTP/1.1 200 也是可以的
+	
+	Calendar cd = Calendar.getInstance();
+	Format sdf = new SimpleDataFormat("EEE, dd MMM yyy
+	sdf.setTimeZone(TimeZone.getTimeZone("GMT"));
+	String s_date = sdf.format(cd.getTime());
+	pw.print("Date: " + s_date + "\r\n");
+	
+	pw.print("\r\n");
+	pw.print("<h1>hello<h1>");
+	pw.flush();
+	pw.close();

@@ -1,0 +1,118 @@
+PageContext 的API函数！！！ 重点
+
+
+
+
+缺一节
+
+
+
+Tag
+Interface Tag
+setPageContext(PageContext pc)
+setParent(Tag t) 不讲
+销毁函数 release() 对象池 ， 对象并不是真正的销毁
+//4个常量  EVAL_BODY_INCLUDE(解析体内容), EVAL_PAGE, SKIP_BODY, SKIP_PAGE
+int doEndTag()  正常返回值是EVAL_PAGE(默认),SKIP_PAGE
+int doStartTag() throws JspException   合法的返回值是EVAL_BODY_INCLUDE(默认返回值)和SKIP_BODY
+
+
+
+
+
+import javax.servlet.jsp.tagext.*;
+import java.util.*;
+import java.io.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+import javax.servlet.jsp.*;
+
+public class TimeTag extends TagSupport {
+		public int doStartTag() throws JspException {
+				try{
+					pageContext.getOut().print(new Date());//编译失败，jsp print函数会抛出IOException   //pageContext.getSession().getAttribute("username");
+				}
+				catch(Exception e) {
+					throw new JspException(e)
+				}
+				return Tag.EVAL_BODY_INCLUDE;
+		}
+}
+
+time.tld 放在/WEB-INF/tlds
+						time.tld
+<!DOCTYPE taglib PUBLIC "">
+
+<taglib>
+	<tlib-version>1.1</tlib-version>
+	<jsp-version>2.0<jsp-version>
+	<short-name>mytags<?short-name>
+	//考<tag>里的内容
+	<tag>
+		<name>time</name>
+		<tag-class>TimeTag</tag-class>
+		<tei-class>MyTagExtraInfo</tei-class>//考这个！！！！在编译时运行
+		<body-content>JSP</body-content>//默认是JSP,还可以是empty,dependant
+		<uri>http://java.sun.com/jsp/jstl/core</uri>  //如果是META-INF 则写这个
+		<!--在time标记中，声明了两个属性-->
+		//attribute 考理解，填空题
+		<attribute>
+			<name>color</name>
+			<required>tfalse</required>//是否为必须提供的属性
+			<rtexprvalue>true</rtexprvalue>//允许动态的值，不解析,一个变量的值，一般是true
+			<type>Java.lang.String</type>
+		</attribute>
+	</tag>
+</taglib>
+		
+<%@ taglib uri="/WEB_INF/tlds/time.tld" prefix="t" %>		//uri填空题！！！！！
+<t:time> //转换成doStartTag()  //doTag()
+
+</t:time>
+
+
+<%@ taglib uri="/WEB_INF/b.tld" prefix="b" %>		
+		
+<%@ %>
+<%! %>
+<%-- --%>
+<%= %>	
+IterationTag extends Tag      API函数
+BodyTag extends IterationTag  API 函数  getEnclosingWriter(),此out非彼Out,不能用getOut().print()
+public VariableInfo[] getVariableInfo()
+
+scope  AT_BEGIN(从起始标记开始到结束) AT_END(从该元素结束到后续结束) NESTED(内嵌)
+理解：主要是考这个class对应着<tei-class>MyTagExtraInfo</tei-class>
+public class MyTagExtraInfo
+	extends TagExtraInfo
+	{
+		public VariableInfo[] getVariableInfo(TagData td){ //考试不会考这个函数名字
+			return new VariableInfo[]{
+				new VariableInfo(//参数也不需要记
+				"d",    //td.getAttribute(var)
+				"java.util.Date",  //td.getAttribute(type)
+				true,
+				VariableInfo.AT_BEGIN),
+				new VariableInfo(...)
+				//d 在doStartTag()赋值  pageContext.setAttribute("d",new java.util.Date() ) //pageContext.setAttribute(var,Beans.instantiate().getClass().getClassLoader())
+				};
+		}
+	}	
+
+Interface SimpleTag
+publi class TimeTag extends SimpleTagSupport {
+	void doTag() throws JspException,IOException{
+		getJspContext().getOut.print(new java.util.Date());
+		
+		PageContext  pageContext = (PageContext) getJspContext();
+		HttpSession session = pageContext.getSession();
+		String username = (String) session.setAttribute("username");
+	}
+}
+void invoke(Writer out)	!!考
+
+<%= new java.util.Date %>
+
+<%@ taglib uri=   prefix=  %>
+
+pageContext -- request --session -- application 

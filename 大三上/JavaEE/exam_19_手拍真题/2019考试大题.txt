@@ -1,0 +1,15 @@
+1.J2EE平台的组件和服务有哪些
+
+2.J2EE框架struts  struts2和MVC有哪些共同点和不同点
+
+区别1：
+
+Struts2 的核心是基于一个Filter即StrutsPreparedAndExcuteFilter
+SpringMvc的核心是基于一个Servlet即DispatcherServlet(前端控制器)
+
+区别2：
+Struts2是基于类开发的，传递的参数是通过类的属性传递
+SpringMvc是基于类中的方法开发的，也就是一个url对应一个方法，
+传递参数是传到方法的形参上面，所以既可以是单例模式也可以是多例模式
+
+区别3：

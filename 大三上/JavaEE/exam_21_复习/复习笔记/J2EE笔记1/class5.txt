@@ -1,0 +1,178 @@
+HttpSession
+Filter
+Listener
+web.xml必须得会
+
+<session-config>
+	<session-timeout>30</session-timeout>    //30的单位是min
+</session-config>
+
+HttpSession 的getAttribute,setAtribute和getCookies等等必考	HttpSession session = request.getSession();
+会话实现的三种方法：（必考）
+cookie
+url rewriting
+hidden field
+实现getSession （必考）
+Cookies[] request.Cookies();
+request.getRequestURL();
+request.getRequestURI();
+
+header分隔符，名值对冒号
+<form method="post" action="/first/login">
+	<input type="text" name= "username"/><br>
+	<input type="password name="password"/>
+</form>
+//如果是get方式，则用QueryString
+http://localhost:8080/first/login?username=zs&password=zs123
+
+String username = request.getParameter("username");
+String password = request.getParameter("password");
+
+
+
+	
+	HttpSession session = request.getSession();
+	Object o = session.getAttribute("login");
+	if(o == null) {
+		request
+		.getRequestDispatcher("");
+		.forward(request,response);
+	}
+	
+	
+	
+	必考！
+	service() {
+		request.getSession().invalidate();//使这个session失效
+	}
+
+	
+Filter
+考过滤器的9个作用（选择题）!!!
+1.Authentication
+2.Logging and Auditing
+3.Image
+4.
+必考doFilter(Servlet)函数
+public class MyFilter extends HttpFilter {
+	
+	private FilterConfig config;
+	public void init(FilterConfig config)throws ServletException{
+	
+	}
+	
+	public void doFilter(HttpServletRequest request,
+						 HttpServletResponse response,
+						 FilterChain chain)throws ServletException,IOException {
+		HttpSession session = request.getSession();
+		
+		Object o = session.getAttribute("login");
+		if(o==null) {
+			request.getRequestDispatcher("/login.html").forward(request,response);//把请求派发到登录页面
+			return;
+		}
+		Boolean b = (Boolean) o;
+		if(b) {
+			chain.doFilter(request,response);
+			return;
+		}
+		else {
+			request.
+		}
+	}
+	
+	public void destroy(){
+	
+	}
+	
+}
+
+public class AuditFiltr implement Filter {
+
+
+	private FilterConfig config;
+	
+	public void init(FilterConfig config)throws ServletException{
+	
+	}
+	
+	public void doFilter(request,response,chain)throws ServletException,IOException {
+	
+		long start = System.currentTimeMillis();//预处理，处理request对象
+		
+		chain.doFilter(request,response);//如果写这个则把这个过滤器往后传
+		
+		long end = System.currentTimeMillis();//后处理，处理response对象
+		
+		System.out.println("cost:" + end-start);
+		
+		config.getServletContext().log(""+(end-start));
+	}
+	
+	public void destroy(){
+	
+	}
+	
+}
+import javax.serlet.*;
+
+public class MyApplistener implements
+	ServletContextListener {
+		
+		public void contextInitialized(ServletContextEvent e) {
+			ServletContext context = e.getServletContext();
+			ServletContext context = (ServletContext) e.getSource();
+		}
+		
+		public void contextDestroyed(ServletContextEvent sce) {
+		
+		}
+		
+	}
+web.xml//部署
+
+<?xml version?>
+
+<web-app>
+
+	<listener>
+		<listener-class>MyApplistener</listener-class>
+	</listener>
+
+	<filter>
+		<filter-name>f1</filter-name>
+		<filter-class>MyFilter<.filter-class>
+		<init-param>
+			<param-name>software</param-name>
+			<param-value> /WEB-INF/software</param-value>
+		</init-param>
+	</filter>
+	
+	<filter-mapping>
+		<filter-name>f1</filter-name>
+		<servlet0-name>s1</servlet-name>
+		<dispatcher>REQUEST</dispatcher>//必须是客户浏览器发过来的请求,默认是request，可以有多个dispatcher，但会优先匹配url-pattern，再匹配servlet-name
+		<dispatcher>INCLUDE</dispatcher>
+		<dispatcher>ERROR</dispatcher>
+		<url-pattern> </url-pattern>
+	</filter-mapping>
+	
+	<filter-mapping>
+	
+	
+	</filter-mapping>
+	
+	<servlet>
+		<servlet-name>s1</servlet-name>
+		<servlet-class>com.abc.servlet.MyServlet</servlet-class>
+		<init-param>
+			<param-name>abc</param-name>
+			<param-value>8</param-value>
+		</init-param>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name> </servlet-name>
+		<servlet-pattern> </servlet-pattern>
+	</servlet-mapping>
+</web-app>

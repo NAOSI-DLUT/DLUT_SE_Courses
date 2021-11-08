@@ -1,0 +1,59 @@
+filter
+listener
+
+UTF-8 汉字是3个字节，常用的字符是1个字节，有字节顺序
+Unicode 汉字是两个字节，没有字节顺序，传输的时候可能是四个字节
+如果UNICODE字符由2个字节表示，则编码成UTF-8很可能需要3个字节。而如果UNICODE字符由4个字节表示，则编码成UTF-8可能需要6个字节
+
+
+request.setCharacterEncoding("GBK");//只对body中的内容有效，但不处理header中的数据
+String username = request.setParameter("username");
+response.getWriter().println(username);
+
+String queryString = request.getQueryString();
+queryString = URLDecoder.decode(queryString,"UTF-8");
+String test = "abc=中国&server=abc";
+test = URLEncoding.encode(test,"UTF-8");
+
+GBK-(UTF-8)-GBK
+String username = request.getParameter("username");
+username = new String(username.getByte("UTF-8),"GBK");
+
+byte[] buffer = new byte[4];
+String s = new String(buffer, "GBK");
+
+s.getByte("UTF-8");
+
+
+
+listener
+ServletContextEvent 对应 ServletContextListener接口
+contextInitialized()//应用程序初始化
+contextDestroyed(ServletContextEvent sce)
+
+import javax.serlet.*;
+
+public class MyApplistener implements
+	ServletContextListener {
+		
+		public void contextInitialized(ServletContextEvent e) {
+			ServletContext context = e.getServletContext();
+			ServletContext context = (ServletContext) e.getSource();
+		}
+		
+		public void contextDestroyed(ServletContextEvent sce) {
+		
+		}
+		
+	}
+	
+HttpSessionListener
+sessionCreated(HttpSessionEvent se)
+sessionDestroyed(HttpSessionEvent se)
+部署
+	<listener>
+		<listener-class>MyApplistener</listener-class>
+	</listener>
+	
+HttpSessionBindingListenrr
+HttpSessionAtributeListener

@@ -1,0 +1,96 @@
+﻿考试大纲
+
+API方面，包括
+Servlet, HttpServlet, ServletRequest, ServletResponse, HttpServletRequest, HttpServletResponse,
+ServletConfig, ServletContext,
+HttpSession, Cookie
+WebServlet Annotation(包括所有的J2EE Web Annotation, 建议看javax.servlet.annotation中的所有的Annotation//
+web listeners and web events.
+Filter, 
+RequestDispatcher
+Tag, SimpleTag//
+JSP语法，EL表达式, PageContext类
+
+listener->event
+
+Struts 1， 重点是后端控制器，Action, LookUpDispatchAction//
+必须掌握mvc设计模式，了解struts1 struts2 SpringMVC 的工作原理，特点。
+需要掌握Spring Controller（在QQ群里有对应的文档）
+需要掌握HTTP协议。
+
+look up dispatchaction
+
+试卷包括30道选择题，单选。占60分，10道填空题，占20分，两道简答题，占20分。
+
+期末成绩占70分，平时上机作业占30分。
+
+重定向
+
+
+
+javax.jms 应用程序到应用程序之间的消息服务，异步，可靠，高效（邮件服务不是javaee提供的服务）
+
+web service:提供函数调用      rpc:远程过程调用
+
+j2ee服务器提供命名服务，接口叫做JNDI
+注册：把信息放到命名服务器中。
+
+JTS事务服务
+
+
+
+JavaEE 的特性和优点：
+1.J2EE平台支持简化的、基于组件开发模型，编写一次，随处运行的可移植性，遵循J2EE标准的所有服务器都支持该模型。
+2.基于J2EE的应用程序不依赖任何特定操作系统、中间件或硬件，因此，设计合理的基于J2EE的程序只需开发一次就可以
+部署到各种平台。
+3.由于组件技术的使用，可以按照开发人员的技能对应用程序开发进行分工，并行开发，提供整体开发效率。
+4.基于组件的设计简化了应用程序的维护。由于组件可以被独立地更新和替代，通过更新应用程序中特定的组件，新的功能
+可以被很容易地增加。
+
+
+XML 和 annotation都是元数据的操作符
+
+XML的优点：
+1.开发者能够为软件量身定制适用的标记，使代码更加通俗易懂。
+2.修改配置而无需变动现有程序。
+3.利用 xml 配置能使软件更具扩展性。
+缺点：
+1.解析 xml 势必会影响应用程序性能，占用系统资源。
+2.编译期无法对其配置项的正确性进行验证，或要查错只能在运行期。
+3.IDE 无法验证配置项的正确性。
+4.不得不同时维护代码和配置文件，开发效率变得低下。
+
+Annotation的优点
+保存在 class 文件中，降低维护成本。
+无需工具支持，无需解析。
+编译期即可验证正确性，查错变得容易。
+提升开发效率。
+缺点：
+若要对配置项进行修改，不得不修改 Java 文件，重新编译打包应用。
+配置项编码在 Java 文件中，可扩展性差。
+
+
+
+
+Struts1要求Action类继承一个抽象基类。Struts1的一个普遍问题是
+使用抽象类编程而不是接口。（侵入dao式编程，不赞同）
+Struts 2 Action类可以实现一个Action接口，也可实现其他接口，使可选
+和定制的服务成为可能。Struts2提供一个ActionSupport基类去实现 常用的接口。
+
+Struts1 Action是单例模式并且必须是线程安全的，因为仅有Action的一个实例来处理所有的请求。
+Struts2 Action对象为每一个请求产生一个实例，因此没有线程安全问题。
+
+Struts1 依赖servlet api 但是 2不依赖，可以单独进行测试
+Struts1 支持JSTL表达式语言，Struts2支持JSTL与OGNL
+
+Struts2是基于类开发的，传递的参数是通过类的属性传递
+SpringMvc是基于类中的方法开发的，也就是一个url对应一个方法，
+传递参数是传到方法的形参上面，所以既可以是单例模式也可以是多例模式
+
+springmvc的方法之间基本上独立的，独享request response数据
+struts2虽然方法之间也是独立的，但其所有Action变量是共享的
+
+
+
+
+
