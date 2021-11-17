@@ -23,7 +23,7 @@ function init() {
     return botui.action.text({
       delay: 1000,
       action: {
-        value: '您的问题',
+        value: '邮局的开放时间',
         placeholder: '请输入您的问题'
       }
     })
