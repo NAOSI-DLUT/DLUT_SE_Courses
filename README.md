@@ -10,15 +10,31 @@
 
 如果对 Github 的使用还有疑问，请自行查阅CSDN，或参考 [官方教程](https://guides.github.com/activities/hello-world/)
 
-如果想下载部分文件夹，可以选择
+如果想对项目进行贡献，推荐学习 Git 工具 bash 命令行的使用 - [ProGit](https://www.progit.cn/)
 
-* [文件服务器](http://123.56.68.177:6868/)（最快）
+## 文件下载
 
-*  [DownGit](http://zhoudaxiaa.gitee.io/downgit/#/home) - 复制文件/夹 网址，粘贴并download即可
+我们为同学们提供了可靠的下载方式，有以下方式可以选择。
+
+* 阿里云网盘(最快)
+  * [大一上](https://www.aliyundrive.com/s/sspTjXnJuRF)
+  * [大一下](https://www.aliyundrive.com/s/FyMXUqaezNK)
+  * [大二上](https://www.aliyundrive.com/s/Wtiks7Rs3t6)
+  * [大二下](https://www.aliyundrive.com/s/Wtiks7Rs3t6)
+  * [大三上](https://www.aliyundrive.com/s/KQiAgvVfoca)
+  * [大三下](https://www.aliyundrive.com/s/Wtiks7Rs3t6)
+  * 因为阿里云文件分享数量限制，暂时没有JavaEE
+  
+* [文件服务器](http://file.dingisoul.cn/)（方便）
+  * 支持同学们直接上传文件或文件夹
+
+* [DownGit](http://zhoudaxiaa.gitee.io/downgit/#/home) - 复制文件/夹 网址，粘贴并download即可
 
 * [GitZip](https://chrome.google.com/webstore/detail/gitzip-for-github/ffabmkklhbepgcgfonabamgnfafbdlkn?hl=en) - 浏览器扩展，需要安装，自行学习
 
-如果想对项目进行贡献，推荐学习 Git 工具 bash 命令行的使用 - [ProGit](https://www.progit.cn/)
+* 未来我们希望将内容暂存校内，有想法的同学或组织请联系我
+
+
 
 ## 感谢
 
