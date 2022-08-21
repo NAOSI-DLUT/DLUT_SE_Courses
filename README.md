@@ -24,9 +24,6 @@
   * [大三上](https://www.aliyundrive.com/s/KQiAgvVfoca)
   * [大三下](https://www.aliyundrive.com/s/Wtiks7Rs3t6)
   * 因为阿里云文件分享数量限制，暂时没有JavaEE
-  
-* [文件服务器](http://file.dingisoul.cn/)（方便）
-  * 支持同学们直接上传文件或文件夹
 
 * [DownGit](http://zhoudaxiaa.gitee.io/downgit/#/home) - 复制文件/夹 网址，粘贴并download即可
 
