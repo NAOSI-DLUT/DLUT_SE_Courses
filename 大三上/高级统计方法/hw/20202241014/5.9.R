@@ -1,0 +1,119 @@
+library(MASS)
+summary(Boston)
+##       crim             zn            indus            chas       
+##  Min.   : 0.01   Min.   :  0.0   Min.   : 0.46   Min.   :0.0000  
+##  1st Qu.: 0.08   1st Qu.:  0.0   1st Qu.: 5.19   1st Qu.:0.0000  
+##  Median : 0.26   Median :  0.0   Median : 9.69   Median :0.0000  
+##  Mean   : 3.61   Mean   : 11.4   Mean   :11.14   Mean   :0.0692  
+##  3rd Qu.: 3.68   3rd Qu.: 12.5   3rd Qu.:18.10   3rd Qu.:0.0000  
+##  Max.   :88.98   Max.   :100.0   Max.   :27.74   Max.   :1.0000  
+##       nox              rm            age             dis       
+##  Min.   :0.385   Min.   :3.56   Min.   :  2.9   Min.   : 1.13  
+##  1st Qu.:0.449   1st Qu.:5.89   1st Qu.: 45.0   1st Qu.: 2.10  
+##  Median :0.538   Median :6.21   Median : 77.5   Median : 3.21  
+##  Mean   :0.555   Mean   :6.29   Mean   : 68.6   Mean   : 3.79  
+##  3rd Qu.:0.624   3rd Qu.:6.62   3rd Qu.: 94.1   3rd Qu.: 5.19  
+##  Max.   :0.871   Max.   :8.78   Max.   :100.0   Max.   :12.13  
+##       rad             tax         ptratio         black      
+##  Min.   : 1.00   Min.   :187   Min.   :12.6   Min.   :  0.3  
+##  1st Qu.: 4.00   1st Qu.:279   1st Qu.:17.4   1st Qu.:375.4  
+##  Median : 5.00   Median :330   Median :19.1   Median :391.4  
+##  Mean   : 9.55   Mean   :408   Mean   :18.5   Mean   :356.7  
+##  3rd Qu.:24.00   3rd Qu.:666   3rd Qu.:20.2   3rd Qu.:396.2  
+##  Max.   :24.00   Max.   :711   Max.   :22.0   Max.   :396.9  
+##      lstat            medv     
+##  Min.   : 1.73   Min.   : 5.0  
+##  1st Qu.: 6.95   1st Qu.:17.0  
+##  Median :11.36   Median :21.2  
+##  Mean   :12.65   Mean   :22.5  
+##  3rd Qu.:16.95   3rd Qu.:25.0  
+##  Max.   :37.97   Max.   :50.0
+set.seed(1)
+attach(Boston)
+# a
+medv.mean = mean(medv)
+# medv.mean
+## [1] 22.53
+
+# b
+medv.err = sd(medv)/sqrt(length(medv))
+# medv.err
+## [1] 0.4089
+
+# c
+boot.fn = function(data, index) return(mean(data[index]))
+library(boot)
+bstrap = boot(medv, boot.fn, 1000)
+## 
+## ORDINARY NONPARAMETRIC BOOTSTRAP
+## 
+## 
+## Call:
+## boot(data = medv, statistic = boot.fn, R = 1000)
+## 
+## 
+## Bootstrap Statistics :
+##     original   bias    std. error
+## t1*    22.53 0.008518      0.4119
+
+# 与(b)中的答案相似，最多为两个有效数字。(0.4119 vs 0.4089)
+
+# d
+t.test(medv)
+## 
+##  One Sample t-test
+## 
+## data:  medv
+## t = 55.11, df = 505, p-value < 2.2e-16
+## alternative hypothesis: true mean is not equal to 0
+## 95 percent confidence interval:
+##  21.73 23.34
+## sample estimates:
+## mean of x 
+##     22.53
+c(bstrap$t0 - 2 * 0.4119, bstrap$t0 + 2 * 0.4119)
+## [1] 21.71 23.36
+# Bootstrap estimate only 0.02 away for t.test estimate.
+
+# e
+medv.med = median(medv)
+# medv.med
+## [1] 21.2
+
+# f
+boot.fn = function(data, index) return(median(data[index]))
+boot(medv, boot.fn, 1000)
+## 
+## ORDINARY NONPARAMETRIC BOOTSTRAP
+## 
+## 
+## Call:
+## boot(data = medv, statistic = boot.fn, R = 1000)
+## 
+## 
+## Bootstrap Statistics :
+##     original  bias    std. error
+## t1*     21.2 -0.0098      0.3874
+# 中位数为21.2，SE为0.3874。相对于中位数，标准误差较小。
+
+# g
+medv.tenth = quantile(medv, c(0.1))
+##   10% 
+## 12.75
+
+# h
+boot.fn = function(data, index) return(quantile(data[index], c(0.1)))
+boot(medv, boot.fn, 1000)
+## 
+## ORDINARY NONPARAMETRIC BOOTSTRAP
+## 
+## 
+## Call:
+## boot(data = medv, statistic = boot.fn, R = 1000)
+## 
+## 
+## Bootstrap Statistics :
+##     original  bias    std. error
+## t1*    12.75 0.00515      0.5113
+
+# 第十百分位数为12.75，SE为0.511。相对于第十个百分位数的数值，标准误差较小。
