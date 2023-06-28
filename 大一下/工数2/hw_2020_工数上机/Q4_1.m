@@ -1,0 +1,22 @@
+syms x y z;
+f = sqrt(x^2+y^2)-z;
+fx = diff(f,x);
+fy = diff(f,y);
+x = 1;
+y = 1;
+z = sqrt(2);
+
+fxv = eval(fx);
+fyv = eval(fy);
+[x,y] = meshgrid(-2:0.1:3);
+z1 = sqrt(x.^2+y.^2);
+z2 = fxv*(x-1)+fyv*(y-1)+sqrt(2);
+t = -1:0.1:1;
+x3 = fxv*t+1;
+y3 = fyv*t+1;
+z3 = -t+sqrt(2);
+hold on;
+mesh(x,y,z1);
+mesh(x,y,z2);
+plot3(x3,y3,z3);
+hold off;
