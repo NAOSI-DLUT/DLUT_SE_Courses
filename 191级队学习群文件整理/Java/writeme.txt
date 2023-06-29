@@ -1,0 +1,20 @@
+第1行:I suggested to my brother Todd, who is making the leap from hardware into programming, 
+第2行:that the next big revolution will be in genetic engineering. We'll have microbes designed to
+第3行:make food, fuel and plastic; they'll clean up pollution and in general allow us to master the
+第4行:manipulation of the physical world for a fraction of what it costs now. I claimed that it would
+第5行:make the computer revolution look small in comparison. Then I realized I was making a
+第6行:mistake common to science fiction writers: getting lost in the technology (which is of course
+第7行:easy to do in science fiction). An experienced writer knows that the story is never about the
+第8行:things; it's about the people. Genetics will have a very large impact on our lives, but I'm not
+第9行:so sure it will dwarf the computer revolution - or at least the information revolution.
+第10行:Information is about talking to each other: yes, cars and shoes and especially genetic cures
+第11行:are important, but in the end those are just trappings. What truly matters is how we relate to
+第12行:the world. And so much of that is about communication. This book is a case in point. A
+第13行:majority of folks thought I was very bold or a little crazy to put the entire thing up on the
+第14行:Web. "Why would anyone buy it " they asked. If I had been of a more conservative nature I
+第15行:wouldn't have done it, but I really didn't want to write another computer book in the same
+第16行:old way. I didn't know what would happen but it turned out to be the smartest thing I've ever
+第17行:done with a book. For one thing, people started sending in corrections. This has been an
+第18行:amazing process, because folks have looked into every nook and cranny and caught both
+第19行:technical and grammatical errors, and I've been able to eliminate bugs of all sorts that I know
+第20行:would have otherwise slipped through.
