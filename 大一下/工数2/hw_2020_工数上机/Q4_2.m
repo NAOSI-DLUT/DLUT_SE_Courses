@@ -1,0 +1,13 @@
+x1 = linspace(-2,2,25);
+y1 = linspace(-2,2,25);
+[x,y] = meshgrid(x1,y1);
+u = x.^2-y.^2;
+v = x.*y.*2;
+hold on;
+figure(1);
+mesh(x,y,u);
+mesh(x,y,v);
+figure(2);
+contour(x,y,u,'ShowText','on');
+contour(x,y,v,'ShowText','on');
+hold off;
