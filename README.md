@@ -1,5 +1,3 @@
-# DLUT_SE_Courses
-
 # 大连理工大学软件工程系课程攻略
 
 受[清华大学](https://github.com/Salensoft/thu-cst-cracker)相关项目的影响，为方便学弟们的学习，特建立此课程攻略，祝大家都有美好的大学生活！！！！
