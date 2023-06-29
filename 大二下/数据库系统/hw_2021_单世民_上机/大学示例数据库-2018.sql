@@ -1,0 +1,427 @@
+﻿--大连理工大学软件学院数据库系统课程实践示例数据库
+--任课教师：单世民、原旭、刘宇、赵哲焕
+--作者：单世民，崔敏浩
+--著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
+delete from prereq;
+delete from time_slot;
+delete from advisor;
+delete from takes;
+delete from student;
+delete from teaches;
+delete from section;
+delete from instructor;
+delete from course;
+delete from department;
+delete from classroom;
+
+insert into classroom values ('逍遥洞', '001', '500');
+insert into classroom values ('逍遥洞', '006', '50');
+insert into classroom values ('逍遥洞', '003', '80');
+insert into classroom values ('武当山', '1001', '800');
+insert into classroom values ('武当山', '1002', '500');
+insert into classroom values ('少林寺', '101', '1000');
+insert into classroom values ('少林寺', '102', '200');
+insert into classroom values ('少林寺', '103', '200');
+insert into classroom values ('少林寺', '104', '200');
+insert into classroom values ('丐帮总舵', '001', '2000');
+insert into classroom values ('光明顶', '501', '800');
+insert into classroom values ('光明顶', '502', '500');
+insert into classroom values ('光明顶', '503', '500');
+insert into classroom values ('星宿海', '201', '900');
+insert into classroom values ('星宿海', '202', '900');
+
+insert into department values ('逍遥', '凌波洞', '90000');
+insert into department values ('武当', '武当山', '140000');
+insert into department values ('少林', '少林寺', '120000');
+insert into department values ('丐帮', '丐帮总舵', '80000');
+insert into department values ('明教', '光明顶', '150000');
+insert into department values ('星宿', '星宿海', '130000');
+
+insert into course values ('qg1', '初级轻功', '逍遥', '4');
+insert into course values ('qg2', '步步生花', '逍遥', '4');
+insert into course values ('qg3', '江行初雪', '逍遥', '3');
+insert into course values ('qg4', '云体风身', '逍遥', '3');
+insert into course values ('qg5', '凌波微步', '逍遥', '4');
+insert into course values ('ng1', '初级内功', '武当', '4');
+insert into course values ('ng2', '八卦掌', '武当', '3');
+insert into course values ('ng3', '仙人指路', '武当', '3');
+insert into course values ('ng4', '天外飞仙', '武当', '5');
+insert into course values ('ng5', '真武七截阵', '武当', '2');
+insert into course values ('fy1', '初级防御', '少林', '4');
+insert into course values ('fy2', '金钟罩', '少林', '3');
+insert into course values ('fy3', '铁布衫', '少林', '3');
+insert into course values ('fy4', '金刚不坏体', '少林', '4');
+insert into course values ('fy5', '礼敬如来', '少林', '4');
+insert into course values ('gf1', '初级棍法', '丐帮', '4');
+insert into course values ('gf2', '冲锋斩将', '丐帮', '3');
+insert into course values ('gf3', '千里横行', '丐帮', '4');
+insert into course values ('gf4', '棒打狗头', '丐帮', '2');
+insert into course values ('gf5', '天下无狗', '丐帮', '5');
+insert into course values ('zf1', '初级掌法', '明教', '4');
+insert into course values ('zf2', '推心掌', '明教', '2');
+insert into course values ('zf3', '葵花点穴手', '明教', '4');
+insert into course values ('zf4', '斗转星移', '明教', '3');
+insert into course values ('zf5', '无中生有', '明教', '3');
+insert into course values ('zd1', '初级制毒', '星宿', '2');
+insert into course values ('zd2', '化骨绵掌', '星宿', '3');
+insert into course values ('zd3', '含笑半步颠', '星宿', '4');
+insert into course values ('zd4', '一日丧命散', '星宿', '4');
+insert into course values ('zd5', '天地同寿', '星宿', '4');
+
+insert into instructor values ('13965', '秦观', '逍遥', '45000');
+insert into instructor values ('65940', '丁春秋', '星宿', '69000');
+insert into instructor values ('32189', '玄慈', '少林', '65000');
+insert into instructor values ('17371', '康广陵', '逍遥', '50000');
+insert into instructor values ('34790', '玄难', '少林', '56000');
+insert into instructor values ('17220', '苏星河', '逍遥', '70000');
+insert into instructor values ('27517', '张中行', '武当', '50000');
+insert into instructor values ('49708', '白世镜', '丐帮', '55000');
+insert into instructor values ('59194', '林世长', '明教', '80000');
+insert into instructor values ('23748', '俞远山', '武当', '60000');
+insert into instructor values ('66772', '施全', '星宿', '59000');
+insert into instructor values ('20289', '张素玄', '武当', '75000');
+insert into instructor values ('28718', '静初散人', '武当', '70000');
+insert into instructor values ('39305', '玄渡', '少林', '60000');
+insert into instructor values ('54147', '吕师襄', '明教', '70000');
+insert into instructor values ('39883', '慧芳', '少林', '50000');
+insert into instructor values ('31008', '玄寂', '少林', '53000');
+insert into instructor values ('49518', '洪通', '丐帮', '40000');
+insert into instructor values ('56926', '林岩', '明教', '55000');
+insert into instructor values ('68006', '天浪子', '星宿', '49000');
+
+
+insert into section values ('qg1', '1', 'Spring', '2016', '逍遥洞', '001', 'A');
+insert into section values ('qg1', '1', 'Summer', '2016', '逍遥洞', '001', 'A');
+insert into section values ('qg1', '2', 'Summer', '2016', '逍遥洞', '001', 'B');
+insert into section values ('qg1', '1', 'Summer', '2017', '逍遥洞', '001', 'B');
+insert into section values ('qg2', '1', 'Fall', '2016', '逍遥洞', '006', 'A');
+insert into section values ('qg2', '2', 'Fall', '2016', '逍遥洞', '006', 'B');
+insert into section values ('qg3', '1', 'Spring', '2017', '逍遥洞', '003', 'A');
+insert into section values ('qg4', '1', 'Summer', '2017', '逍遥洞', '003', 'A');
+insert into section values ('qg5', '1', 'Fall', '2017', '逍遥洞', '006', 'C');
+
+insert into section values ('ng1', '1', 'Summer', '2016', '武当山', '1001', 'A');
+insert into section values ('ng1', '2', 'Summer', '2016', '武当山', '1001', 'B');
+insert into section values ('ng1', '3', 'Summer', '2016', '武当山', '1001', 'C');
+insert into section values ('ng2', '1', 'Fall', '2016', '武当山', '1002', 'F');
+insert into section values ('ng3', '1', 'Fall', '2016', '武当山', '1002', 'E');
+insert into section values ('ng1', '1', 'Spring', '2017', '武当山', '1001', 'A');
+insert into section values ('ng4', '1', 'Summer', '2017', '武当山', '1002', 'A');
+insert into section values ('ng5', '1', 'Fall', '2017', '武当山', '1001', 'D');
+
+
+insert into section values ('fy1', '1', 'Summer', '2016', '少林寺', '101', 'A');
+insert into section values ('fy1', '2', 'Summer', '2016', '少林寺', '101', 'B');
+insert into section values ('fy1', '1', 'Summer', '2017', '少林寺', '101', 'B');
+insert into section values ('fy2', '1', 'Fall', '2016', '少林寺', '102', 'F');
+insert into section values ('fy2', '1', 'Winter', '2016', '少林寺', '102', 'G');
+insert into section values ('fy2', '1', 'Spring', '2017', '少林寺', '102', 'F');
+insert into section values ('fy3', '1', 'Summer', '2017', '少林寺', '103', 'A');
+insert into section values ('fy4', '1', 'Fall', '2017', '少林寺', '104', 'I');
+
+
+insert into section values ('gf1', '1', 'Summer', '2016', '丐帮总舵', '001', 'H');
+insert into section values ('gf1', '2', 'Summer', '2016', '丐帮总舵', '001', 'G');
+insert into section values ('gf1', '1', 'Summer', '2017', '丐帮总舵', '001', 'F');
+insert into section values ('gf2', '1', 'Fall', '2016', '丐帮总舵', '001', 'D');
+insert into section values ('gf2', '2', 'Fall', '2016', '丐帮总舵', '001', 'E');
+insert into section values ('gf3', '1', 'Spring', '2017', '丐帮总舵', '001', 'C');
+insert into section values ('gf4', '1', 'Summer', '2017', '丐帮总舵', '001', 'C');
+insert into section values ('gf5', '1', 'Fall', '2017', '丐帮总舵', '001', 'A');
+
+insert into section values ('zf1', '1', 'Spring', '2016', '光明顶', '501', 'A');
+insert into section values ('zf1', '1', 'Summer', '2016', '光明顶', '501', 'A');
+insert into section values ('zf1', '1', 'Summer', '2017', '光明顶', '501', 'A');
+insert into section values ('zf2', '1', 'Fall', '2016', '光明顶', '502', 'A');
+insert into section values ('zf3', '1', 'Winter', '2016', '光明顶', '503', 'B');
+insert into section values ('zf4', '1', 'Spring', '2017', '光明顶', '503', 'A');
+
+
+insert into section values ('zd1', '1', 'Summer', '2016', '星宿海', '201', 'I');
+insert into section values ('zd1', '2', 'Summer', '2016', '星宿海', '201', 'H');
+insert into section values ('zd1', '1', 'Summer', '2017', '星宿海', '201', 'I');
+insert into section values ('zd1', '2', 'Summer', '2017', '星宿海', '201', 'H');
+insert into section values ('zd2', '1', 'Fall', '2016', '星宿海', '202', 'I');
+insert into section values ('zd3', '1', 'Spring', '2017', '星宿海', '202', 'I');
+insert into section values ('zd4', '1', 'Summer', '2017', '星宿海', '202', 'I');
+insert into section values ('zd5', '1', 'Fall', '2017', '星宿海', '202', 'J');
+
+
+
+insert into teaches values ('27517', 'qg1', '1', 'Summer', '2016');
+insert into teaches values ('13965', 'qg1', '2', 'Summer', '2016');
+insert into teaches values ('13965', 'qg1', '1', 'Summer', '2017');
+insert into teaches values ('13965', 'qg2', '1', 'Fall', '2016');
+insert into teaches values ('13965', 'qg2', '2', 'Fall', '2016');
+insert into teaches values ('17371', 'qg3', '1', 'Spring', '2017');
+insert into teaches values ('17371', 'qg4', '1', 'Summer', '2017');
+insert into teaches values ('17220', 'qg5', '1', 'Fall', '2017');
+
+insert into teaches values ('27517', 'ng1', '1', 'Summer', '2016');
+insert into teaches values ('27517', 'ng1', '2', 'Summer', '2016');
+insert into teaches values ('27517', 'ng1', '3', 'Summer', '2016');
+insert into teaches values ('23748', 'ng2', '1', 'Fall', '2016');
+insert into teaches values ('23748', 'ng3', '1', 'Fall', '2016');
+insert into teaches values ('28718', 'ng1', '1', 'Spring', '2017');
+insert into teaches values ('20289', 'ng4', '1', 'Summer', '2017');
+insert into teaches values ('28718', 'ng5', '1', 'Fall', '2017');
+
+insert into teaches values ('27517', 'fy1', '1', 'Summer', '2016');
+insert into teaches values ('39883', 'fy1', '2', 'Summer', '2016');
+insert into teaches values ('39883', 'fy1', '1', 'Summer', '2017');
+insert into teaches values ('31008', 'fy2', '1', 'Fall', '2016');
+insert into teaches values ('31008', 'fy2', '1', 'Winter', '2016');
+insert into teaches values ('31008', 'fy2', '1', 'Spring', '2017');
+insert into teaches values ('34790', 'fy3', '1', 'Summer', '2017');
+insert into teaches values ('39305', 'fy4', '1', 'Fall', '2017');
+
+insert into teaches values ('13965', 'gf1', '1', 'Summer', '2016');
+insert into teaches values ('49518', 'gf1', '2', 'Summer', '2016');
+insert into teaches values ('49518', 'gf1', '1', 'Summer', '2017');
+insert into teaches values ('49518', 'gf2', '1', 'Fall', '2016');
+insert into teaches values ('49518', 'gf2', '2', 'Fall', '2016');
+insert into teaches values ('49518', 'gf3', '1', 'Spring', '2017');
+insert into teaches values ('49708', 'gf4', '1', 'Summer', '2017');
+insert into teaches values ('49708', 'gf5', '1', 'Fall', '2017');
+
+insert into teaches values ('56926', 'zf1', '1', 'Summer', '2016');
+insert into teaches values ('56926', 'zf1', '1', 'Summer', '2017');
+insert into teaches values ('54147', 'zf2', '1', 'Fall', '2016');
+insert into teaches values ('54147', 'zf3', '1', 'Winter', '2016');
+insert into teaches values ('59194', 'zf4', '1', 'Spring', '2017');
+
+insert into teaches values ('56926', 'zd1', '1', 'Summer', '2016');
+insert into teaches values ('68006', 'zd1', '2', 'Summer', '2016');
+insert into teaches values ('68006', 'zd1', '1', 'Summer', '2017');
+insert into teaches values ('68006', 'zd1', '2', 'Summer', '2017');
+insert into teaches values ('66772', 'zd2', '1', 'Fall', '2016');
+insert into teaches values ('66772', 'zd3', '1', 'Spring', '2017');
+insert into teaches values ('66772', 'zd4', '1', 'Summer', '2017');
+insert into teaches values ('65940', 'zd5', '1', 'Fall', '2017');
+
+insert into student values ('11990', '李秋水', '逍遥', '80');
+insert into student values ('16597', '无崖子', '逍遥', '102');
+insert into student values ('15167', '吴领军', '逍遥', '78');
+insert into student values ('11795', '范柏玲', '逍遥', '47');
+insert into student values ('16352', '冯阿三', '逍遥', '23');
+insert into student values ('18553', '石清露', '逍遥', '69');
+insert into student values ('13779', '李傀儡', '逍遥', '58');
+insert into student values ('18909', '王傀儡', '逍遥', '47');
+insert into student values ('57662', '左子穆', '明教', '23');
+insert into student values ('57182', '辛双清', '明教', '89');
+insert into student values ('53418', '容子矩', '明教', '69');
+insert into student values ('51120', '于光豪', '明教', '35');
+insert into student values ('52737', '张三丰', '明教', '21');
+insert into student values ('21065', '郁光标', '武当', '41');
+insert into student values ('25971', '吴光胜', '武当', '14');
+insert into student values ('28763', '柯百岁', '武当', '59');
+insert into student values ('20861', '崔百泉', '武当', '28');
+insert into student values ('20852', '张万泉','武当', '68');
+insert into student values ('28985', '李千泉', '武当', '13');
+insert into student values ('34229', '青松', '少林', '20');
+insert into student values ('32026', '止清', '少林', '73');
+insert into student values ('33156', '止泉', '少林', '77');
+insert into student values ('39840', '止澈', '少林', '29');
+insert into student values ('32433', '止渊', '少林', '72');
+insert into student values ('30131', '止露', '少林', '89');
+insert into student values ('35627', '本因', '少林', '51');
+insert into student values ('34813', '本果', '少林', '95');
+insert into student values ('40006', '李春来', '丐帮', '30');
+insert into student values ('45876', '李夏来', '丐帮', '72');
+insert into student values ('42755', '李秋来', '丐帮', '54');
+insert into student values ('47413', '李冬来', '丐帮', '66');
+insert into student values ('47651', '刘竹桩', '丐帮', '56');
+insert into student values ('47957', '萧峰', '丐帮', '26');
+insert into student values ('47731', '张全祥', '丐帮', '56');
+insert into student values ('44838', '康敏', '丐帮', '50');
+insert into student values ('68183', '阿紫', '星宿', '79');
+insert into student values ('69279', '阿绿', '星宿', '14');
+insert into student values ('64840', '狮吼子', '星宿', '50');
+insert into student values ('66471', '出尘子', '星宿', '61');
+insert into student values ('60694', '摘星子', '星宿', '81');
+insert into student values ('65824', '完颜阿骨打', '星宿', '76');
+
+insert into takes values ('21065', 'qg1', '1', 'Summer', '2016', 'A');
+insert into takes values ('11990', 'qg1', '1', 'Summer', '2016', 'A');
+insert into takes values ('11990', 'qg2', '1', 'Fall', '2016', 'A-');
+insert into takes values ('11990', 'qg3', '1', 'Spring', '2017', 'F');
+insert into takes values ('16597', 'qg1', '2', 'Summer', '2016', 'A');
+insert into takes values ('16597', 'qg2', '1', 'Fall', '2016', 'A');
+insert into takes values ('16597', 'qg3', '1', 'Spring', '2017', 'A');
+insert into takes values ('16597', 'qg4', '1', 'Summer', '2017', 'A');
+insert into takes values ('16597', 'qg5', '1', 'Fall', '2017', 'F');
+insert into takes values ('15167', 'qg1', '1', 'Summer', '2016', 'A-');
+insert into takes values ('15167', 'qg2', '2', 'Fall', '2016', 'B-');
+insert into takes values ('11795', 'qg1', '1', 'Summer', '2016', 'B');
+insert into takes values ('16352', 'qg1', '1', 'Summer', '2017', 'A');
+insert into takes values ('18553', 'qg1', '1', 'Summer', '2017', 'D');
+insert into takes values ('13779', 'qg1', '1', 'Summer', '2016', 'D');
+
+insert into takes values ('21065', 'ng1', '3', 'Summer', '2016', 'A');
+insert into takes values ('21065', 'ng2', '1', 'Fall', '2016', 'A');
+insert into takes values ('21065', 'ng3', '1', 'Fall', '2016', 'A-');
+insert into takes values ('21065', 'ng4', '1', 'Summer', '2017', 'B-');
+insert into takes values ('21065', 'ng5', '1', 'Fall', '2017', 'F');
+insert into takes values ('25971', 'ng1', '1', 'Summer', '2016', 'A');
+insert into takes values ('25971', 'ng1', '1', 'Spring', '2017', 'F');
+insert into takes values ('25971', 'ng2', '1', 'Fall', '2016', 'A');
+insert into takes values ('25971', 'ng3', '1', 'Fall', '2016', 'A');
+insert into takes values ('28763', 'ng1', '1', 'Spring', '2017', 'A');
+insert into takes values ('20861', 'ng1', '1', 'Spring', '2017', 'F');
+insert into takes values ('20852', 'ng1', '1', 'Summer', '2016', 'D');
+insert into takes values ('20852', 'ng1', '1', 'Spring', '2017', 'C-');
+insert into takes values ('28985', 'ng1', '2', 'Summer', '2016', 'B+');
+
+insert into takes values ('25971', 'fy1', '1', 'Summer', '2016', 'A');
+insert into takes values ('35627', 'fy1', '1', 'Summer', '2016', 'A');
+insert into takes values ('35627', 'fy2', '1', 'Fall', '2016', 'A');
+insert into takes values ('35627', 'fy3', '1', 'Summer', '2017', 'A');
+insert into takes values ('34813', 'fy1', '1', 'Summer', '2016', 'F');
+insert into takes values ('34813', 'fy1', '1', 'Summer', '2017', 'A');
+insert into takes values ('34813', 'fy2', '1', 'Fall', '2016', 'B');
+insert into takes values ('34813', 'fy3', '1', 'Summer', '2017', 'A-');
+insert into takes values ('32026', 'fy1', '1', 'Summer', '2016', 'B+');
+insert into takes values ('32026', 'fy2', '1', 'Fall', '2016', 'B');
+insert into takes values ('33156', 'fy1', '1', 'Summer', '2016', 'A');
+insert into takes values ('33156', 'fy2', '1', 'Fall', '2016', 'B-');
+insert into takes values ('39840', 'fy1', '2', 'Summer', '2016', 'A-');
+insert into takes values ('39840', 'fy2', '1', 'Fall', '2016', 'A-');
+insert into takes values ('32433', 'fy1', '2', 'Summer', '2016', 'A-');
+insert into takes values ('32433', 'fy2', '1', 'Fall', '2016', 'A');
+insert into takes values ('30131', 'fy1', '1', 'Summer', '2017', 'A');
+insert into takes values ('34229', 'fy1', '1', 'Summer', '2017', 'A');
+
+insert into takes values ('52737', 'gf1', '1', 'Summer', '2016', 'A');
+insert into takes values ('47957', 'gf1', '1', 'Summer', '2016', 'A');
+insert into takes values ('47957', 'gf2', '1', 'Fall', '2016', 'A');
+insert into takes values ('47957', 'gf3', '1', 'Spring', '2017', 'A');
+insert into takes values ('47957', 'gf4', '1', 'Summer', '2017', 'A');
+insert into takes values ('47957', 'gf5', '1', 'Fall', '2017', 'F');
+insert into takes values ('40006', 'gf1', '1', 'Summer', '2016', 'A-');
+insert into takes values ('40006', 'gf2', '2', 'Fall', '2016', 'B-');
+insert into takes values ('45876', 'gf1', '2', 'Summer', '2016', 'B-');
+insert into takes values ('45876', 'gf2', '2', 'Fall', '2016', 'C');
+insert into takes values ('42755', 'gf1', '2', 'Summer', '2016', 'C');
+insert into takes values ('42755', 'gf2', '1', 'Fall', '2016', 'F');
+insert into takes values ('47413', 'gf1', '1', 'Summer', '2016', 'C-');
+insert into takes values ('47413', 'gf2', '1', 'Fall', '2016', 'D');
+insert into takes values ('47651', 'gf1', '1', 'Summer', '2016', null);
+
+insert into takes values ('52737', 'zf1', '1', 'Summer', '2016', 'A');
+insert into takes values ('52737', 'zf2', '1', 'Fall', '2016', 'A');
+insert into takes values ('52737', 'zf3', '1', 'Winter', '2016', 'A');
+insert into takes values ('52737', 'zf4', '1', 'Spring', '2017', 'F');
+insert into takes values ('57662', 'zf1', '1', 'Summer', '2016', 'A');
+insert into takes values ('57662', 'zf2', '1', 'Fall', '2016', 'B');
+insert into takes values ('57662', 'zf3', '1', 'Winter', '2016', 'F');
+insert into takes values ('57182', 'zf1', '1', 'Summer', '2016', 'A-');
+insert into takes values ('57182', 'zf2', '1', 'Fall', '2016', 'B-');
+insert into takes values ('57182', 'zf3', '1', 'Winter', '2016', 'D');
+insert into takes values ('53418', 'zf1', '1', 'Summer', '2017', 'D');
+
+insert into takes values ('57662', 'zd1', '1', 'Summer', '2016', 'A');
+insert into takes values ('68183', 'zd1', '1', 'Summer', '2016', 'A');
+insert into takes values ('68183', 'zd2', '1', 'Fall', '2016', 'A');
+insert into takes values ('68183', 'zd3', '1', 'Spring', '2017', 'F');
+insert into takes values ('69279', 'zd1', '2', 'Summer', '2016', 'A-');
+insert into takes values ('69279', 'zd2', '1', 'Fall', '2016', 'B+');
+insert into takes values ('69279', 'zd3', '1', 'Spring', '2017', 'F');
+insert into takes values ('64840', 'zd1', '1', 'Summer', '2016', 'A');
+insert into takes values ('64840', 'zd2', '1', 'Fall', '2016', 'B-');
+insert into takes values ('64840', 'zd4', '1', 'Summer', '2017', 'D');
+insert into takes values ('66471', 'zd1', '2', 'Summer', '2016', 'A');
+insert into takes values ('66471', 'zd3', '1', 'Spring', '2017', 'C+');
+insert into takes values ('66471', 'zd4', '1', 'Summer', '2017', 'F');
+insert into takes values ('60694', 'zd1', '2', 'Summer', '2016', 'A');
+insert into takes values ('60694', 'zd2', '1', 'Fall', '2016', 'A');
+insert into takes values ('60694', 'zd4', '1', 'Summer', '2017', 'A');
+insert into takes values ('60694', 'zd5', '1', 'Fall', '2017', null);
+
+insert into advisor values ('11990', '13965');
+insert into advisor values ('16597', '17371');
+insert into advisor values ('15167', '17220');
+insert into advisor values ('21065', '27517');
+insert into advisor values ('25971', '23748');
+insert into advisor values ('28763', '20289');
+insert into advisor values ('20861', '28718');
+insert into advisor values ('34229', '32189');
+insert into advisor values ('32026', '34790');
+insert into advisor values ('33156', '39305');
+insert into advisor values ('39840', '39883');
+insert into advisor values ('32433', '31008');
+insert into advisor values ('40006', '49518');
+insert into advisor values ('45876', '49708');
+insert into advisor values ('57662', '59194');
+insert into advisor values ('57182', '54147');
+insert into advisor values ('53418', '56926');
+insert into advisor values ('68183', '68006');
+insert into advisor values ('64840', '65940');
+insert into advisor values ('66471', '66772');
+
+insert into time_slot values ('A', 'M', '8', '0', '8', '50');
+insert into time_slot values ('A', 'W', '8', '0', '8', '50');
+insert into time_slot values ('A', 'F', '8', '0', '8', '50');
+insert into time_slot values ('B', 'M', '9', '0', '9', '50');
+insert into time_slot values ('B', 'W', '9', '0', '9', '50');
+insert into time_slot values ('B', 'F', '9', '0', '9', '50');
+insert into time_slot values ('C', 'M', '11', '0', '11', '50');
+insert into time_slot values ('C', 'W', '11', '0', '11', '50');
+insert into time_slot values ('C', 'F', '11', '0', '11', '50');
+insert into time_slot values ('D', 'M', '13', '0', '13', '50');
+insert into time_slot values ('D', 'W', '13', '0', '13', '50');
+insert into time_slot values ('D', 'F', '13', '0', '13', '50');
+insert into time_slot values ('E', 'T', '10', '30', '11', '45 ');
+insert into time_slot values ('E', 'R', '10', '30', '11', '45 ');
+insert into time_slot values ('F', 'T', '14', '30', '15', '45 ');
+insert into time_slot values ('F', 'R', '14', '30', '15', '45 ');
+insert into time_slot values ('G', 'M', '16', '0', '16', '50');
+insert into time_slot values ('G', 'W', '16', '0', '16', '50');
+insert into time_slot values ('G', 'F', '16', '0', '16', '50');
+insert into time_slot values ('H', 'M', '10', '0', '12', '30');
+insert into time_slot values ('H', 'T', '10', '0', '12', '30');
+insert into time_slot values ('H', 'F', '10', '0', '12', '30');
+insert into time_slot values ('I', 'M', '1', '0', '2', '0');
+insert into time_slot values ('I', 'W', '1', '0', '2', '0');
+insert into time_slot values ('I', 'F', '1', '0', '2', '0');
+insert into time_slot values ('J', 'M', '6', '0', '8', '30');
+
+
+insert into prereq values ('qg2', 'qg1');
+insert into prereq values ('qg3', 'qg2');
+insert into prereq values ('qg4', 'qg2');
+insert into prereq values ('qg5', 'qg4');
+insert into prereq values ('ng2', 'ng1');
+insert into prereq values ('ng3', 'ng1');
+insert into prereq values ('ng4', 'ng3');
+insert into prereq values ('ng5', 'ng4');
+insert into prereq values ('fy2', 'fy1');
+insert into prereq values ('fy3', 'fy2');
+insert into prereq values ('fy4', 'fy3');
+insert into prereq values ('fy5', 'fy4');
+insert into prereq values ('gf2', 'gf1');
+insert into prereq values ('gf3', 'gf1');
+insert into prereq values ('gf4', 'gf3');
+insert into prereq values ('gf5', 'gf3');
+insert into prereq values ('zf2', 'zf1');
+insert into prereq values ('zf3', 'zf2');
+insert into prereq values ('zf4', 'zf3');
+insert into prereq values ('zf5', 'zf4');
+insert into prereq values ('zd2', 'zd1');
+insert into prereq values ('zd3', 'zd1');
+insert into prereq values ('zd4', 'zd1');
+insert into prereq values ('zd5', 'zd4');
+
+/*
+select * from advisor;
+select * from student;
+select * from course;
+select * from department;
+select * from instructor;
+select * from takes;
+select * from teaches;
+select * from prereq;
+select * from classroom;
+select * from section;
+select * from time_slot;
+*/
