@@ -29,13 +29,11 @@
 
 * 未来我们希望将内容暂存校内，有想法的同学或组织请联系我
 
-
-
 ## 感谢
 
 #### 欢迎贡献！！ 欢迎贡献！！ 欢迎贡献！！
 
-感谢对本项目贡献的同学（无论排名）：[徐志](https://github.com/1999John)、[张恩泽](https://github.com/FrancisGrace)、崔良睍、武文轩、方念华、[于汛](https://github.com/JFJ-yx)、[王琪瑞](https://github.com/ChrisWang13)……以及电脑前的您！
+感谢对本项目贡献的同学（无论排名）：[徐志](https://github.com/1999John)、[张恩泽](https://github.com/FrancisGrace)、崔良睍、武文轩、方念华、[于汛](https://github.com/JFJ-yx)、[王琪瑞](https://github.com/ChrisWang13)、[张亦弛](https://github.com/Augists)……以及电脑前的您！
 
 ## 前言
 
