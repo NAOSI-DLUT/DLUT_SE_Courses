@@ -1,14 +1,6 @@
 # 大连理工大学软件工程系课程攻略
 
-受[清华大学](https://github.com/Salensoft/thu-cst-cracker)相关项目的影响，为方便学弟们的学习，特建立此课程攻略，祝大家都有美好的大学生活！！！！
-
-如果你不善于提issue，欢迎加入我们的聊天室
-
-​    [<img src="https://badges.gitter.im/Join Chat.svg"  alt="gitter" />](https://gitter.im/DLUT_SE_Courses/Ask_For_Me_Anything)
-
-如果对 Github 的使用还有疑问，请自行查阅CSDN，或参考 [官方教程](https://guides.github.com/activities/hello-world/)
-
-如果想对项目进行贡献，推荐学习 Git 工具 bash 命令行的使用 - [ProGit](https://www.progit.cn/)
+Github 使用请自行查阅CSDN，或参考 [官方教程](https://guides.github.com/activities/hello-world/)。如果想对项目进行贡献，推荐学习 Git 工具 bash 命令行的使用 - [ProGit](https://www.progit.cn/)
 
 ## 文件下载
 
@@ -17,9 +9,7 @@
 * [GitZip](https://chrome.google.com/webstore/detail/gitzip-for-github/ffabmkklhbepgcgfonabamgnfafbdlkn?hl=en) - 浏览器扩展，需要安装，自行学习
 * 校内资料库已挂，请有想法的同学或组织联系 NAOSI 协会
 
-## 感谢
-
-#### 欢迎贡献！！ 欢迎贡献！！ 欢迎贡献！！
+## 感谢-欢迎贡献！！ 欢迎贡献！！ 欢迎贡献！！
 
 感谢对本项目贡献的同学（无论排名）：[徐志](https://github.com/1999John)、[张恩泽](https://github.com/FrancisGrace)、崔良睍、武文轩、方念华、[于汛](https://github.com/JFJ-yx)、[王琪瑞](https://github.com/ChrisWang13)、[张亦弛](https://github.com/Augists)……以及电脑前的您！
 
@@ -82,10 +72,8 @@
 
 真正版权归属于其各自的作者。资料仅供参考，请自己判断其适用性。
 
-## 最后
-
-我们十分欢迎有兴趣参加本项目维护的同学，我本人也非常希望和大家成为朋友，如果有兴趣，欢迎大家给我发邮件 **[My_E-mail](mailto:1037139985@qq.com)**.
-
 ## 参考
 
-#### [清华大学](https://github.com/Salensoft/thu-cst-cracker) 、[浙江大学](https://github.com/QSCTech/zju-icicles) 、[上海交通大学](https://github.com/c-hj/SJTU-Courses) 、[北京大学](https://github.com/lib-pku/libpku)  大家也可借鉴参阅
+[清华大学](https://github.com/Salensoft/thu-cst-cracker) | [浙江大学](https://github.com/QSCTech/zju-icicles) | [上海交通大学](https://github.com/c-hj/SJTU-Courses) | [北京大学](https://github.com/lib-pku/libpku) | [同济大学](https://github.com/TJ-CSCCG/TJCS-Course)
+
+大家也可借鉴参阅
