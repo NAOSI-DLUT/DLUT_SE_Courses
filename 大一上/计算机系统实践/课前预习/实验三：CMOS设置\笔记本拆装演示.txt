@@ -1,0 +1,150 @@
+1(2分)为了用软盘启动系统以便在DOS 下进行系统维护, 应在“CMOS SETUP” 中将“Boot Sequence:”项设为( ).
+
+A A,C
+
+B C,A,CDROM
+
+C CDROM,C,A
+
+D C Only
+答题内容A
+2(2分)存储系统BIOS 的用户设置的硬件配置数据的存储器是( ).
+
+A 磁盘
+
+B Cache RAM
+
+C 内存条
+
+D CMOS RAM
+答题内容D
+3(2分)关机后存储数据丢失的存储器是( ).
+
+A 系统ROM BIOS
+
+B 硬盘
+
+C CMOS RAM
+
+D 主存RAM
+答题内容D
+4(2分)CMOS RAM 的供电电池电压约为（ ）.
+
+A 3V
+
+B 1.5V
+
+C 6V
+
+D 4.5V
+答题内容A
+5(2分)CMOS 是主板上一块特殊的（ ）芯片，用来保存当前系统的硬件配置和用户对某些参数的设定。
+
+A ROM
+
+B RAM
+
+C BIOS
+
+D CMOS
+答题内容B
+6(2分)我们通常说的“BIOS 设置”或“COMS 设置“其完整的说法是（ ）。
+
+A 利用BIOS设置程序对CMOS 参数进行设置；
+
+B 利用 CMOS 设置程序对 BIOS 参数进行设置；
+
+C 利用 CMOS 设置程序对 CMOS 参数进行设置；
+
+D 利用 BIOS 设置程序对 BIOS 参数进行设置
+答题内容B
+7(2分)目前大多数微机中，要想使用BIOS对CMOS参数进行设置，开机后，应按下的键是（ ）
+
+A CTRL
+
+B SHIFT
+
+C 空格
+
+D DEL
+答题内容D
+8(2分)在常见的BIOS报警信息中，下列各项中哪一项表示硬盘没有格式化，需要对硬盘分区进行格式化。（ ）
+
+A Missing operation system
+
+B No Partition Bootable
+
+C Non-system disk or disk error
+
+D No ROM BASIC
+答题内容C
+9(2分)主板的核心和灵魂是( )。
+
+A CPU插座
+
+B 扩展槽
+
+C 芯片组
+
+D BIOS和CMOS芯片
+答题内容C
+10(2分)计算机的开机自检是在（ ）里完成的。
+
+A CMOS
+
+B CPU
+
+C BIOS
+
+D 内存
+答题内容C
+11(2分)BIOS是一段程序，它是固化到计算机主板上一个（ ）芯片，由主板上的电池供电，关机后其中的信息不会丢失。
+
+A ROM
+
+B RAM
+
+C SRAM
+
+D DRAM
+答题内容A
+12(2分)计算机能直接执行的程序是（ ）
+
+A 机器语言程序
+
+B C 语言程序
+
+C 汇编语言程序
+
+D 源程序
+答题内容A
+13(2分)计算机中所有信息都是用（ ）来表示
+
+A 八进制代码
+
+B 二进制代码
+
+C ASCII 码
+
+D BCD 码
+答题内容B
+14(2分)计算机存储容量的基本单位是（ ）
+
+A 位
+
+B 字节
+
+C 双字
+
+D 字
+答题内容B
+15(2分)计算机内存分为（ ）两种
+
+A 硬盘和软盘
+
+B ROM 和软盘
+
+C RAM和硬盘
+
+D ROM 和RAM
+答题内容D
