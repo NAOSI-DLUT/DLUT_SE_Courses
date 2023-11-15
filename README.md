@@ -7,6 +7,20 @@ Github 使用请自行查阅CSDN，或参考 [官方教程](https://guides.githu
 我们为同学们提供了可靠的下载方式，有以下方式可以选择。
 * [DownGit](http://zhoudaxiaa.gitee.io/downgit/#/home) - 复制文件/夹 网址，粘贴并download即可
 * [GitZip](https://chrome.google.com/webstore/detail/gitzip-for-github/ffabmkklhbepgcgfonabamgnfafbdlkn?hl=en) - 浏览器扩展，需要安装，自行学习
+* 或者使用 git sparse checkout 方式单独下载某一部分文件或文件夹（需 git 版本高于 1.7.0 Feb. 2012）
+  ```bash
+  mkdir DLUT_SE_Courses
+  cd DLUT_SE_Courses
+  git init
+  git remote add -f origin git@github.com:NAOSI-DLUT/DLUT_SE_Courses.git
+  
+  git config core.sparseCheckout true
+
+  echo "some/dir/" >> .git/info/sparse-checkout
+  echo "another/sub/tree" >> .git/info/sparse-checkout
+
+  git pull origin master
+  ```
 * 校内资料库已挂，请有想法的同学或组织联系 NAOSI 协会
 
 ## 感谢-欢迎贡献！！ 欢迎贡献！！ 欢迎贡献！！
