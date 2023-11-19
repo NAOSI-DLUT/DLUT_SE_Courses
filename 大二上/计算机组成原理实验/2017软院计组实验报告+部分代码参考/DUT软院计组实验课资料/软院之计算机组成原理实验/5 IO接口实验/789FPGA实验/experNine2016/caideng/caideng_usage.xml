@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<DeviceUsageSummary rev="6">
+<DesignStatistics TimeStamp="Mon Apr 08 16:06:27 2013"><group name="NetStatistics">
+<item name="NumNets_Active" rev="6">
+<attrib name="value" value="54"/></item>
+<item name="NumNets_Gnd" rev="6">
+<attrib name="value" value="1"/></item>
+<item name="NumNets_Vcc" rev="6">
+<attrib name="value" value="1"/></item>
+<item name="NumNodesOfType_Active_BACKBONE" rev="6">
+<attrib name="value" value="1"/></item>
+<item name="NumNodesOfType_Active_BIHEX" rev="6">
+<attrib name="value" value="8"/></item>
+<item name="NumNodesOfType_Active_CLKPIN" rev="6">
+<attrib name="value" value="12"/></item>
+<item name="NumNodesOfType_Active_CNTRLPIN" rev="6">
+<attrib name="value" value="13"/></item>
+<item name="NumNodesOfType_Active_DUMMY" rev="6">
+<attrib name="value" value="86"/></item>
+<item name="NumNodesOfType_Active_GLOBAL" rev="6">
+<attrib name="value" value="11"/></item>
+<item name="NumNodesOfType_Active_HLONG" rev="6">
+<attrib name="value" value="1"/></item>
+<item name="NumNodesOfType_Active_INPUT" rev="6">
+<attrib name="value" value="93"/></item>
+<item name="NumNodesOfType_Active_IOBOUTPUT" rev="6">
+<attrib name="value" value="1"/></item>
+<item name="NumNodesOfType_Active_OMUX" rev="6">
+<attrib name="value" value="59"/></item>
+<item name="NumNodesOfType_Active_OUTPUT" rev="6">
+<attrib name="value" value="43"/></item>
+<item name="NumNodesOfType_Active_SINGLE" rev="6">
+<attrib name="value" value="116"/></item>
+<item name="NumNodesOfType_Active_UNIHEX" rev="6">
+<attrib name="value" value="15"/></item>
+<item name="NumNodesOfType_Active_VLONG" rev="6">
+<attrib name="value" value="2"/></item>
+<item name="NumNodesOfType_Gnd_DUMMY" rev="6">
+<attrib name="value" value="1"/></item>
+<item name="NumNodesOfType_Gnd_INPUT" rev="6">
+<attrib name="value" value="1"/></item>
+<item name="NumNodesOfType_Gnd_OMUX" rev="6">
+<attrib name="value" value="1"/></item>
+<item name="NumNodesOfType_Gnd_OUTPUT" rev="6">
+<attrib name="value" value="1"/></item>
+<item name="NumNodesOfType_Gnd_SINGLE" rev="6">
+<attrib name="value" value="1"/></item>
+</group>
+<group name="MiscellaneousStatistics">
+<item name="AVG_LUT_FAN_IN" rev="5">
+<attrib name="value" value="3.529400"/></item>
+<item name="AVG_SIG_FANOUT" rev="5">
+<attrib name="value" value="2.000000"/></item>
+<item name="LUT" rev="5">
+<attrib name="value" value="17"/></item>
+<item name="MAX_SIG_FANOUT" rev="5">
+<attrib name="value" value="17"/></item>
+<item name="PK_NUM_4_INPUT_LUTS" rev="5">
+<attrib name="value" value="17"/></item>
+<item name="PK_NUM_4_INPUT_LUT_RTS" rev="5">
+<attrib name="value" value="15"/></item>
+<item name="PK_NUM_BONDED_IOBS" rev="5">
+<attrib name="value" value="9"/></item>
+<item name="PK_NUM_CYINIT" rev="5">
+<attrib name="value" value="8"/></item>
+<item name="PK_NUM_CYMUX" rev="5">
+<attrib name="value" value="15"/></item>
+<item name="PK_NUM_EQUIV_GATES" rev="5">
+<attrib name="value" value="360"/></item>
+<item name="PK_NUM_JTAG_GATES" rev="5">
+<attrib name="value" value="10"/></item>
+<item name="PK_NUM_LUTLESS_SLICE_FFS" rev="5">
+<attrib name="value" value="17"/></item>
+<item name="PK_NUM_SLICES" rev="5">
+<attrib name="value" value="20"/></item>
+<item name="PK_NUM_SLICE_FFS" rev="5">
+<attrib name="value" value="21"/></item>
+<item name="PK_NUM_TOTAL_LUTLESS_REGISTER" rev="5">
+<attrib name="value" value="17"/></item>
+<item name="PK_NUM_XOR" rev="5">
+<attrib name="value" value="15"/></item>
+<item name="PK_NUM_XVK_GCLKIOBS" rev="5">
+<attrib name="value" value="1"/></item>
+<item name="PK_NUM_XVK_GCLKS" rev="5">
+<attrib name="value" value="1"/></item>
+<item name="SINGLE_LOAD_SIG" rev="5">
+<attrib name="value" value="15"/></item>
+<item name="TWO_LOAD_SIG" rev="5">
+<attrib name="value" value="1"/></item>
+</group>
+</DesignStatistics>
+<DeviceUsage TimeStamp="Mon Apr 08 16:06:27 2013"><group name="SiteSummary">
+<item name="GCLK" rev="6">
+<attrib name="total" value="1000000"/><attrib name="used" value="1"/></item>
+<item name="GCLKIOB" rev="6">
+<attrib name="total" value="1000000"/><attrib name="used" value="1"/></item>
+<item name="GCLKIOB_GCLK_BUF" rev="6">
+<attrib name="total" value="1000000"/><attrib name="used" value="1"/></item>
+<item name="GCLKIOB_PAD" rev="6">
+<attrib name="total" value="1000000"/><attrib name="used" value="1"/></item>
+<item name="GCLK_CE_POWER" rev="6">
+<attrib name="total" value="1000000"/><attrib name="used" value="1"/></item>
+<item name="GCLK_GCLK_BUFFER" rev="6">
+<attrib name="total" value="1000000"/><attrib name="used" value="1"/></item>
+<item name="IOB" rev="6">
+<attrib name="total" value="1000000"/><attrib name="used" value="9"/></item>
+<item name="IOB_INBUF" rev="6">
+<attrib name="total" value="1000000"/><attrib name="used" value="1"/></item>
+<item name="IOB_OUTBUF" rev="6">
+<attrib name="total" value="1000000"/><attrib name="used" value="8"/></item>
+<item name="IOB_PAD" rev="6">
+<attrib name="total" value="1000000"/><attrib name="used" value="9"/></item>
+<item name="SLICE" rev="6">
+<attrib name="total" value="1000000"/><attrib name="used" value="20"/></item>
+<item name="SLICE_CY0" rev="6">
+<attrib name="total" value="1000000"/><attrib name="used" value="1"/></item>
+<item name="SLICE_CYMUXF" rev="6">
+<attrib name="total" value="1000000"/><attrib name="used" value="8"/></item>
+<item name="SLICE_CYMUXG" rev="6">
+<attrib name="total" value="1000000"/><attrib name="used" value="7"/></item>
+<item name="SLICE_F" rev="6">
+<attrib name="total" value="1000000"/><attrib name="used" value="14"/></item>
+<item name="SLICE_FFX" rev="6">
+<attrib name="total" value="1000000"/><attrib name="used" value="9"/></item>
+<item name="SLICE_FFY" rev="6">
+<attrib name="total" value="1000000"/><attrib name="used" value="12"/></item>
+<item name="SLICE_G" rev="6">
+<attrib name="total" value="1000000"/><attrib name="used" value="18"/></item>
+<item name="SLICE_GNDF" rev="6">
+<attrib name="total" value="1000000"/><attrib name="used" value="7"/></item>
+<item name="SLICE_GNDG" rev="6">
+<attrib name="total" value="1000000"/><attrib name="used" value="6"/></item>
+<item name="SLICE_XORF" rev="6">
+<attrib name="total" value="1000000"/><attrib name="used" value="7"/></item>
+<item name="SLICE_XORG" rev="6">
+<attrib name="total" value="1000000"/><attrib name="used" value="8"/></item>
+</group>
+</DeviceUsage>
+<ReportConfigData TimeStamp="Mon Apr 08 16:06:27 2013"><group name="GCLK_GCLK_BUFFER">
+<item name="DISABLE_ATTR" rev="6">
+<attrib name="LOW" value="1"/></item>
+</group>
+<group name="SLICE_FFX">
+<item name="INITX" rev="6">
+<attrib name="LOW" value="9"/></item>
+<item name="LATCH_OR_FF" rev="6">
+<attrib name="FF" value="9"/></item>
+<item name="SYNC_ATTR" rev="6">
+<attrib name="ASYNC" value="1"/><attrib name="SYNC" value="8"/></item>
+</group>
+<group name="SLICE_FFY">
+<item name="INITY" rev="6">
+<attrib name="LOW" value="12"/></item>
+<item name="LATCH_OR_FF" rev="6">
+<attrib name="FF" value="12"/></item>
+<item name="SYNC_ATTR" rev="6">
+<attrib name="ASYNC" value="4"/><attrib name="SYNC" value="8"/></item>
+</group>
+<group name="SLICE_F">
+<item name="LUT_OR_MEM" rev="6">
+<attrib name="LUT" value="14"/></item>
+</group>
+<group name="SLICE_G">
+<item name="LUT_OR_MEM" rev="6">
+<attrib name="LUT" value="18"/></item>
+</group>
+<group name="IOB_PAD">
+<item name="DRIVEATTRBOX" rev="6">
+<attrib name="12" value="8"/></item>
+<item name="IOATTRBOX" rev="6">
+<attrib name="LVTTL" value="9"/></item>
+<item name="SLEW" rev="6">
+<attrib name="SLOW" value="8"/></item>
+</group>
+<group name="GCLKIOB_PAD">
+<item name="IOATTRBOX" rev="6">
+<attrib name="LVTTL" value="1"/></item>
+</group>
+</ReportConfigData>
+<ReportPinData TimeStamp="Mon Apr 08 16:06:27 2013"><group name="GCLK">
+<item name="IN" rev="6">
+<attrib name="value" value="1"/></item>
+<item name="OUT" rev="6">
+<attrib name="value" value="1"/></item>
+</group>
+<group name="GCLK_GCLK_BUFFER">
+<item name="CE" rev="6">
+<attrib name="value" value="1"/></item>
+<item name="IN" rev="6">
+<attrib name="value" value="1"/></item>
+<item name="OUT" rev="6">
+<attrib name="value" value="1"/></item>
+</group>
+<group name="SLICE_SR0">
+<item name="0" rev="2">
+<attrib name="value" value="1"/></item>
+</group>
+<group name="IOB_OUTBUF">
+<item name="IN" rev="6">
+<attrib name="value" value="8"/></item>
+<item name="OUT" rev="6">
+<attrib name="value" value="8"/></item>
+</group>
+<group name="GCLK_CE_POWER">
+<item name="1" rev="6">
+<attrib name="value" value="1"/></item>
+</group>
+<group name="SLICE_CY0">
+<item name="0" rev="6">
+<attrib name="value" value="1"/></item>
+</group>
+<group name="SLICE_GNDF">
+<item name="0" rev="6">
+<attrib name="value" value="7"/></item>
+</group>
+<group name="SLICE_FFX">
+<item name="CK" rev="6">
+<attrib name="value" value="9"/></item>
+<item name="D" rev="6">
+<attrib name="value" value="9"/></item>
+<item name="INIT" rev="6">
+<attrib name="value" value="9"/></item>
+<item name="Q" rev="6">
+<attrib name="value" value="9"/></item>
+</group>
+<group name="SLICE_GNDG">
+<item name="0" rev="6">
+<attrib name="value" value="6"/></item>
+</group>
+<group name="SLICE_FFY">
+<item name="CE" rev="6">
+<attrib name="value" value="2"/></item>
+<item name="CK" rev="6">
+<attrib name="value" value="12"/></item>
+<item name="D" rev="6">
+<attrib name="value" value="12"/></item>
+<item name="INIT" rev="6">
+<attrib name="value" value="11"/></item>
+<item name="Q" rev="6">
+<attrib name="value" value="12"/></item>
+</group>
+<group name="GCLKIOB">
+<item name="GCLKOUT" rev="6">
+<attrib name="value" value="1"/></item>
+<item name="PAD" rev="6">
+<attrib name="value" value="1"/></item>
+</group>
+<group name="IOB_INBUF">
+<item name="IN" rev="6">
+<attrib name="value" value="1"/></item>
+<item name="OUT" rev="6">
+<attrib name="value" value="1"/></item>
+</group>
+<group name="SLICE">
+<item name="BY" rev="6">
+<attrib name="value" value="2"/></item>
+<item name="CE" rev="6">
+<attrib name="value" value="2"/></item>
+<item name="CIN" rev="6">
+<attrib name="value" value="7"/></item>
+<item name="CLK" rev="6">
+<attrib name="value" value="12"/></item>
+<item name="COUT" rev="6">
+<attrib name="value" value="7"/></item>
+<item name="F1" rev="6">
+<attrib name="value" value="14"/></item>
+<item name="F2" rev="6">
+<attrib name="value" value="7"/></item>
+<item name="F3" rev="6">
+<attrib name="value" value="6"/></item>
+<item name="F4" rev="6">
+<attrib name="value" value="6"/></item>
+<item name="G1" rev="6">
+<attrib name="value" value="18"/></item>
+<item name="G2" rev="6">
+<attrib name="value" value="11"/></item>
+<item name="G3" rev="6">
+<attrib name="value" value="8"/></item>
+<item name="G4" rev="6">
+<attrib name="value" value="7"/></item>
+<item name="SR" rev="6">
+<attrib name="value" value="11"/></item>
+<item name="X" rev="6">
+<attrib name="value" value="5"/></item>
+<item name="XQ" rev="6">
+<attrib name="value" value="9"/></item>
+<item name="Y" rev="6">
+<attrib name="value" value="8"/></item>
+<item name="YQ" rev="6">
+<attrib name="value" value="12"/></item>
+</group>
+<group name="GCLKIOB_GCLK_BUF">
+<item name="IN" rev="6">
+<attrib name="value" value="1"/></item>
+<item name="OUT" rev="6">
+<attrib name="value" value="1"/></item>
+</group>
+<group name="SLICE_F">
+<item name="A1" rev="6">
+<attrib name="value" value="13"/></item>
+<item name="A2" rev="6">
+<attrib name="value" value="7"/></item>
+<item name="A3" rev="6">
+<attrib name="value" value="6"/></item>
+<item name="A4" rev="6">
+<attrib name="value" value="6"/></item>
+<item name="D" rev="6">
+<attrib name="value" value="14"/></item>
+</group>
+<group name="SLICE_G">
+<item name="A1" rev="6">
+<attrib name="value" value="17"/></item>
+<item name="A2" rev="6">
+<attrib name="value" value="11"/></item>
+<item name="A3" rev="6">
+<attrib name="value" value="8"/></item>
+<item name="A4" rev="6">
+<attrib name="value" value="7"/></item>
+<item name="D" rev="6">
+<attrib name="value" value="18"/></item>
+</group>
+<group name="IOB_PAD">
+<item name="PAD" rev="6">
+<attrib name="value" value="9"/></item>
+</group>
+<group name="IOB">
+<item name="I" rev="6">
+<attrib name="value" value="1"/></item>
+<item name="O" rev="6">
+<attrib name="value" value="8"/></item>
+<item name="PAD" rev="6">
+<attrib name="value" value="9"/></item>
+</group>
+<group name="SLICE_XORF">
+<item name="0" rev="6">
+<attrib name="value" value="7"/></item>
+<item name="1" rev="6">
+<attrib name="value" value="7"/></item>
+<item name="O" rev="6">
+<attrib name="value" value="7"/></item>
+</group>
+<group name="SLICE_XORG">
+<item name="0" rev="6">
+<attrib name="value" value="8"/></item>
+<item name="1" rev="6">
+<attrib name="value" value="8"/></item>
+<item name="O" rev="6">
+<attrib name="value" value="8"/></item>
+</group>
+<group name="SLICE_CYMUXF">
+<item name="0" rev="6">
+<attrib name="value" value="8"/></item>
+<item name="1" rev="6">
+<attrib name="value" value="8"/></item>
+<item name="OUT" rev="6">
+<attrib name="value" value="8"/></item>
+<item name="S0" rev="6">
+<attrib name="value" value="8"/></item>
+</group>
+<group name="SLICE_CYMUXG">
+<item name="0" rev="6">
+<attrib name="value" value="7"/></item>
+<item name="1" rev="6">
+<attrib name="value" value="7"/></item>
+<item name="OUT" rev="6">
+<attrib name="value" value="7"/></item>
+<item name="S0" rev="6">
+<attrib name="value" value="7"/></item>
+</group>
+<group name="GCLKIOB_PAD">
+<item name="PAD" rev="6">
+<attrib name="value" value="1"/></item>
+</group>
+</ReportPinData>
+<CmdHistory>
+</CmdHistory>
+</DeviceUsageSummary>

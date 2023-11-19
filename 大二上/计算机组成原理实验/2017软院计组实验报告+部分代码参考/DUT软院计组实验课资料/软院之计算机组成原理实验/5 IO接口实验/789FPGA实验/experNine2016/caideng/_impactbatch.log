@@ -1,0 +1,26 @@
+iMPACT Version: Nov 14 2006 20:34:41
+
+iMPACT log file Started on Mon Apr 08 16:06:35 2013
+
+Connecting to cable (Usb Port - usb21).
+Checking cable driver.
+ File C:\WINDOWS\system32\drivers\xusbdfwu.sys not found.
+Driver file not found. Inf file version = 0.
+ Driver xusbdfwu.sys version: 1021 (1029).
+ Driver windrvr6.sys version = 10.0.0.0. WinDriver v10.00 Jungo (c) 1997 - 2008 Build Date: Jan 20 2009 X86 32bit SYS11:48:08, version = 1000.
+ Cable PID = 0008.
+ Max current requested during enumeration is 150 mA.
+ Cable Type = 3, Revision = 0.
+ Setting cable speed to 6 MHz.
+Cable connection established.
+Firmware version = 1021.
+CPLD file version = 0012h.
+CPLD version = 0012h.
+'1': Loading file 'E:\workplace\TryToGet\caideng\caideng.bit' ...
+done.
+INFO:iMPACT:501 - '1': Added Device xc2s200 successfully.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+INFO:iMPACT:479 - Programming device, total bits 1335840, ...
+Programming completed successfully.
+Elapsed time =      1 sec.

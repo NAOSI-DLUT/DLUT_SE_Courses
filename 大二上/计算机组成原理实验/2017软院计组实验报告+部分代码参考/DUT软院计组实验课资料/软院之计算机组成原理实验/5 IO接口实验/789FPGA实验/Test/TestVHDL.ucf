@@ -1,0 +1,17 @@
+net "key1" loc ="p94";
+net "key2" loc ="p95";
+net "key3" loc ="p96";
+net "key4" loc ="p97";
+net "key5" loc ="p98";
+net "key6" loc ="p99";
+net "key7" loc ="p100";
+net "key8" loc ="p101";
+
+net "led1" loc ="p58";
+net "led2" loc ="p59";
+net "led3" loc ="p60";
+net "led4" loc ="p61";
+net "led5" loc ="p62";
+net "led6" loc ="p63";
+net "led7" loc ="p68";
+net "led8" loc ="p69";
