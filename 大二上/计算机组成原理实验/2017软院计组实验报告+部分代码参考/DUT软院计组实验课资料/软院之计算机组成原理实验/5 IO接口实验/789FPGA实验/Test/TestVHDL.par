@@ -1,0 +1,148 @@
+Release 9.1i par J.30
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+
+stu927caa::  Mon Mar 31 09:35:42 2014
+
+par -w -intstyle ise -ol std -t 1 TestVHDL_map.ncd TestVHDL.ncd TestVHDL.pcf 
+
+
+Constraints file: TestVHDL.pcf.
+Loading device for application Rf_Device from file 'v200.nph' in environment C:\Xilinx91i.
+   "TestVHDL" is an NCD, version 3.1, device xc2s200, package pq208, speed -6
+
+Initializing temperature to 85.000 Celsius. (default - Range: -40.000 to 100.000 Celsius)
+Initializing voltage to 2.375 Volts. (default - Range: 2.375 to 2.625 Volts)
+
+INFO:Par:282 - No user timing constraints were detected or you have set the option to ignore timing constraints ("par
+   -x"). Place and Route will run in "Performance Evaluation Mode" to automatically improve the performance of all
+   internal clocks in this design. The PAR timing summary will list the performance achieved for each clock. Note: For
+   the fastest runtime, set the effort level to "std".  For best performance, set the effort level to "high". For a
+   balance between the fastest runtime and best performance, set the effort level to "med".
+
+Device speed data version:  "PRODUCTION 1.27 2006-10-19".
+
+
+Device Utilization Summary:
+
+   Number of External IOBs                  16 out of 140    11%
+      Number of LOCed IOBs                  16 out of 16    100%
+
+
+
+Overall effort level (-ol):   Standard 
+Placer effort level (-pl):    High 
+Placer cost table entry (-t): 1
+Router effort level (-rl):    Standard 
+
+
+Starting Placer
+
+Phase 1.1
+Phase 1.1 (Checksum:98968f) REAL time: 0 secs 
+
+Phase 2.7
+Phase 2.7 (Checksum:1312cfe) REAL time: 0 secs 
+
+Phase 3.31
+Phase 3.31 (Checksum:1c9c37d) REAL time: 0 secs 
+
+Phase 4.23
+Phase 4.23 (Checksum:26259fc) REAL time: 0 secs 
+
+Phase 5.3
+Phase 5.3 (Checksum:2faf07b) REAL time: 0 secs 
+
+Phase 6.5
+Phase 6.5 (Checksum:39386fa) REAL time: 0 secs 
+
+Phase 7.8
+Phase 7.8 (Checksum:994395) REAL time: 0 secs 
+
+Phase 8.5
+Phase 8.5 (Checksum:4c4b3f8) REAL time: 0 secs 
+
+Phase 9.18
+Phase 9.18 (Checksum:55d4a77) REAL time: 0 secs 
+
+Phase 10.5
+Phase 10.5 (Checksum:5f5e0f6) REAL time: 0 secs 
+
+REAL time consumed by placer: 0 secs 
+CPU  time consumed by placer: 0 secs 
+Writing design to file TestVHDL.ncd
+
+
+Total REAL time to Placer completion: 0 secs 
+Total CPU time to Placer completion: 0 secs 
+
+Starting Router
+
+Phase 1: 8 unrouted;       REAL time: 0 secs 
+
+Phase 2: 8 unrouted;       REAL time: 0 secs 
+
+Phase 3: 1 unrouted;       REAL time: 0 secs 
+
+Phase 4: 1 unrouted; (0)      REAL time: 0 secs 
+
+Phase 5: 1 unrouted; (0)      REAL time: 0 secs 
+
+Phase 6: 0 unrouted; (0)      REAL time: 0 secs 
+
+Phase 7: 0 unrouted; (0)      REAL time: 0 secs 
+
+Phase 8: 0 unrouted; (0)      REAL time: 0 secs 
+
+Total REAL time to Router completion: 0 secs 
+Total CPU time to Router completion: 0 secs 
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Generating "PAR" statistics.
+
+
+   The Delay Summary Report
+
+
+The NUMBER OF SIGNALS NOT COMPLETELY ROUTED for this design is: 0
+
+   The AVERAGE CONNECTION DELAY for this design is:        2.272
+   The MAXIMUM PIN DELAY IS:                               2.447
+   The AVERAGE CONNECTION DELAY on the 10 WORST NETS is:   2.272
+
+   Listing Pin Delays by value: (nsec)
+
+    d < 1.00   < d < 2.00  < d < 3.00  < d < 4.00  < d < 5.00  d >= 5.00
+   ---------   ---------   ---------   ---------   ---------   ---------
+           0           1           7           0           0           0
+
+Timing Score: 0
+
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+Total REAL time to PAR completion: 0 secs 
+Total CPU time to PAR completion: 0 secs 
+
+Peak Memory Usage:  117 MB
+
+Placement: Completed - No errors found.
+Routing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 0
+Number of info messages: 1
+
+Writing design to file TestVHDL.ncd
+
+
+
+PAR done!

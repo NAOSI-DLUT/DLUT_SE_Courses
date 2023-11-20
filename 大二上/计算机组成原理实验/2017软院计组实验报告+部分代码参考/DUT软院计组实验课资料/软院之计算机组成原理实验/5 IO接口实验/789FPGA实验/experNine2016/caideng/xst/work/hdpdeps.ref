@@ -1,0 +1,13 @@
+V3 7
+FL E:/workplace/TryToGet/caideng/caideng.vhd 2013/04/08.16:05:52 J.30
+EN work/caideng 1365408362 FL E:/workplace/TryToGet/caideng/caideng.vhd \
+      PB ieee/std_logic_1164 1163575071 PB ieee/std_logic_arith 1163575072 \
+      PB ieee/STD_LOGIC_UNSIGNED 1163575073
+AR work/caideng/Behavioral 1365408363 \
+      FL E:/workplace/TryToGet/caideng/caideng.vhd EN work/caideng 1365408362
+FL F:/2017组成原理实验/软院之计算机组成原理实验/789FPGA实验/experNine2016/caideng/../../../../../sixty/sixty.vhd 2017/11/10.18:20:17 J.30
+FL F:/sixty/sixty.vhd 2017/11/10.18:20:17 J.30
+EN work/sixty 1514974377 FL F:/sixty/sixty.vhd PB ieee/std_logic_1164 1163575071 \
+      PB ieee/std_logic_arith 1163575072 PB ieee/STD_LOGIC_UNSIGNED 1163575073
+AR work/sixty/Behavioral 1514974378 \
+      FL F:/sixty/sixty.vhd EN work/sixty 1514974377
