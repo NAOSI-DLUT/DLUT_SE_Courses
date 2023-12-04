@@ -1,0 +1,58 @@
+--------------------------------------------------------------------------------
+Release 9.1i Trace 
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx91i\bin\nt\trce.exe -ise C:/Test/Test.ise -intstyle ise -e 3 -s 6 -xml
+TestVHDL TestVHDL.ncd -o TestVHDL.twr TestVHDL.pcf -ucf TestVHDL.ucf
+
+Design file:              testvhdl.ncd
+Physical constraint file: testvhdl.pcf
+Device,package,speed:     xc2s200,pq208,-6 (PRODUCTION 1.27 2006-10-19)
+Report level:             error report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+key1           |led1           |    7.815|
+key2           |led2           |    7.767|
+key3           |led3           |    7.438|
+key4           |led4           |    7.891|
+key5           |led5           |    7.769|
+key6           |led6           |    7.817|
+key7           |led7           |    7.456|
+key8           |led8           |    7.773|
+---------------+---------------+---------+
+
+
+Analysis completed Mon Mar 31 09:35:44 2014
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 82 MB
+
+
+

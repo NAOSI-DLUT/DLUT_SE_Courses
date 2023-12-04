@@ -1,0 +1,397 @@
+Release 9.1i - xst J.30
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to ./xst/projnav.tmp
+CPU : 0.00 / 0.23 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Parameter xsthdpdir set to ./xst
+CPU : 0.00 / 0.23 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Reading design: caideng.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+     9.1) Device utilization summary
+     9.2) Partition Resource Summary
+     9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "caideng.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "caideng"
+Output Format                      : NGC
+Target Device                      : xc2s200-6-pq208
+
+---- Source Options
+Top Module Name                    : caideng
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : lut
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100
+Add Generic Clock Buffer(BUFG)     : 4
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Convert Tristates To Logic         : Yes
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Library Search Order               : caideng.lso
+Keep Hierarchy                     : NO
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "E:/workplace/TryToGet/caideng/caideng.vhd" in Library work.
+Entity <caideng> compiled.
+Entity <caideng> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <caideng> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <caideng> in library <work> (Architecture <behavioral>).
+Entity <caideng> analyzed. Unit <caideng> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <caideng>.
+    Related source file is "E:/workplace/TryToGet/caideng/caideng.vhd".
+    Found finite state machine <FSM_0> for signal <Cur_STATE>.
+    -----------------------------------------------------------------------
+    | States             | 9                                              |
+    | Transitions        | 9                                              |
+    | Inputs             | 0                                              |
+    | Outputs            | 8                                              |
+    | Clock              | clk_temp (rising_edge)                         |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | s0                                             |
+    | Power Up State     | s0                                             |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <clk_temp>.
+    Found 16-bit up counter for signal <count>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <caideng> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 1
+ 16-bit up counter                                     : 1
+# Registers                                            : 1
+ 1-bit register                                        : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <Cur_STATE> on signal <Cur_STATE[1:4]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ s0    | 0000
+ s1    | 0001
+ s2    | 0011
+ s3    | 0010
+ s4    | 0110
+ s5    | 0111
+ s6    | 0101
+ s7    | 0100
+ s8    | 1100
+-------------------
+Loading device for application Rf_Device from file 'v200.nph' in environment E:\ise9.1.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# Counters                                             : 1
+ 16-bit up counter                                     : 1
+# Registers                                            : 5
+ Flip-Flops                                            : 5
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <caideng> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block caideng, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 21
+ Flip-Flops                                            : 21
+
+=========================================================================
+
+=========================================================================
+*                          Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : caideng.ngr
+Top Level Output File Name         : caideng
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
+
+Design Statistics
+# IOs                              : 10
+
+Cell Usage :
+# BELS                             : 66
+#      GND                         : 1
+#      INV                         : 3
+#      LUT1                        : 15
+#      LUT2                        : 2
+#      LUT3                        : 1
+#      LUT4                        : 12
+#      LUT4_L                      : 1
+#      MUXCY                       : 15
+#      VCC                         : 1
+#      XORCY                       : 15
+# FlipFlops/Latches                : 21
+#      FDC                         : 3
+#      FDCE                        : 1
+#      FDE                         : 1
+#      FDR                         : 16
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 9
+#      IBUF                        : 1
+#      OBUF                        : 8
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 2s200pq208-6 
+
+ Number of Slices:                      17  out of   2352     0%  
+ Number of Slice Flip Flops:            21  out of   4704     0%  
+ Number of 4 input LUTs:                34  out of   4704     0%  
+ Number of IOs:                         10
+ Number of bonded IOBs:                 10  out of    140     7%  
+ Number of GCLKs:                        1  out of      4    25%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 17    |
+clk_temp                           | NONE(Cur_STATE_FFd3)   | 4     |
+-----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+rst                                | IBUF                   | 4     |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -6
+
+   Minimum period: 7.920ns (Maximum Frequency: 126.263MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: 9.407ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 7.920ns (frequency: 126.263MHz)
+  Total number of paths / destination ports: 409 / 34
+-------------------------------------------------------------------------
+Delay:               7.920ns (Levels of Logic = 2)
+  Source:            count_4 (FF)
+  Destination:       clk_temp (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: count_4 to clk_temp
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   1.085   1.206  count_4 (count_4)
+     LUT4:I0->O            1   0.549   1.035  count_cmp_eq00009 (count_cmp_eq0000_map5)
+     LUT4:I1->O           17   0.549   2.610  count_cmp_eq000036 (count_cmp_eq0000)
+     FDE:CE                    0.886          clk_temp
+    ----------------------------------------
+    Total                      7.920ns (3.069ns logic, 4.851ns route)
+                                       (38.8% logic, 61.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_temp'
+  Clock period: 5.448ns (frequency: 183.554MHz)
+  Total number of paths / destination ports: 12 / 5
+-------------------------------------------------------------------------
+Delay:               5.448ns (Levels of Logic = 1)
+  Source:            Cur_STATE_FFd2 (FF)
+  Destination:       Cur_STATE_FFd3 (FF)
+  Source Clock:      clk_temp rising
+  Destination Clock: clk_temp rising
+
+  Data Path: Cur_STATE_FFd2 to Cur_STATE_FFd3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             11   1.085   2.070  Cur_STATE_FFd2 (Cur_STATE_FFd2)
+     INV:I->O              1   0.549   1.035  Cur_STATE_FFd3-In11_INV_0 (N51)
+     FDCE:D                    0.709          Cur_STATE_FFd3
+    ----------------------------------------
+    Total                      5.448ns (2.343ns logic, 3.105ns route)
+                                       (43.0% logic, 57.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_temp'
+  Total number of paths / destination ports: 29 / 8
+-------------------------------------------------------------------------
+Offset:              9.407ns (Levels of Logic = 2)
+  Source:            Cur_STATE_FFd2 (FF)
+  Destination:       led<7> (PAD)
+  Source Clock:      clk_temp rising
+
+  Data Path: Cur_STATE_FFd2 to led<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             11   1.085   2.070  Cur_STATE_FFd2 (Cur_STATE_FFd2)
+     LUT3:I0->O            1   0.549   1.035  Cur_STATE_Out51 (led_2_OBUF)
+     OBUF:I->O                 4.668          led_2_OBUF (led<2>)
+    ----------------------------------------
+    Total                      9.407ns (6.302ns logic, 3.105ns route)
+                                       (67.0% logic, 33.0% route)
+
+=========================================================================
+CPU : 3.09 / 3.39 s | Elapsed : 3.00 / 4.00 s
+ 
+--> 
+
+Total memory usage is 131252 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+
