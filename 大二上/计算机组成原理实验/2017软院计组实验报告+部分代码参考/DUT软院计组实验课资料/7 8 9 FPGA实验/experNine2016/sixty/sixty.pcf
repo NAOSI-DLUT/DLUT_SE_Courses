@@ -1,0 +1,16 @@
+//! **************************************************************************
+// Written by: Map J.30 on Wed Nov 05 13:49:39 2014
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clk" LOCATE = SITE "P182" LEVEL 1;
+COMP "ledL<0>" LOCATE = SITE "P58" LEVEL 1;
+COMP "ledL<1>" LOCATE = SITE "P59" LEVEL 1;
+COMP "ledL<2>" LOCATE = SITE "P60" LEVEL 1;
+COMP "ledL<3>" LOCATE = SITE "P61" LEVEL 1;
+COMP "ledH<0>" LOCATE = SITE "P62" LEVEL 1;
+COMP "ledH<1>" LOCATE = SITE "P63" LEVEL 1;
+COMP "rst" LOCATE = SITE "P160" LEVEL 1;
+COMP "ledH<2>" LOCATE = SITE "P68" LEVEL 1;
+COMP "ledH<3>" LOCATE = SITE "P69" LEVEL 1;
+SCHEMATIC END;

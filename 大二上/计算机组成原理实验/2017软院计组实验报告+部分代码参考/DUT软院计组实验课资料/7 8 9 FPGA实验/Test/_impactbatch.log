@@ -1,0 +1,17 @@
+iMPACT Version: Nov 14 2006 20:34:41
+
+iMPACT log file Started on Tue Jun 06 15:51:05 2017
+
+Connecting to cable (Usb Port - usb21).
+Checking cable driver.
+ File C:\WINDOWS\system32\drivers\xusbdfwu.sys not found.
+Driver file not found. Inf file version = 0.
+ Driver xusbdfwu.sys version: 1021 (1029).
+ Driver windrvr6.sys version = 8.1.0.0. WinDriver v8.10 Jungo (c) 1997 - 2006 Build Date: Aug 15 2006 X86 32bit SYS14:21:34, version = 810.
+Cable connection failed.
+'1': Loading file'F:\2017组成原理实验\软院之计算机组成原理实验\789FPGA实验\Test\testvhdl.bit' ...
+done.
+INFO:iMPACT:501 - '1': Added Device xc2s200 successfully.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+ERROR:iMPACT:1075 - setCable must be set before this operation.

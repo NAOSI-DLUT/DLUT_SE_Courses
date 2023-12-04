@@ -1,0 +1,31 @@
+Release 9.1i ngdbuild J.30
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+
+Command Line: C:\Xilinx91i\bin\nt\ngdbuild.exe -ise C:/Xilinx91i/sixty/sixty.ise
+-intstyle ise -dd _ngo -nt timestamp -uc sixty.ucf -p xc2s200-pq208-6 sixty.ngc
+sixty.ngd
+
+Reading NGO file "C:/Xilinx91i/sixty/sixty.ngc" ...
+
+Applying constraints in "sixty.ucf" to the design...
+
+Checking timing specifications ...
+Checking Partitions ...
+Checking expanded design ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Total memory usage is 66036 kilobytes
+
+Writing NGD file "sixty.ngd" ...
+
+Writing NGDBUILD log file "sixty.bld"...

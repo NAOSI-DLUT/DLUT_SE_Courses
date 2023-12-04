@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<DeviceUsageSummary rev="4">
+<DesignStatistics TimeStamp="Mon Mar 31 09:35:46 2014"><group name="NetStatistics">
+<item name="NumNets_Active" rev="4">
+<attrib name="value" value="24"/></item>
+<item name="NumNodesOfType_Active_BACKBONE" rev="4">
+<attrib name="value" value="7"/></item>
+<item name="NumNodesOfType_Active_BIHEX" rev="4">
+<attrib name="value" value="12"/></item>
+<item name="NumNodesOfType_Active_DUMMY" rev="4">
+<attrib name="value" value="15"/></item>
+<item name="NumNodesOfType_Active_INPUT" rev="4">
+<attrib name="value" value="8"/></item>
+<item name="NumNodesOfType_Active_IOBOUTPUT" rev="4">
+<attrib name="value" value="8"/></item>
+<item name="NumNodesOfType_Active_SINGLE" rev="4">
+<attrib name="value" value="18"/></item>
+</group>
+<group name="MiscellaneousStatistics">
+<item name="AVG_LUT_FAN_IN" rev="3">
+<attrib name="value" value="-1.000000"/></item>
+<item name="AVG_SIG_FANOUT" rev="3">
+<attrib name="value" value="-1.000000"/></item>
+<item name="PK_NUM_BONDED_IOBS" rev="3">
+<attrib name="value" value="16"/></item>
+<item name="PK_NUM_JTAG_GATES" rev="3">
+<attrib name="value" value="16"/></item>
+</group>
+</DesignStatistics>
+<DeviceUsage TimeStamp="Mon Mar 31 09:35:46 2014"><group name="SiteSummary">
+<item name="IOB" rev="4">
+<attrib name="total" value="1000000"/><attrib name="used" value="16"/></item>
+<item name="IOB_INBUF" rev="4">
+<attrib name="total" value="1000000"/><attrib name="used" value="8"/></item>
+<item name="IOB_OUTBUF" rev="4">
+<attrib name="total" value="1000000"/><attrib name="used" value="8"/></item>
+<item name="IOB_PAD" rev="4">
+<attrib name="total" value="1000000"/><attrib name="used" value="16"/></item>
+</group>
+</DeviceUsage>
+<ReportConfigData TimeStamp="Mon Mar 31 09:35:46 2014"><group name="IOB_PAD">
+<item name="DRIVEATTRBOX" rev="4">
+<attrib name="12" value="8"/></item>
+<item name="IOATTRBOX" rev="4">
+<attrib name="LVTTL" value="16"/></item>
+<item name="SLEW" rev="4">
+<attrib name="SLOW" value="8"/></item>
+</group>
+</ReportConfigData>
+<ReportPinData TimeStamp="Mon Mar 31 09:35:46 2014"><group name="IOB_OUTBUF">
+<item name="IN" rev="4">
+<attrib name="value" value="8"/></item>
+<item name="OUT" rev="4">
+<attrib name="value" value="8"/></item>
+</group>
+<group name="IOB_INBUF">
+<item name="IN" rev="4">
+<attrib name="value" value="8"/></item>
+<item name="OUT" rev="4">
+<attrib name="value" value="8"/></item>
+</group>
+<group name="IOB_PAD">
+<item name="PAD" rev="4">
+<attrib name="value" value="16"/></item>
+</group>
+<group name="IOB">
+<item name="I" rev="4">
+<attrib name="value" value="8"/></item>
+<item name="O" rev="4">
+<attrib name="value" value="8"/></item>
+<item name="PAD" rev="4">
+<attrib name="value" value="16"/></item>
+</group>
+</ReportPinData>
+<CmdHistory>
+</CmdHistory>
+</DeviceUsageSummary>

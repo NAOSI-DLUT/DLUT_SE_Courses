@@ -1,0 +1,53 @@
+--------------------------------------------------------------------------------
+Release 9.1i Trace 
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+
+E:\ise9.1\bin\nt\trce.exe -ise E:/workplace/TryToGet/caideng/caideng.ise
+-intstyle ise -e 3 -s 6 -xml caideng caideng.ncd -o caideng.twr caideng.pcf
+-ucf pin.ucf
+
+Design file:              caideng.ncd
+Physical constraint file: caideng.pcf
+Device,package,speed:     xc2s200,pq208,-6 (PRODUCTION 1.27 2006-10-19)
+Report level:             error report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    6.017|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Analysis completed Mon Apr 08 16:06:23 2013
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 82 MB
+
+
+

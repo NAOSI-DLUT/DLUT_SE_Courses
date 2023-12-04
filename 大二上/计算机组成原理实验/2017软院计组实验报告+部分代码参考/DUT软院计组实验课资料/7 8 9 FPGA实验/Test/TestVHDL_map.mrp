@@ -1,0 +1,166 @@
+Release 9.1i Map J.30
+Xilinx Mapping Report File for Design 'TestVHDL'
+
+Design Information
+------------------
+Command Line   : C:\Xilinx91i\bin\nt\map.exe -ise C:/Test/Test.ise -intstyle ise
+-p xc2s200-pq208-6 -cm area -pr b -k 4 -c 100 -tx off -o TestVHDL_map.ncd
+TestVHDL.ngd TestVHDL.pcf 
+Target Device  : xc2s200
+Target Package : pq208
+Target Speed   : -6
+Mapper Version : spartan2 -- $Revision: 1.36 $
+Mapped Date    : Mon Mar 31 09:35:41 2014
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    2
+Logic Utilization:
+Logic Distribution:
+    Number of Slices containing only related logic:      0 out of      0    0%
+    Number of Slices containing unrelated logic:         0 out of      0    0%
+        *See NOTES below for an explanation of the effects of unrelated logic
+   Number of bonded IOBs:            16 out of    140   11%
+
+Total equivalent gate count for design:  0
+Additional JTAG gate count for IOBs:  768
+Peak Memory Usage:  130 MB
+Total REAL time to MAP completion:  0 secs 
+Total CPU time to MAP completion:   0 secs 
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Modular Design Summary
+Section 11 - Timing Report
+Section 12 - Configuration String Information
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:LIT:243 - Logical network N4 has no load.
+WARNING:LIT:395 - The above warning message base_net_load_rule is repeated 1
+   more times for the following (max. 5 shown):
+   N5
+   To see the details of these warning messages, please use the -detail switch.
+
+Section 3 - Informational
+-------------------------
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs in the
+   schematic.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+   2 block(s) removed
+   2 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+The signal "N4" is loadless and has been removed.
+ Loadless block "XST_GND" (ZERO) removed.
+The signal "N5" is loadless and has been removed.
+ Loadless block "XST_VCC" (ONE) removed.
+
+Section 6 - IOB Properties
+--------------------------
+
++------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type    | Direction | IO Standard | Drive    | Slew | Reg (s)  | Resistor | IOB   |
+|                                    |         |           |             | Strength | Rate |          |          | Delay |
++------------------------------------------------------------------------------------------------------------------------+
+| key1                               | IOB     | INPUT     | LVTTL       |          |      |          |          |       |
+| key2                               | IOB     | INPUT     | LVTTL       |          |      |          |          |       |
+| key3                               | IOB     | INPUT     | LVTTL       |          |      |          |          |       |
+| key4                               | IOB     | INPUT     | LVTTL       |          |      |          |          |       |
+| key5                               | IOB     | INPUT     | LVTTL       |          |      |          |          |       |
+| key6                               | IOB     | INPUT     | LVTTL       |          |      |          |          |       |
+| key7                               | IOB     | INPUT     | LVTTL       |          |      |          |          |       |
+| key8                               | IOB     | INPUT     | LVTTL       |          |      |          |          |       |
+| led1                               | IOB     | OUTPUT    | LVTTL       | 12       | SLOW |          |          |       |
+| led2                               | IOB     | OUTPUT    | LVTTL       | 12       | SLOW |          |          |       |
+| led3                               | IOB     | OUTPUT    | LVTTL       | 12       | SLOW |          |          |       |
+| led4                               | IOB     | OUTPUT    | LVTTL       | 12       | SLOW |          |          |       |
+| led5                               | IOB     | OUTPUT    | LVTTL       | 12       | SLOW |          |          |       |
+| led6                               | IOB     | OUTPUT    | LVTTL       | 12       | SLOW |          |          |       |
+| led7                               | IOB     | OUTPUT    | LVTTL       | 12       | SLOW |          |          |       |
+| led8                               | IOB     | OUTPUT    | LVTTL       | 12       | SLOW |          |          |       |
++------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Modular Design Summary
+-----------------------------------
+Modular Design not used for this design.
+
+Section 11 - Timing Report
+--------------------------
+No timing report for this architecture.
+
+Section 12 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
