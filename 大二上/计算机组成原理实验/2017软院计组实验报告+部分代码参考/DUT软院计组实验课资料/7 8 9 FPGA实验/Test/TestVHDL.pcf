@@ -1,0 +1,22 @@
+//! **************************************************************************
+// Written by: Map J.30 on Mon Mar 31 09:35:41 2014
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "led1" LOCATE = SITE "P58" LEVEL 1;
+COMP "led2" LOCATE = SITE "P59" LEVEL 1;
+COMP "led3" LOCATE = SITE "P60" LEVEL 1;
+COMP "led4" LOCATE = SITE "P61" LEVEL 1;
+COMP "led5" LOCATE = SITE "P62" LEVEL 1;
+COMP "led6" LOCATE = SITE "P63" LEVEL 1;
+COMP "led7" LOCATE = SITE "P68" LEVEL 1;
+COMP "led8" LOCATE = SITE "P69" LEVEL 1;
+COMP "key1" LOCATE = SITE "P94" LEVEL 1;
+COMP "key2" LOCATE = SITE "P95" LEVEL 1;
+COMP "key3" LOCATE = SITE "P96" LEVEL 1;
+COMP "key4" LOCATE = SITE "P97" LEVEL 1;
+COMP "key5" LOCATE = SITE "P98" LEVEL 1;
+COMP "key6" LOCATE = SITE "P99" LEVEL 1;
+COMP "key7" LOCATE = SITE "P100" LEVEL 1;
+COMP "key8" LOCATE = SITE "P101" LEVEL 1;
+SCHEMATIC END;

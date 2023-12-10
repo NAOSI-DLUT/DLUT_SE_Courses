@@ -1,0 +1,20 @@
+xst -ise "E:/workplace/TryToGet/caideng/caideng.ise" -intstyle ise -ifn caideng.xst -ofn caideng.syr
+ngdbuild -ise "E:/workplace/TryToGet/caideng/caideng.ise" -intstyle ise -dd _ngo -nt timestamp -uc "pin.ucf" -p xc2s200-pq208-6 "caideng.ngc" caideng.ngd
+map -ise "E:/workplace/TryToGet/caideng/caideng.ise" -intstyle ise -p xc2s200-pq208-6 -cm area -pr b -k 4 -c 100 -tx off -o caideng_map.ncd caideng.ngd caideng.pcf
+ngdbuild -ise "E:/workplace/TryToGet/caideng/caideng.ise" -intstyle ise -dd _ngo -nt timestamp -uc "pin.ucf" -p xc2s200-pq208-6 "caideng.ngc" caideng.ngd
+map -ise "E:/workplace/TryToGet/caideng/caideng.ise" -intstyle ise -p xc2s200-pq208-6 -cm area -pr b -k 4 -c 100 -tx off -o caideng_map.ncd caideng.ngd caideng.pcf
+par -ise "E:/workplace/TryToGet/caideng/caideng.ise" -w -intstyle ise -ol std -t 1 caideng_map.ncd caideng.ncd caideng.pcf
+trce -ise "E:/workplace/TryToGet/caideng/caideng.ise" -intstyle ise -e 3 -s 6 -xml caideng caideng.ncd -o caideng.twr caideng.pcf -ucf pin.ucf
+bitgen -ise "E:/workplace/TryToGet/caideng/caideng.ise" -intstyle ise -f caideng.ut caideng.ncd
+xst -ise "E:/workplace/TryToGet/caideng/caideng.ise" -intstyle ise -ifn caideng.xst -ofn caideng.syr
+ngdbuild -ise "E:/workplace/TryToGet/caideng/caideng.ise" -intstyle ise -dd _ngo -nt timestamp -uc "pin.ucf" -p xc2s200-pq208-6 "caideng.ngc" caideng.ngd
+map -ise "E:/workplace/TryToGet/caideng/caideng.ise" -intstyle ise -p xc2s200-pq208-6 -cm area -pr b -k 4 -c 100 -tx off -o caideng_map.ncd caideng.ngd caideng.pcf
+par -ise "E:/workplace/TryToGet/caideng/caideng.ise" -w -intstyle ise -ol std -t 1 caideng_map.ncd caideng.ncd caideng.pcf
+trce -ise "E:/workplace/TryToGet/caideng/caideng.ise" -intstyle ise -e 3 -s 6 -xml caideng caideng.ncd -o caideng.twr caideng.pcf -ucf pin.ucf
+bitgen -ise "E:/workplace/TryToGet/caideng/caideng.ise" -intstyle ise -f caideng.ut caideng.ncd
+xst -ise "E:/workplace/TryToGet/caideng/caideng.ise" -intstyle ise -ifn caideng.xst -ofn caideng.syr
+ngdbuild -ise "E:/workplace/TryToGet/caideng/caideng.ise" -intstyle ise -dd _ngo -nt timestamp -uc "pin.ucf" -p xc2s200-pq208-6 "caideng.ngc" caideng.ngd
+map -ise "E:/workplace/TryToGet/caideng/caideng.ise" -intstyle ise -p xc2s200-pq208-6 -cm area -pr b -k 4 -c 100 -tx off -o caideng_map.ncd caideng.ngd caideng.pcf
+par -ise "E:/workplace/TryToGet/caideng/caideng.ise" -w -intstyle ise -ol std -t 1 caideng_map.ncd caideng.ncd caideng.pcf
+trce -ise "E:/workplace/TryToGet/caideng/caideng.ise" -intstyle ise -e 3 -s 6 -xml caideng caideng.ncd -o caideng.twr caideng.pcf -ucf pin.ucf
+bitgen -ise "E:/workplace/TryToGet/caideng/caideng.ise" -intstyle ise -f caideng.ut caideng.ncd

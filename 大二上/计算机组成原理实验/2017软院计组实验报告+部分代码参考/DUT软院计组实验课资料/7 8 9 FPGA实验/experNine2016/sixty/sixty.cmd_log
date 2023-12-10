@@ -1,0 +1,12 @@
+xst -ise "C:/Xilinx91i/sixty/sixty.ise" -intstyle ise -ifn sixty.xst -ofn sixty.syr
+ngdbuild -ise "C:/Xilinx91i/sixty/sixty.ise" -intstyle ise -dd _ngo -nt timestamp -uc "sixty.ucf" -p xc2s200-pq208-6 "sixty.ngc" sixty.ngd
+map -ise "C:/Xilinx91i/sixty/sixty.ise" -intstyle ise -p xc2s200-pq208-6 -cm area -pr b -k 4 -c 100 -tx off -o sixty_map.ncd sixty.ngd sixty.pcf
+par -ise "C:/Xilinx91i/sixty/sixty.ise" -w -intstyle ise -ol std -t 1 sixty_map.ncd sixty.ncd sixty.pcf
+trce -ise "C:/Xilinx91i/sixty/sixty.ise" -intstyle ise -e 3 -s 6 -xml sixty sixty.ncd -o sixty.twr sixty.pcf -ucf sixty.ucf
+bitgen -ise "C:/Xilinx91i/sixty/sixty.ise" -intstyle ise -f sixty.ut sixty.ncd
+xst -ise "C:/Xilinx91i/sixty/sixty.ise" -intstyle ise -ifn sixty.xst -ofn sixty.syr
+ngdbuild -ise "C:/Xilinx91i/sixty/sixty.ise" -intstyle ise -dd _ngo -nt timestamp -uc "sixty.ucf" -p xc2s200-pq208-6 "sixty.ngc" sixty.ngd
+map -ise "C:/Xilinx91i/sixty/sixty.ise" -intstyle ise -p xc2s200-pq208-6 -cm area -pr b -k 4 -c 100 -tx off -o sixty_map.ncd sixty.ngd sixty.pcf
+par -ise "C:/Xilinx91i/sixty/sixty.ise" -w -intstyle ise -ol std -t 1 sixty_map.ncd sixty.ncd sixty.pcf
+trce -ise "C:/Xilinx91i/sixty/sixty.ise" -intstyle ise -e 3 -s 6 -xml sixty sixty.ncd -o sixty.twr sixty.pcf -ucf sixty.ucf
+bitgen -ise "C:/Xilinx91i/sixty/sixty.ise" -intstyle ise -f sixty.ut sixty.ncd
