@@ -1,4 +1,4 @@
-# 大连理工大学软件工程系课程攻略
+# 大连理工大学软件学院（软件工程、网络工程）课程攻略
 
 Github 使用请自行查阅CSDN，或参考 [官方教程](https://guides.github.com/activities/hello-world/)。如果想对项目进行贡献，推荐学习 Git 工具 bash 命令行的使用 - [ProGit](https://www.progit.cn/)
 
