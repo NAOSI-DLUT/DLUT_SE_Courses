@@ -1,0 +1,5 @@
+﻿  main.cpp
+D:\github\DLUT_SE_Courses-eb20275bfff28141d80f36cbe593586e070ad4f3\DLUT_SE_Courses-eb20275bfff28141d80f36cbe593586e070ad4f3\大一下\程序设计开发实践\程序设计开发实践\Code\ball\ball\main.cpp(117,15): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+D:\github\DLUT_SE_Courses-eb20275bfff28141d80f36cbe593586e070ad4f3\DLUT_SE_Courses-eb20275bfff28141d80f36cbe593586e070ad4f3\大一下\程序设计开发实践\程序设计开发实践\Code\ball\ball\main.cpp(142,25): warning C4244: “初始化”: 从“ULONGLONG”转换到“DWORD”，可能丢失数据
+D:\github\DLUT_SE_Courses-eb20275bfff28141d80f36cbe593586e070ad4f3\DLUT_SE_Courses-eb20275bfff28141d80f36cbe593586e070ad4f3\大一下\程序设计开发实践\程序设计开发实践\Code\ball\ball\main.cpp(214,23): warning C4244: “初始化”: 从“ULONGLONG”转换到“DWORD”，可能丢失数据
+  ball.vcxproj -> D:\github\DLUT_SE_Courses-eb20275bfff28141d80f36cbe593586e070ad4f3\DLUT_SE_Courses-eb20275bfff28141d80f36cbe593586e070ad4f3\大一下\程序设计开发实践\程序设计开发实践\Code\ball\x64\Debug\ball.exe

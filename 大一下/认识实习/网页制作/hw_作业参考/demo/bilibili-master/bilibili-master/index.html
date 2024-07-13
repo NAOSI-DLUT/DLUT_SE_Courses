@@ -1,0 +1,1770 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>哔哩哔哩 (゜-゜)つロ 干杯~-bilibili</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+	<!-- 切换用&&户遮罩层 -->
+	<div class="switch_mask" id='switchMask'></div>
+	<div class="switch_dialog" id='dialog'>
+		<div class="dialog_title" id='dialog_bar' onselectstart="return false">登录</div>
+		<form action="" class="dialog_form">
+			<div class='input1'>
+				<input type="text" placeholder='你的手机号/邮箱' id='textInput' autofocus>
+				<p class='usercheck' id='userCheck'></p>
+			</div>
+			<div class='input2'>
+				<input type="password" placeholder='密码' id='pswdInput'>
+				<p class='pswdcheck' id='pswdCheck'></p>
+			</div>
+			<div class="input3">
+				<a href="###">忘记密码？&gt;</a>
+			</div>
+			<div class="input4">
+				<input type="text" placeholder='验证码'>
+				<img src="img/index/captcha.jpg" alt="点击刷新">
+				<a href="###">换一张</a>
+			</div>
+			<div class="input5">
+				<label><input type="checkbox"> 记住我</label>
+				<span>不是自己的电脑上不要勾选此项</span>
+			</div>
+			<div class="input6">
+				<input type="button" value='登录' id='login'>
+				<input type="button" value='注册'>
+			</div>
+			<div class="input7">
+				<a href="###">微博账号登录</a>
+				<a href="###">QQ账号登录</a>
+			</div>
+		</form>
+	</div>
+	<!-- header顶部 -->
+	<header class='clearfix'>
+		<div class='top_nav'>
+			<div  class='top_nav_con clearfix'>
+				<ul class='left_nav'>
+					<li><a href="index.html">主站</a></li>
+					<li><a href="paint-friend.html">画友</a></li>
+					<li><a href="game.html" target='_blank'>游戏中心</a></li>
+					<li><a href="video.html">直播</a></li>
+					<li><a href="shop.html">周边</a></li>
+					<li><a href="###">移动端</a></li>
+				</ul>
+				
+				<ul class='right_nav'>
+					<li><a href="###">消息</a></li>
+					<li><a href="###">动态</a></li>
+					<li><a href="###">收藏夹</a></li>
+					<li><a href="###">历史</a></li>
+					<li class='tgao_li'>
+						<a href="###" class='tgao'>投稿</a>
+						<ul class='tgao_info'>
+							<li><a href="###"><i class='i1'></i><span>视频投稿</span></a></li>
+							<li><a href="###"><i class='i2'></i><span>投稿管理</span></a></li>
+							<li><a href="###"><i class='i3'></i><span>创作中心</span></a></li>
+						</ul>
+					</li>
+				</ul>
+
+				<div class="user">
+					<a href="###"  class='user_img'></a>
+					<div class="info_box" id='infoBox'>
+						<div class="user_info">
+							<div class="info_top">
+								<p class='username'>Tracy_腾</p>
+								<p class='userdefaure clearfix'>
+									<span class='de_l'>
+										<a href="###" title='硬币'><b>34</b></a>
+										<a href="###" title='B币'><b>0</b></a>
+									</span>
+									<span class='de_r'>
+										<a href="###" class='e_link'><span class='email'>前去绑定邮箱</span><i class='email_i'><em class='email_em'></em></i></a>
+										<a href="###" class='p_link'><span class='phone'>前去绑定手机</span><i><em></em></i></a>
+									</span>
+								</p>
+								<p class='userlevel clearfix'>
+									<span class='levelbox clearfix'>
+										<i>等级</i>
+										<a href="###" id='level_link'>
+											<em class='level_num'></em>
+											<em class='level_line'></em>
+										</a>
+									</span>
+									<span class='ex'><b>0</b>/1500</span>
+									<div class="level_info" id='levelInfo'>
+										<h2>作为<strong>LV2</strong>, 你可以：</h2>
+										<ul>
+											<li>1、发射个性弹幕（彩色、高级）</li>
+											<li>2、参与视频互动（评论）</li>
+											<li>3、投稿成为偶像 </li>
+										</ul>
+										<p><a href="###">会员等级相关说明 &gt;</a></p>
+										<i><em></em></i>
+									</div>
+								</p>
+							</div>
+							<div class="info_mid">
+							<ul class='clearfix'>
+								<li><a href="###">个人中心</a></li>	
+								<li><a href="###">投稿管理</a></li>
+								<li><a href="###">B币钱包</a></li>	
+								<li><a href="###">直播中心</a></li>
+							</ul>
+							</div>
+						</div>
+						<div class="user_out"><a href="###">退出</a></div>
+					</div>
+				</div>
+
+				<div class="switch_user" id='switchUser' >
+					<a href="###">点我切换用户</a>
+				</div>
+			</div>
+		</div>
+		<div class="top_search">
+			<a href="###" class='rank'>排行榜</a>
+			<a href="###" class='input_border'>
+				<input type="text" name='txt' placeholder='少男少女，不传火吗？' id='inputWp'>
+				<button class='search_btn' type='submit'></button>
+			</a>
+			<div class="history_search" id='historySearch'>
+				<div class="history_title">历史搜索</div>
+				<ul>
+					<!-- <li><a href="###">女流66</a></li> -->
+					<!-- <li><a href="###">陈一发儿</a></li> -->
+					<!-- <li><a href="###">大司马</a></li> -->
+				</ul>
+			</div>
+		</div>
+		<div class="top_banner"><a href="###"><img src="img/index/logo.png" alt="哔哩哔哩"></a></div>
+	</header>
+	
+	<!-- content主体内容 -->
+	<section class="main_con" id='mainCon'>
+		<!-- nav主导航块-->
+		<div class='main_nav conbox' id='mainav_section'>
+			<div class='nav_top clearfix'>
+				<div class="top_lf">
+					<ul class='clearfix'>
+						<li><a href="###"><em></em>首页</a></li>
+						<li>
+							<a href="###"><span>999+</span>动画</a>
+							<ul class='list'>
+								<li><a href="###">连载动画</a></li>
+								<li><a href="###">完结动画</a></li>
+								<li><a href="###">资讯</a></li>
+								<li><a href="###">官方延伸</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="###"><span>99</span>番剧</a>
+							<ul class='list'>
+								<li><a href="###">连载动画</a></li>
+								<li><a href="###">完结动画</a></li>
+								<li><a href="###">资讯</a></li>
+								<li><a href="###">官方延伸</a></li>
+							</ul>
+						</li>
+						<li><a href="###"><span>200</span>国创</a></li>
+						<li><a href="###"><span>300</span>音乐</a></li>
+						<li><a href="###"><span>400</span>舞蹈</a></li>
+						<li><a href="###"><span>999+</span>游戏</a></li>
+						<li><a href="###"><span>99</span>科技</a></li>
+						<li><a href="###"><span>10</span>生活</a></li>
+						<li><a href="###"><span>100</span>鬼畜</a></li>
+						<li><a href="###"><span>130</span>时尚</a></li>
+						<li><a href="###"><span>100</span>广告</a></li>
+						<li><a href="###"><span>770</span>娱乐</a></li>
+						<li><a href="###"><span>95</span>影视</a></li>
+					</ul>
+				</div>
+				<div class="top_rt">
+					<ol class='clearfix'>
+						<li>
+							<a href="###"><i class='i_squre'></i>广场</a>
+							<div class="activity">
+								<div class='con_left'>
+									<ul>
+										<li><a href="###"><em class='a'></em>活动中心</a></li>
+										<li><a href="###"><em class='g'></em>游戏中心</a></li>
+										<li><a href="###"><em class='n'></em>新闻中心</a></li>
+										<li><a href="###"><em class='p'></em>画友</a></li>
+										<li><a href="###"><em class='m'></em>芒果TV</a></li>
+									</ul>
+								</div>
+								<div class='con_right'>
+									<a href="###"><img src="img/index/square01.jpg@240w_84h.jpg" alt="bilibili活动" title='bilibili活动'></a>
+									<a href="###"><img src="img/index/square02.jpg@240w_84h.jpg" alt="bilibili话题" title='bilibili话题'></a>
+								</div>
+							</div>
+						</li>
+						<li><a href="###"><i class='i_anchor'></i>直播</a></li>
+						<li><a href="###"><i class='i_balckhouse'></i>小黑屋</a></li>
+					</ol>
+					<a href="###"><img src="img/index/img.gif" alt="图片gif" title='日更一图'></a>
+				</div>
+			</div>
+			<div class='nav_bottom clearfix'>
+				<div class="rotation" id='rContainer'>
+					<div class="r_img" id='imgBox' style='left: -440px;'>
+						<ul class='clearfix'>
+							<li><a href='###'><img src="img/index/lunbo05.jpg@440w_220h.jpg" alt="图片" title=''></a></li>
+							<li><a href='###'><img src="img/index/lunbo01.jpg@440w_220h.jpg" alt="图片" title=''></a></li>
+							<li><a href='###'><img src="img/index/lunbo02.png@440w_220h.png" alt="图片" title=''></a></li>
+							<li><a href='###'><img src="img/index/lunbo03.jpg@440w_220h.jpg" alt="图片" title=''></a></li>
+							<li><a href='###'><img src="img/index/lunbo04.jpg@440w_220h.jpg" alt="图片" title=''></a></li>
+							<li><a href='###'><img src="img/index/lunbo05.jpg@440w_220h.jpg" alt="图片" title=''></a></li>
+							<li><a href='###'><img src="img/index/lunbo01.jpg@440w_220h.jpg" alt="图片" title=''></a></li>
+						</ul>
+					</div>
+
+					<div class="r_txt clearfix" id='rTxt'>
+						<span class='text show'><a href='###'>风暴英雄</a></span>
+						<span class='text'><a href='###'>(❛◡❛✿)</a></span>
+						<span class='text'><a href='###'>某一天他们从二次元来到了现实</a></span>
+						<span class='text'><a href='###'>满盈吧满盈吧满盈吧…</a></span>
+						<span class='text'><a href='###'>热门电影周边送送送~</a></span>
+					</div>
+
+					<div class="r_btn" id='btnBox'>
+						<ul class='clearfix'>
+							<li class='on'>123</li>
+							<li>123</li>
+							<li>123</li>
+							<li>123</li>
+							<li>123</li>
+						</ul>
+					</div>
+
+					<a href="javascript:;" class='arrow prev' id='prev_btn'>&lt;</a>
+					<a href="javascript:;" class='arrow next' id='next_btn'>&gt;</a>
+
+					<a href="###" class='more'>更多 &gt; </a>
+				</div>
+
+				<div class="series">
+					<div class="s_items" id='sItems'>
+						<ul class='visible clearfix'>
+							<li>
+								<a href="###" title='【A.I.Channel】到底是酸甜还是苦涩？今晚惊艳这个世界【镜头配布】'>
+									<div class="pic"><img src="img/index/r_lunbo01.jpg@160w_100h.jpg" alt=""></div>
+									<div class="info">
+										<P class='info_txt'>【A.I.Channel】到底是酸甜还是苦涩？今晚惊艳这个世界【镜头配布】</P>
+										<P class='up'>up主：<i>TsWEITAO</i> </P>
+										<P class='play'>播放：<i>146652</i> </P>
+									</div>
+									<div class="mask"></div>
+								</a>
+							</li>
+
+							<li>
+								<a href="###" title='【欧美的MC幻想乡】东方MC幻想乡计划 最终版'>
+									<div class="pic"><img src="img/index/r_lunbo02.jpg@160w_100h.jpg" alt=""></div>
+									<div class="info">
+										<P class='info_txt'>【欧美的MC幻想乡】东方MC幻想乡计划 最终版</P>
+										<P class='up'>up主：<i>囧仙</i> </P>
+										<P class='play'>播放：<i>178764</i> </P>
+									</div>
+									<div class="mask"></div>
+								</a>
+							</li>
+
+							<li>
+								<a href="###" title='震惊！小学生居然用翻页漫画做出.........'>
+									<div class="pic"><img src="img/index/r_lunbo03.jpg@160w_100h.jpg" alt=""></div>
+									<div class="info">
+										<P class='info_txt'>震惊！小学生居然用翻页漫画做出.........</P>
+										<P class='up'>up主：<i>Nuomi_Jiang</i> </P>
+										<P class='play'>播放：<i>164178</i> </P>
+									</div>
+									<div class="mask"></div>
+								</a>
+							</li>
+
+							<li>
+								<a href="###" title='【舰R手书】少女们的挽歌'>
+									<div class="pic"><img src="img/index/r_lunbo04.jpg@160w_100h.jpg" alt=""></div>
+									<div class="info">
+										<P class='info_txt'>【舰R手书】少女们的挽歌</P>
+										<P class='up'>up主：<i>永远一粒米</i> </P>
+										<P class='play'>播放：<i>44386</i> </P>
+									</div>
+									<div class="mask"></div>
+								</a>
+							</li>
+
+							<li>
+								<a href="###" title='【春物】由比滨结衣的青春恋爱物语果然没问题……【MAD】'>
+									<div class="pic"><img src="img/index/r_lunbo05.jpg@160w_100h.jpg" alt=""></div>
+									<div class="info">
+										<P class='info_txt'>【春物】由比滨结衣的青春恋爱物语果然没问题……【MAD】</P>
+										<P class='up'>up主：<i>天光净</i> </P>
+										<P class='play'>播放：<i>64053</i> </P>
+									</div>
+									<div class="mask"></div>
+								</a>
+							</li>
+
+							<li>
+								<a href="###" title='【AMV】艳阳下的画中世界'>
+									<div class="pic"><img src="img/index/r_lunbo06.jpg@160w_100h.jpg" alt=""></div>
+									<div class="info">
+										<P class='info_txt'>【AMV】艳阳下的画中世界</P>
+										<P class='up'>up主：<i>SoulsTeam</i> </P>
+										<P class='play'>播放：<i>10248</i> </P>
+									</div>
+									<div class="mask"></div>
+								</a>
+							</li>
+						</ul>
+						<ul class='clearfix'>
+							<li>
+								<a href="###" title='【A.I.Channel】到底是酸甜还是苦涩？今晚惊艳这个世界【镜头配布】'>
+									<div class="pic"><img src="img/index/r_lunbo06.jpg@160w_100h.jpg" alt=""></div>
+									<div class="info">
+										<P class='info_txt'>【A.I.Channel】到底是酸甜还是苦涩？今晚惊艳这个世界【镜头配布】</P>
+										<P class='up'>up主：<i>TsWEITAO</i> </P>
+										<P class='play'>播放：<i>146652</i> </P>
+									</div>
+									<div class="mask"></div>
+								</a>
+							</li>
+
+							<li>
+								<a href="###" title='【欧美的MC幻想乡】东方MC幻想乡计划 最终版'>
+									<div class="pic"><img src="img/index/r_lunbo05.jpg@160w_100h.jpg" alt=""></div>
+									<div class="info">
+										<P class='info_txt'>【欧美的MC幻想乡】东方MC幻想乡计划 最终版</P>
+										<P class='up'>up主：<i>囧仙</i> </P>
+										<P class='play'>播放：<i>178764</i> </P>
+									</div>
+									<div class="mask"></div>
+								</a>
+							</li>
+
+							<li>
+								<a href="###" title='震惊！小学生居然用翻页漫画做出.........'>
+									<div class="pic"><img src="img/index/r_lunbo04.jpg@160w_100h.jpg" alt=""></div>
+									<div class="info">
+										<P class='info_txt'>震惊！小学生居然用翻页漫画做出.........</P>
+										<P class='up'>up主：<i>Nuomi_Jiang</i> </P>
+										<P class='play'>播放：<i>164178</i> </P>
+									</div>
+									<div class="mask"></div>
+								</a>
+							</li>
+
+							<li>
+								<a href="###" title='【舰R手书】少女们的挽歌'>
+									<div class="pic"><img src="img/index/r_lunbo03.jpg@160w_100h.jpg" alt=""></div>
+									<div class="info">
+										<P class='info_txt'>【舰R手书】少女们的挽歌</P>
+										<P class='up'>up主：<i>永远一粒米</i> </P>
+										<P class='play'>播放：<i>44386</i> </P>
+									</div>
+									<div class="mask"></div>
+								</a>
+							</li>
+
+							<li>
+								<a href="###" title='【春物】由比滨结衣的青春恋爱物语果然没问题……【MAD】'>
+									<div class="pic"><img src="img/index/r_lunbo02.jpg@160w_100h.jpg" alt=""></div>
+									<div class="info">
+										<P class='info_txt'>【春物】由比滨结衣的青春恋爱物语果然没问题……【MAD】</P>
+										<P class='up'>up主：<i>天光净</i> </P>
+										<P class='play'>播放：<i>64053</i> </P>
+									</div>
+									<div class="mask"></div>
+								</a>
+							</li>
+
+							<li>
+								<a href="###" title='【AMV】艳阳下的画中世界'>
+									<div class="pic"><img src="img/index/r_lunbo01.jpg@160w_100h.jpg" alt=""></div>
+									<div class="info">
+										<P class='info_txt'>【AMV】艳阳下的画中世界</P>
+										<P class='up'>up主：<i>SoulsTeam</i> </P>
+										<P class='play'>播放：<i>10248</i> </P>
+									</div>
+									<div class="mask"></div>
+								</a>
+							</li>
+						</ul>
+						<ul class='clearfix'>
+							<li>
+								<a href="###" title='【A.I.Channel】到底是酸甜还是苦涩？今晚惊艳这个世界【镜头配布】'>
+									<div class="pic"><img src="img/index/r_lunbo01.jpg@160w_100h.jpg" alt=""></div>
+									<div class="info">
+										<P class='info_txt'>【A.I.Channel】到底是酸甜还是苦涩？今晚惊艳这个世界【镜头配布】</P>
+										<P class='up'>up主：<i>TsWEITAO</i> </P>
+										<P class='play'>播放：<i>146652</i> </P>
+									</div>
+									<div class="mask"></div>
+								</a>
+							</li>
+
+							<li>
+								<a href="###" title='【欧美的MC幻想乡】东方MC幻想乡计划 最终版'>
+									<div class="pic"><img src="img/index/r_lunbo03.jpg@160w_100h.jpg" alt=""></div>
+									<div class="info">
+										<P class='info_txt'>【欧美的MC幻想乡】东方MC幻想乡计划 最终版</P>
+										<P class='up'>up主：<i>囧仙</i> </P>
+										<P class='play'>播放：<i>178764</i> </P>
+									</div>
+									<div class="mask"></div>
+								</a>
+							</li>
+
+							<li>
+								<a href="###" title='震惊！小学生居然用翻页漫画做出.........'>
+									<div class="pic"><img src="img/index/r_lunbo05.jpg@160w_100h.jpg" alt=""></div>
+									<div class="info">
+										<P class='info_txt'>震惊！小学生居然用翻页漫画做出.........</P>
+										<P class='up'>up主：<i>Nuomi_Jiang</i> </P>
+										<P class='play'>播放：<i>164178</i> </P>
+									</div>
+									<div class="mask"></div>
+								</a>
+							</li>
+
+							<li>
+								<a href="###" title='【舰R手书】少女们的挽歌'>
+									<div class="pic"><img src="img/index/r_lunbo02.jpg@160w_100h.jpg" alt=""></div>
+									<div class="info">
+										<P class='info_txt'>【舰R手书】少女们的挽歌</P>
+										<P class='up'>up主：<i>永远一粒米</i> </P>
+										<P class='play'>播放：<i>44386</i> </P>
+									</div>
+									<div class="mask"></div>
+								</a>
+							</li>
+
+							<li>
+								<a href="###" title='【春物】由比滨结衣的青春恋爱物语果然没问题……【MAD】'>
+									<div class="pic"><img src="img/index/r_lunbo04.jpg@160w_100h.jpg" alt=""></div>
+									<div class="info">
+										<P class='info_txt'>【春物】由比滨结衣的青春恋爱物语果然没问题……【MAD】</P>
+										<P class='up'>up主：<i>天光净</i> </P>
+										<P class='play'>播放：<i>64053</i> </P>
+									</div>
+									<div class="mask"></div>
+								</a>
+							</li>
+
+							<li>
+								<a href="###" title='【AMV】艳阳下的画中世界'>
+									<div class="pic"><img src="img/index/r_lunbo06.jpg@160w_100h.jpg" alt=""></div>
+									<div class="info">
+										<P class='info_txt'>【AMV】艳阳下的画中世界</P>
+										<P class='up'>up主：<i>SoulsTeam</i> </P>
+										<P class='play'>播放：<i>10248</i> </P>
+									</div>
+									<div class="mask"></div>
+								</a>
+							</li>
+						</ul>
+						<div class=" pagebtn prevbtn" id='prevBtn'>昨<br>日</div>
+						<div class=" pagebtn nextbtn" id='nextBtn'>一<br>周</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- promotion推广块-->
+		<div class="promotion clearfix conbox " id='pro_section'>
+			<div class="pro_title clearfix">
+				<P class='pro_logo'>推广</P>
+				<P class='online'>
+					<a href="###">在线人数：<span class='onlinenum'>547383</span></a>
+					<i class='s_line'></i>
+					<a href="###">最新投稿：<span class='new_sub'>6654</span></a>
+				</P>
+			</div>
+			<div class="pro_con">
+				<div class="pro_items clearfix" id='proItems'>
+					<dl>
+						<dt>
+							<a href="###"><img src="img/index/proimg01.jpg@160w_100h.jpg"></a>
+							<div class="danmu danmu0">啊哈哈哈</div>
+							<div class="danmu danmu1">额(⊙o⊙)…</div>
+							<div class="danmu danmu2">别笑了23333</div>
+							<div class="danmu danmu3">死爹垃！</div>
+							<div class="danmu danmu4">卧槽哈哈哈哈哈哈哈哈哈哈</div>
+							<div class="danmu danmu5">爱笑的岛崎信长</div>
+							<div class="danmu danmu6">医生：mmp</div>
+							<div class="danmu danmu7">逃生1还好，但是逃生2的BGM真的吓人</div>
+							<div class="danmu danmu8">讲真，逃生2男主那身体素质是真的可以屠村了，但就是非得跑</div>
+							<div class="danmu danmu9">怪不得老子玩逃生2出BUG了</div>
+						</dt>
+						<dd>
+							<a href="###" title='【BDF2017】和广州航海学院一起跳舞【交织together】'>【BDF2017】和广州航海学院一起跳舞【交织together】
+							</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt>
+							<a href="###"><img src="img/index/proimg02.jpg@160w_100h.jpg"></a>
+							<div class="danmu danmu0">啊哈哈哈</div>
+							<div class="danmu danmu1">额(⊙o⊙)…</div>
+							<div class="danmu danmu2">别笑了23333</div>
+							<div class="danmu danmu3">死爹垃！</div>
+							<div class="danmu danmu4">卧槽哈哈哈哈哈哈哈哈哈哈</div>
+							<div class="danmu danmu5">爱笑的岛崎信长</div>
+							<div class="danmu danmu6">医生：mmp</div>
+							<div class="danmu danmu7">逃生1还好，但是逃生2的BGM真的吓人</div>
+							<div class="danmu danmu8">讲真，逃生2男主那身体素质是真的可以屠村了，但就是非得跑</div>
+							<div class="danmu danmu9">怪不得老子玩逃生2出BUG了</div>
+						</dt>
+						<dd>
+							<a href="###" title='【本末测评】热门日式服装 到底买亏了没有啊喂 ⊙▂⊙'>
+							【本末测评】热门日式服装 到底买亏了没有啊喂 ⊙▂⊙
+							</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="###"><img src="img/index/proimg03.jpg@160w_100h.jpg"></a></dt>
+						<dd>
+							<a href="###" title='《全职高手》第7话更新 第6话免费观看'>
+							《全职高手》第7话更新 第6话免费观看
+							</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="###"><img src="img/index/proimg04.jpg@160w_100h.jpg"></a></dt>
+						<dd>
+							<a href="###" title='【FGO】住口！不要再笑了！'>
+							【FGO】住口！不要再笑了！
+							</a>
+						</dd>
+					</dl>
+				</div>
+				<aside class='ad'>
+					<a href="###">
+						<img src="img/index/ad01.jpg" alt="广告">
+					</a>
+				</aside>
+			</div>
+		</div>
+		<!-- 正在直播块 -->
+		<div class="live clearfix conbox" id='live_section'>
+			<div class="live_now">
+				<div class="live_title">
+					<a href="###" class='title_txt'>正在直播</a>
+					<span class='live_total'>当前共有<b>6004</b>个在线直播</span>
+					<a href="###" class='live_hot'>233秒居然能做这些！</a>
+					<a href="###" class='live_update'><i></i><b>40000</b>条新动态</a>
+					<a href="###" class='live_more'>更多<i></i></a>
+				</div>
+				<div class="live_con">
+					<ul>
+						<li>
+							<a href="###" title='朝气蓬勃的一天【绝地求生大逃杀】'>
+								<p>
+									<img src="img/index/borimg01.jpg@160w_100h.jpg">
+									<span class='live_kind'>电子竞技</span>
+									<i class='player_face'><img src="img/index/borimg01.jpg@160w_100h.jpg"></i>
+									<i class='live_font'>Live</i>
+									<em class='mask'></em>
+								</p>
+								<p class='live_info'>朝气蓬勃的一天【绝地求生大逃杀】</p>
+								<p class='live_play'>
+									<i class='player'>玲珑</i>
+									<i class='viewers'>1.7万</i>
+								</p>
+							</a>
+						</li>
+						<li>
+							<a href="###" title='心暖:震惊，对面下路把把被举报的原因竟是'>
+								<p>
+									<img src="img/index/borimg02.jpg@160w_100h.jpg">
+									<span class='live_kind'>电子竞技</span>
+									<i class='player_face'><img src="img/index/borimg02.jpg@160w_100h.jpg"></i>
+									<i class='live_font'>Live</i>
+									<em class='mask'></em>
+								</p>
+								<p class='live_info'>心暖:震惊，对面下路把把被举报的原因竟是</p>
+								<p class='live_play'>
+									<i class='player'>心暖西瓜君</i>
+									<i class='viewers'>2.2万</i>
+								</p>
+							</a>
+						</li>
+						<li>
+							<a href="###" title='日本三大祭神田祭户外直播lovelive圣地巡礼'>
+								<p>
+									<img src="img/index/borimg03.jpg@160w_100h.jpg">
+									<span class='live_kind'>户外娱乐</span>
+									<i class='player_face'><img src="img/index/borimg03.jpg@160w_100h.jpg"></i>
+									<i class='live_font'>Live</i>
+									<em class='mask'></em>
+								</p>
+								<p class='live_info'>日本三大祭神田祭户外直播lovelive圣地巡礼</p>
+								<p class='live_play'>
+									<i class='player'>软软冰</i>
+									<i class='viewers'>1.8万</i>
+								</p>
+							</a>
+						</li>
+						<li>
+							<a href="###" title='【奶苏】老歌回忆录/治愈/催眠'>
+								<p>
+									<img src="img/index/borimg04.jpg@160w_100h.jpg">
+									<span class='live_kind'>才艺歌舞</span>
+									<i class='player_face'><img src="img/index/borimg04.jpg@160w_100h.jpg"></i>
+									<i class='live_font'>Live</i>
+									<em class='mask'></em>
+								</p>
+								<p class='live_info'>【奶苏】老歌回忆录/治愈/催眠</p>
+								<p class='live_play'>
+									<i class='player'>Sun</i>
+									<i class='viewers'>8700</i>
+								</p>
+							</a>
+						</li>
+						<li>
+							<a href="###" title='哎我们今天来玩游戏吧~'>
+								<p>
+									<img src="img/index/borimg05.jpg@160w_100h.jpg">
+									<span class='live_kind'>休闲趣游</span>
+									<i class='player_face'><img src="img/index/borimg05.jpg@160w_100h.jpg"></i>
+									<i class='live_font'>Live</i>
+									<em class='mask'></em>
+								</p>
+								<p class='live_info'>哎我们今天来玩游戏吧~</p>
+								<p class='live_play'>
+									<i class='player'>深海</i>
+									<i class='viewers'>131</i>
+								</p>
+							</a>
+						</li>
+						<li>
+							<a href="###" title='王者荣耀〕本命韩信的屠杀免费带粉'>
+								<p>
+									<img src="img/index/borimg06.jpg@160w_100h.jpg">
+									<span class='live_kind'>电子竞技</span>
+									<i class='player_face'><img src="img/index/borimg06.jpg@160w_100h.jpg"></i>
+									<i class='live_font'>Live</i>
+									<em class='mask'></em>
+								</p>
+								<p class='live_info'>王者荣耀〕本命韩信的屠杀免费带粉</p>
+								<p class='live_play'>
+									<i class='player'>仓鼠</i>
+									<i class='viewers'>9862</i>
+								</p>
+							</a>
+						</li>
+						<li>
+							<a href="###" title='【求应援棒】仓鼠球'>
+								<p>
+									<img src="img/index/borimg07.jpg@160w_100h.jpg">
+									<span class='live_kind'>生活娱乐</span>
+									<i class='player_face'><img src="img/index/borimg07.jpg@160w_100h.jpg"></i>
+									<i class='live_font'>Live</i>
+									<em class='mask'></em>
+								</p>
+								<p class='live_info'>【求应援棒】仓鼠球</p>
+								<p class='live_play'>
+									<i class='player'>min</i>
+									<i class='viewers'>6587</i>
+								</p>
+							</a>
+						</li>
+						<li>
+							<a href="###" title='《奥术神座》在线赶稿绘制中'>
+								<p>
+									<img src="img/index/borimg08.jpg@160w_100h.jpg">
+									<span class='live_kind'>才艺歌舞</span>
+									<i class='player_face'><img src="img/index/borimg08.jpg@160w_100h.jpg"></i>
+									<i class='live_font'>Live</i>
+									<em class='mask'></em>
+								</p>
+								<p class='live_info'>《奥术神座》在线赶稿绘制中</p>
+								<p class='live_play'>
+									<i class='player'>大角虫漫画</i>
+									<i class='viewers'>4386</i>
+								</p>	
+							</a>
+						</li>
+					</ul>	
+				</div>
+			</div>
+			<aside class='live_rank'>
+				<div class="rank_title" id='rankTitle'>
+					<ul class='clearfix'>
+						<li class='clk'>直播排行</li>
+						<li>关注的主播</li>
+						<li>为你推荐</li>
+					</ul>
+				</div>
+				<div class="rank_con">
+					<div class="rank_items clearfix" id='rankItems'>
+						<div class='rank_live'>
+							<ul>
+								<li class='clearfix'>
+									<span>1</span>
+									<a href="###" class='clearfix'>
+										<em class='anchor_face'><img src="img/index/liveimg01.jpg@40w_40h.jpg"></em>
+										<div class="rank_liveinfo">
+											<p class='anchor_name clearfix'><em>两仪滚</em><i>1.3万</i></p>
+											<p class='live_intro'>【滚】吃鸡鸡</p>
+										</div>
+									</a>
+								</li>
+								<li class='clearfix'>
+									<span>2</span>
+									<a href="###">
+										<em class='anchor_face'><img src="img/index/liveimg02.jpg@40w_40h.jpg"></em>
+										<div class="rank_liveinfo">
+											<p class='anchor_name clearfix'><em>杆菌无敌</em><i>1.3万</i></p>
+											<p class='live_intro'>【杆菌】死亡细胞！dead cells！</p>
+										</div>
+									</a>
+								</li>
+								<li class='clearfix'>
+									<span>3</span>
+									<a href="###">
+										<em class='anchor_face'><img src="img/index/liveimg03.jpg@40w_40h.jpg"></em>
+										<div class="rank_liveinfo">
+											<p class='anchor_name clearfix'><em>梦醒三生梦</em><i>1.2万</i></p>
+											<p class='live_intro'>二狗解说带你看懂王者荣耀</p>
+										</div>
+									</a>
+								</li>
+								<li class='clearfix'>
+									<span>4</span>
+									<a href="###">
+										<em class='anchor_face'><img src="img/index/liveimg04.jpg@40w_40h.jpg"></em>
+										<div class="rank_liveinfo">
+											<p class='anchor_name clearfix'><em>陈哥1</em><i>8737</i></p>
+											<p class='live_intro'>（以撒）  我是进来学习技术的</p>
+										</div>
+									</a>
+								</li>
+								<li class='clearfix'>
+									<span>5</span>
+									<a href="###">
+										<em class='anchor_face'><img src="img/index/liveimg05.jpg@40w_40h.jpg"></em>
+										<div class="rank_liveinfo">
+											<p class='anchor_name clearfix'><em>miriちゃん</em><i>8152</i></p>
+											<p class='live_intro'>【求应援棒】看板娘</p>
+										</div>
+									</a>
+								</li>
+								<li class='clearfix'>
+									<span>6</span>
+									<a href="###">
+										<em class='anchor_face'><img src="img/index/liveimg06.jpg@40w_40h.jpg"></em>
+										<div class="rank_liveinfo">
+											<p class='anchor_name clearfix'><em>Fubukiikemen</em><i>8100</i></p>
+											<p class='live_intro'>声控福利/单机游戏</p>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class='rank_focus'><i></i>没有数据</div>
+						<div class='rank_recom'>
+							<div class="recom_top" id='recomTop'>
+								<div class="imgbox2 clearfix" id='imgBox2'>
+									<a href="###"><img src="img/index/livelunbo01.jpg@260w_248h.jpg"></a>
+									<a href="###"><img src="img/index/livelunbo02.jpg@260w_248h.jpg"></a>
+								</div>
+								<div class="recom_btn" id='recomBtn'>
+									<ul class='clearfix'>
+										<li class='mhover'></li>
+										<li></li>
+									</ul>
+								</div>
+								<div class="recom_mask" id='recom_Mask'>
+									<a href="###" class='visible'>从Link开始的偶像生活</a>
+									<a href="###">你的童年是哪首歌</a>
+								</div>
+							</div>
+							<div class="recom_bottom">
+								<ul class='clearfix'>
+									<li>
+										<a href="###">
+											<img src="img/index/recom03.jpg">
+											<span class='rb_txt'>Mola灬mola丶翻车鱼</span>
+										</a>
+									</li>
+									<li>
+										<a href="###">
+											<img src="img/index/recom04.jpg">
+											<span class='rb_txt'>不穿内裤的牙套</span>
+										</a>
+									</li>
+									<li>
+										<a href="###">
+											<img src="img/index/recom05.jpg">
+											<span class='rb_txt'>下限酱Orz</span>
+										</a>
+									</li>
+									<li>
+										<a href="###">
+											<img src="img/index/recom06.jpg">
+											<span class='rb_txt'>B站制簪人蝉蝉</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</aside>
+		</div>
+		<!-- 动画块 -->
+		<div class="cartoon clearfix conbox" id='cart_section'>
+			<div class="cartoon_now">
+				<div class="cartoon_title">
+					<a href="###" class='title_txt'>动画</a>
+					<ul class='cartoon_tab clearfix' id='cartoonTab'>
+						<li class='clk'>有新动态</li>
+						<li>最新投稿</li>
+					</ul>
+					<a href="###" class='cartoon_hot'>兽娘动物园新剧场版:破 流出？！</a>
+					<a href="###" class='cartoon_update'><i></i><b>2686</b>条新动态</a>
+					<a href="###" class='cartoon_more'>更多<i></i></a>
+				</div>
+				<div class="cartoon_con" id='cartoonCon'>
+					<ul class='visible'>
+						<li>
+							<a href="###" title='【王者荣耀MMD】王昭君「Tokio·Funka」'>
+								<p>
+									<img src="img/index/move01.jpg@160w_100h.jpg">
+									<span class='duration'>5:00</span>
+									<em class='mask'></em>
+								</p>
+								<p class='cartoon_info'>【王者荣耀MMD】王昭君「Tokio·Funka」</p>
+								<p class='cartoon_play'>
+									<i class='playnum'>1.9万</i>
+									<i class='comments'>240</i>
+								</p>
+							</a>
+						</li>
+						<li>
+							<a href="###" title='国产萝莉的鬼畜调教'>
+								<p>
+									<img src="img/index/move02.jpg@160w_100h.jpg">
+									<span class='duration'>4:00</span>
+									<em class='mask'></em>
+								</p>
+								<p class='cartoon_info'>国产萝莉的鬼畜调教</p>
+								<p class='cartoon_play'>
+									<i class='playnum'>2.2万</i>
+									<i class='comments'>133</i>
+								</p>
+							</a>
+						</li>
+						<li>
+							<a href="###" title='【中配AI】A.I.Channel#00初次见面！我叫绊爱！（0v0）'>
+								<p>
+									<img src="img/index/move03.jpg@160w_100h.jpg">
+									<span class='duration'>8:00</span>
+									<em class='mask'></em>
+								</p>
+								<p class='cartoon_info'>【中配AI】A.I.Channel#00初次见面！我叫绊爱！（0v0）</p>
+								<p class='cartoon_play'>
+									<i class='playnum'>8017</i>
+									<i class='comments'>72</i>
+								</p>
+							</a>
+						</li>
+						<li>
+							<a href="###" title='我和你们看的猫和老鼠好像不太一样'>
+								<p>
+									<img src="img/index/move04.jpg@160w_100h.jpg">
+									<span class='duration'>6:00</span>
+									<em class='mask'></em>
+								</p>
+								<p class='cartoon_info'>我和你们看的猫和老鼠好像不太一样</p>
+								<p class='cartoon_play'>
+									<i class='playnum'>2.5万</i>
+									<i class='comments'>574</i>
+								</p>
+							</a>
+						</li>
+						<li>
+							<a href="###" title='【倒放向】如果把埃罗芒阿老师op倒放会发生什么'>
+								<p>
+									<img src="img/index/move05.jpg@160w_100h.jpg">
+									<span class='duration'>2:00</span>
+									<em class='mask'></em>
+								</p>
+								<p class='cartoon_info'>【倒放向】如果把埃罗芒阿老师op倒放会发生什么</p>
+								<p class='cartoon_play'>
+									<i class='playnum'>9181</i>
+									<i class='comments'>54</i>
+								</p>
+							</a>
+						</li>
+						<li>
+							<a href="###" title='【熟肉】A.I.Channel#101绊爱的语文教室！ 吓到你无法忘怀！？'>
+								<p>
+									<img src="img/index/move06.jpg@160w_100h.jpg">
+									<span class='duration'>7:00</span>
+									<em class='mask'></em>
+								</p>
+								<p class='cartoon_info'>【熟肉】A.I.Channel#101绊爱的语文教室！ 吓到你无法忘怀！？</p>
+								<p class='cartoon_play'>
+									<i class='playnum'>8.6万</i>
+									<i class='comments'>2743</i>
+								</p>
+							</a>
+						</li>
+						<li>
+							<a href="###" title='【MMD】巫女服V家众「Carry me off」by eun sung【授权转载】'>
+								<p>
+									<img src="img/index/move07.jpg@160w_100h.jpg">
+									<span class='duration'>9:00</span>
+									<em class='mask'></em>
+								</p>
+								<p class='cartoon_info'>【MMD】巫女服V家众「Carry me off」by eun sung【授权转载】</p>
+								<p class='cartoon_play'>
+									<i class='playnum'>1.4万</i>
+									<i class='comments'>157</i>
+								</p>
+							</a>
+						</li>
+						<li>
+							<a href="###" title='凤凰旗袍天依 天依专场 極楽浄土'>
+								<p>
+									<img src="img/index/move08.jpg@160w_100h.jpg">
+									<span class='duration'>5:00</span>
+									<em class='mask'></em>
+								</p>
+								<p class='cartoon_info'>凤凰旗袍天依 天依专场 極楽浄土</p>
+								<p class='cartoon_play'>
+									<i class='playnum'>671</i>
+									<i class='comments'>12</i>
+								</p>	
+							</a>
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<a href="###" title='【王者荣耀MMD】王昭君「Tokio·Funka」'>
+								<p>
+									<img src="img/index/new01 .jpg@160w_100h.jpg">
+									<span class='duration'>5:00</span>
+									<em class='mask'></em>
+								</p>
+								<p class='cartoon_info'>【王者荣耀MMD】王昭君「Tokio·Funka」</p>
+								<p class='cartoon_play'>
+									<i class='playnum'>1.9万</i>
+									<i class='comments'>240</i>
+								</p>
+							</a>
+						</li>
+						<li>
+							<a href="###" title='国产萝莉的鬼畜调教'>
+								<p>
+									<img src="img/index/new02 .jpg@160w_100h.jpg">
+									<span class='duration'>4:00</span>
+									<em class='mask'></em>
+								</p>
+								<p class='cartoon_info'>国产萝莉的鬼畜调教</p>
+								<p class='cartoon_play'>
+									<i class='playnum'>2.2万</i>
+									<i class='comments'>133</i>
+								</p>
+							</a>
+						</li>
+						<li>
+							<a href="###" title='【中配AI】A.I.Channel#00初次见面！我叫绊爱！（0v0）'>
+								<p>
+									<img src="img/index/new03 .jpg@160w_100h.jpg">
+									<span class='duration'>8:00</span>
+									<em class='mask'></em>
+								</p>
+								<p class='cartoon_info'>【中配AI】A.I.Channel#00初次见面！我叫绊爱！（0v0）</p>
+								<p class='cartoon_play'>
+									<i class='playnum'>8017</i>
+									<i class='comments'>72</i>
+								</p>
+							</a>
+						</li>
+						<li>
+							<a href="###" title='我和你们看的猫和老鼠好像不太一样'>
+								<p>
+									<img src="img/index/new04 .jpg@160w_100h.jpg">
+									<span class='duration'>6:00</span>
+									<em class='mask'></em>
+								</p>
+								<p class='cartoon_info'>我和你们看的猫和老鼠好像不太一样</p>
+								<p class='cartoon_play'>
+									<i class='playnum'>2.5万</i>
+									<i class='comments'>574</i>
+								</p>
+							</a>
+						</li>
+						<li>
+							<a href="###" title='【倒放向】如果把埃罗芒阿老师op倒放会发生什么'>
+								<p>
+									<img src="img/index/new05 .jpg@160w_100h.jpg">
+									<span class='duration'>2:00</span>
+									<em class='mask'></em>
+								</p>
+								<p class='cartoon_info'>【倒放向】如果把埃罗芒阿老师op倒放会发生什么</p>
+								<p class='cartoon_play'>
+									<i class='playnum'>9181</i>
+									<i class='comments'>54</i>
+								</p>
+							</a>
+						</li>
+						<li>
+							<a href="###" title='【熟肉】A.I.Channel#101绊爱的语文教室！ 吓到你无法忘怀！？'>
+								<p>
+									<img src="img/index/new06 .jpg@160w_100h.jpg">
+									<span class='duration'>7:00</span>
+									<em class='mask'></em>
+								</p>
+								<p class='cartoon_info'>【熟肉】A.I.Channel#101绊爱的语文教室！ 吓到你无法忘怀！？</p>
+								<p class='cartoon_play'>
+									<i class='playnum'>8.6万</i>
+									<i class='comments'>2743</i>
+								</p>
+							</a>
+						</li>
+						<li>
+							<a href="###" title='【MMD】巫女服V家众「Carry me off」by eun sung【授权转载】'>
+								<p>
+									<img src="img/index/new07 .jpg@160w_100h.jpg">
+									<span class='duration'>9:00</span>
+									<em class='mask'></em>
+								</p>
+								<p class='cartoon_info'>【MMD】巫女服V家众「Carry me off」by eun sung【授权转载】</p>
+								<p class='cartoon_play'>
+									<i class='playnum'>1.4万</i>
+									<i class='comments'>157</i>
+								</p>
+							</a>
+						</li>
+						<li>
+							<a href="###" title='凤凰旗袍天依 天依专场 極楽浄土'>
+								<p>
+									<img src="img/index/new08 .jpg@160w_100h.jpg">
+									<span class='duration'>5:00</span>
+									<em class='mask'></em>
+								</p>
+								<p class='cartoon_info'>凤凰旗袍天依 天依专场 極楽浄土</p>
+								<p class='cartoon_play'>
+									<i class='playnum'>671</i>
+									<i class='comments'>12</i>
+								</p>	
+							</a>
+						</li>
+					</ul>	
+				</div>
+			</div>
+			<aside class='cartoon_rank'>
+				<div class="ct_ranktitle clearfix">
+					<div class='title_txt'>排行</div>
+					<div class='rank_tab' id='carankTab'>
+						<ul class='clearfix'>
+							<li class='mhover'>全部</li>
+							<li>原创</li>
+						</ul>
+					</div>
+					<div class='rank_time' id='rankTime'>
+						<ol>
+							<li>三日</li>
+							<li>一周</li>
+						</ol>
+						<i></i>
+					</div>
+				</div>
+				<div class="ct_rankcon" id='ctrankCon'>
+					<ul class='active'>
+						<li class='clearfix'>
+							<span>1</span>
+							<a href="###">
+								<p><img src="img/index/rankimg01.jpg@80w_50h.jpg"></p>
+								<p>【Fate全系列】英灵乱斗: 夺回未来的战争「Grand Order」</p>
+								<p>综合评分：37.8万</p>		
+							</a>
+							<div class="ct_rankinfo">
+								<div class="ct_info_top">
+									<p>【Fate全系列】英灵乱斗: 夺回未来的战争「Grand Order」</p>
+									<p>泛式<span>|</span>2017-5-16 00:00</p>
+								</div>
+								<div class="ct_info_mid clearfix">
+									<img src="img/index/rankimg01.jpg@80w_50h.jpg" alt="">
+									<p>最近是FGO和FZ的联动活动，所以特地给了闪闪、呆毛、大帝一大堆镜头....孔明本身的动作场景不多，但我还是强行给塞进去了23333 另外就是切嗣爸爸，虽然我给你的戏份少，但我给你儿子的戏份多呀！！....希望能感动到老天让我顺利出货这几位吧
+									BGM: Brave Shine - Aimer</p>
+								</div>
+								<div class="ct_info_bottom">
+									<i>22.2万</i>
+									<i>1645</i>
+									<i>1.8万</i>
+									<i>1.6万</i>
+								</div>
+							</div>
+						</li>
+						<li class='clearfix'>
+							<span>2</span>
+							<a href="###">病毒发布者看了想打人(´-ι_-｀)</a>
+						</li>
+						<li class='clearfix'>
+							<span>3</span>
+							<a href="###">【新·游戏王VS系列】第6集：王様和吾王</a>
+						</li>
+						<li class='clearfix'>
+							<span>4</span>
+							<a href="###">【六道杂谈】游戏王战斗城市篇：万恶之源！海马VS游戏</a>
+						</li>
+						<li class='clearfix'>
+							<span>5</span>
+							<a href="###">周刊哔哩哔哩排行榜#360</a>
+						</li>
+						<li class='clearfix'>
+							<span>6</span>
+							<a href="###">【补番推荐·伪】那些留下回忆的动画【补番追番记录】【2005.10~2017.01】【合集】</a>
+						</li>
+						<li class='clearfix'>
+							<span>7</span>
+							<a href="###">【慎入·灵魂手绘】用数码宝贝的方式打开阴阳师</a>
+						</li>
+					</ul>
+					<ul>
+						<li class='clearfix'>
+							<span>1</span>
+							<a href="###">
+								<p><img src="img/index/rankimg01.jpg@80w_50h.jpg"></p>
+								<p>【Fate全系列】英灵乱斗: 夺回未来的战争「Grand Order」</p>
+								<p>综合评分：0.00</p>		
+							</a>
+							<div class="ct_rankinfo">
+								<div class="ct_info_top">
+									<p>【Fate全系列】英灵乱斗: 夺回未来的战争「Grand Order」</p>
+									<p>泛式<span>|</span>2017-5-16 00:00</p>
+								</div>
+								<div class="ct_info_mid clearfix">
+									<img src="img/index/rankimg01.jpg@80w_50h.jpg" alt="">
+									<p>最近是FGO和FZ的联动活动，所以特地给了闪闪、呆毛、大帝一大堆镜头....孔明本身的动作场景不多，但我还是强行给塞进去了23333 另外就是切嗣爸爸，虽然我给你的戏份少，但我给你儿子的戏份多呀！！....希望能感动到老天让我顺利出货这几位吧
+									BGM: Brave Shine - Aimer</p>
+								</div>
+								<div class="ct_info_bottom">
+									<i>22.2万</i>
+									<i>1645</i>
+									<i>1.8万</i>
+									<i>1.6万</i>
+								</div>
+							</div>
+						</li>
+						<li class='clearfix'>
+							<span>2</span>
+							<a href="###">病毒发布者看了想打人(´-ι_-｀)</a>
+						</li>
+						<li class='clearfix'>
+							<span>3</span>
+							<a href="###">【木鱼微剧场】一口气看完《FSN/UBW》（上部）</a>
+						</li>
+						<li class='clearfix'>
+							<span>4</span>
+							<a href="###">被官方强行变男生的那几位大佬</a>
+						</li>
+						<li class='clearfix'>
+							<span>5</span>
+							<a href="###">周刊哔哩哔哩排行榜#360</a>
+						</li>
+						<li class='clearfix'>
+							<span>6</span>
+							<a href="###">【补番推荐·伪】那些留下回忆的动画【补番追番记录】【2005.10~2017.01】【合集】</a>
+						</li>
+						<li class='clearfix'>
+							<span>7</span>
+							<a href="###">【慎入·灵魂手绘】用数码宝贝的方式打开阴阳师</a>
+						</li>
+					</ul>
+				</div>
+				<div class="ct_rankmore"><a href="###">查看更多&gt;</a></div>
+			</aside>
+		</div>
+		<!-- 番剧块 -->
+		<div class="fun clearfix conbox" id='fun_section'>
+			<div class="fun_container">
+				<div class="fun_title clearfix">
+					<div class='title_txt'><a href="###">番剧</a></div>
+					<div class='fun_tab' id='funTab'>
+						<ul class='clearfix'>
+							<li class='clk'><span>最新</span></li>
+							<li><span>一</span></li>
+							<li><span>二</span></li>
+							<li><span>三</span></li>
+							<li><span>四</span></li>
+							<li><span>五</span></li>
+							<li><span>六</span></li>
+							<li><span>日</span></li>
+						</ul>
+					</div>
+					<div class='fun_newtable'><a href="###">新番时间表<i></i></a></div>
+				</div>
+				<div class="fun_con" id='funCon'>
+					<ul class='clearfix' style='display: block;'>
+						<li>
+							<div class="item clearfix">
+								<a href="###"><img src="img/index/funju02.jpg@72w_72h.jpg" alt=""></a>
+								<div class="iteminfo">
+									<a href="###">
+										<p>不要输！！恶之军团！</p>
+									</a>
+									<p class='updatenum'>更新至 <a href="###"><span>8话</span></a></p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item">
+								<a href="###"><img src="img/index/funju01.jpg@72w_72h.jpg" alt=""></a>
+								<div class="iteminfo">
+									<a href="###">
+										<p>不要输！！恶之军团！</p>
+									</a>
+									<p class='updatenum'>
+										更新至 
+										<a href="###"><span>8话</span></a>
+									</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item">
+								<a href="###"><img src="img/index/funju03.jpg@72w_72h.jpg" alt=""></a>
+								<div class="iteminfo">
+									<a href="###">
+										<p>不要输！！恶之军团！</p>
+									</a>
+									<p class='updatenum'>
+										更新至 
+										<a href="###"><span>8话</span></a>
+									</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item">
+								<a href="###"><img src="img/index/funju04.jpg@72w_72h.jpg" alt=""></a>
+								<div class="iteminfo">
+									<a href="###">
+										<p>不要输！！恶之军团！</p>
+									</a>
+									<p class='updatenum'>
+										更新至 
+										<a href="###"><span>8话</span></a>
+									</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item">
+								<a href="###"><img src="img/index/funju01.jpg@72w_72h.jpg" alt=""></a>
+								<div class="iteminfo">
+									<a href="###">
+										<p>不要输！！恶之军团！</p>
+									</a>
+									<p class='updatenum'>
+										更新至 
+										<a href="###"><span>8话</span></a>
+									</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item">
+								<a href="###"><img src="img/index/funju02.jpg@72w_72h.jpg" alt=""></a>
+								<div class="iteminfo">
+									<a href="###">
+										<p>不要输！！恶之军团！</p>
+									</a>
+									<p class='updatenum'>
+										更新至 
+										<a href="###"><span>8话</span></a>
+									</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item">
+								<a href="###"><img src="img/index/funju04.jpg@72w_72h.jpg" alt=""></a>
+								<div class="iteminfo">
+									<a href="###">
+										<p>不要输！！恶之军团！</p>
+									</a>
+									<p class='updatenum'>
+										更新至 
+										<a href="###"><span>8话</span></a>
+									</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item">
+								<a href="###"><img src="img/index/funju03.jpg@72w_72h.jpg" alt=""></a>
+								<div class="iteminfo">
+									<a href="###">
+										<p>不要输！！恶之军团！</p>
+									</a>
+									<p class='updatenum'>
+										更新至 
+										<a href="###"><span>8话</span></a>
+									</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item">
+								<a href="###"><img src="img/index/funju01.jpg@72w_72h.jpg" alt=""></a>
+								<div class="iteminfo">
+									<a href="###">
+										<p>不要输！！恶之军团！</p>
+									</a>
+									<p class='updatenum'>
+										更新至 
+										<a href="###"><span>8话</span></a>
+									</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item">
+								<a href="###"><img src="img/index/funju02.jpg@72w_72h.jpg" alt=""></a>
+								<div class="iteminfo">
+									<a href="###">
+										<p>不要输！！恶之军团！</p>
+									</a>
+									<p class='updatenum'>
+										更新至 
+										<a href="###"><span>8话</span></a>
+									</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item">
+								<a href="###"><img src="img/index/funju03.jpg@72w_72h.jpg" alt=""></a>
+								<div class="iteminfo">
+									<a href="###">
+										<p>不要输！！恶之军团！</p>
+									</a>
+									<p class='updatenum'>
+										更新至 
+										<a href="###"><span>8话</span></a>
+									</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item">
+								<a href="###"><img src="img/index/funju04.jpg@72w_72h.jpg" alt=""></a>
+								<div class="iteminfo">
+									<a href="###">
+										<p>不要输！！恶之军团！</p>
+									</a>
+									<p class='updatenum'>
+										更新至 
+										<a href="###"><span>8话</span></a>
+									</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item">
+								<a href="###"><img src="img/index/funju02.jpg@72w_72h.jpg" alt=""></a>
+								<div class="iteminfo">
+									<a href="###">
+										<p>不要输！！恶之军团！</p>
+									</a>
+									<p class='updatenum'>
+										更新至 
+										<a href="###"><span>8话</span></a>
+									</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item">
+								<a href="###"><img src="img/index/funju04.jpg@72w_72h.jpg" alt=""></a>
+								<div class="iteminfo">
+									<a href="###">
+										<p>不要输！！恶之军团！</p>
+									</a>
+									<p class='updatenum'>
+										更新至 
+										<a href="###"><span>8话</span></a>
+									</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item">
+								<a href="###"><img src="img/index/funju01.jpg@72w_72h.jpg" alt=""></a>
+								<div class="iteminfo">
+									<a href="###">
+										<p>不要输！！恶之军团！</p>
+									</a>
+									<p class='updatenum'>
+										更新至 
+										<a href="###"><span>8话</span></a>
+									</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item">
+								<a href="###"><img src="img/index/funju03.jpg@72w_72h.jpg" alt=""></a>
+								<div class="iteminfo">
+									<a href="###">
+										<p>不要输！！恶之军团！</p>
+									</a>
+									<p class='updatenum'>
+										更新至 
+										<a href="###"><span>8话</span></a>
+									</p>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<ul class='clearfix'>
+						<li>
+							<div class="item clearfix">
+								<a href="###"><img src="img/index/funju02.jpg@72w_72h.jpg" alt=""></a>
+								<div class="iteminfo">
+									<a href="###">
+										<p>不要输！！恶之军团！</p>
+									</a>
+									<p class='updatenum'>更新至 <a href="###"><span>8话</span></a></p>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<ul class='clearfix'>
+						<li>
+							<div class="item clearfix">
+								<a href="###"><img src="img/index/funju01.jpg@72w_72h.jpg" alt=""></a>
+								<div class="iteminfo">
+									<a href="###">
+										<p>不要输！！恶之军团！</p>
+									</a>
+									<p class='updatenum'>更新至 <a href="###"><span>8话</span></a></p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item clearfix">
+								<a href="###"><img src="img/index/funju02.jpg@72w_72h.jpg" alt=""></a>
+								<div class="iteminfo">
+									<a href="###">
+										<p>不要输！！恶之军团！</p>
+									</a>
+									<p class='updatenum'>更新至 <a href="###"><span>8话</span></a></p>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<ul class='clearfix'>
+						<li>
+							<div class="item clearfix">
+								<a href="###"><img src="img/index/funju03.jpg@72w_72h.jpg" alt=""></a>
+								<div class="iteminfo">
+									<a href="###">
+										<p>不要输！！恶之军团！</p>
+									</a>
+									<p class='updatenum'>更新至 <a href="###"><span>8话</span></a></p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item clearfix">
+								<a href="###"><img src="img/index/funju04.jpg@72w_72h.jpg" alt=""></a>
+								<div class="iteminfo">
+									<a href="###">
+										<p>不要输！！恶之军团！</p>
+									</a>
+									<p class='updatenum'>更新至 <a href="###"><span>8话</span></a></p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item clearfix">
+								<a href="###"><img src="img/index/funju01.jpg@72w_72h.jpg" alt=""></a>
+								<div class="iteminfo">
+									<a href="###">
+										<p>不要输！！恶之军团！</p>
+									</a>
+									<p class='updatenum'>更新至 <a href="###"><span>8话</span></a></p>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<ul class='clearfix'>
+						<li>
+							<div class="item clearfix">
+								<a href="###"><img src="img/index/funju02.jpg@72w_72h.jpg" alt=""></a>
+								<div class="iteminfo">
+									<a href="###">
+										<p>不要输！！恶之军团！</p>
+									</a>
+									<p class='updatenum'>更新至 <a href="###"><span>8话</span></a></p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item clearfix">
+								<a href="###"><img src="img/index/funju04.jpg@72w_72h.jpg" alt=""></a>
+								<div class="iteminfo">
+									<a href="###">
+										<p>不要输！！恶之军团！</p>
+									</a>
+									<p class='updatenum'>更新至 <a href="###"><span>8话</span></a></p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item clearfix">
+								<a href="###"><img src="img/index/funju01.jpg@72w_72h.jpg" alt=""></a>
+								<div class="iteminfo">
+									<a href="###">
+										<p>不要输！！恶之军团！</p>
+									</a>
+									<p class='updatenum'>更新至 <a href="###"><span>8话</span></a></p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item clearfix">
+								<a href="###"><img src="img/index/funju03.jpg@72w_72h.jpg" alt=""></a>
+								<div class="iteminfo">
+									<a href="###">
+										<p>不要输！！恶之军团！</p>
+									</a>
+									<p class='updatenum'>更新至 <a href="###"><span>8话</span></a></p>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<ul class='clearfix'>
+						<li>
+							<div class="item clearfix">
+								<a href="###"><img src="img/index/funju02.jpg@72w_72h.jpg" alt=""></a>
+								<div class="iteminfo">
+									<a href="###">
+										<p>不要输！！恶之军团！</p>
+									</a>
+									<p class='updatenum'>更新至 <a href="###"><span>8话</span></a></p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item clearfix">
+								<a href="###"><img src="img/index/funju01.jpg@72w_72h.jpg" alt=""></a>
+								<div class="iteminfo">
+									<a href="###">
+										<p>不要输！！恶之军团！</p>
+									</a>
+									<p class='updatenum'>更新至 <a href="###"><span>8话</span></a></p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item clearfix">
+								<a href="###"><img src="img/index/funju03.jpg@72w_72h.jpg" alt=""></a>
+								<div class="iteminfo">
+									<a href="###">
+										<p>不要输！！恶之军团！</p>
+									</a>
+									<p class='updatenum'>更新至 <a href="###"><span>8话</span></a></p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item clearfix">
+								<a href="###"><img src="img/index/funju04.jpg@72w_72h.jpg" alt=""></a>
+								<div class="iteminfo">
+									<a href="###">
+										<p>不要输！！恶之军团！</p>
+									</a>
+									<p class='updatenum'>更新至 <a href="###"><span>8话</span></a></p>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<ul class='clearfix'>
+						<li>
+							<div class="item clearfix">
+								<a href="###"><img src="img/index/funju01.jpg@72w_72h.jpg" alt=""></a>
+								<div class="iteminfo">
+									<a href="###">
+										<p>不要输！！恶之军团！</p>
+									</a>
+									<p class='updatenum'>更新至 <a href="###"><span>8话</span></a></p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item clearfix">
+								<a href="###"><img src="img/index/funju02.jpg@72w_72h.jpg" alt=""></a>
+								<div class="iteminfo">
+									<a href="###">
+										<p>不要输！！恶之军团！</p>
+									</a>
+									<p class='updatenum'>更新至 <a href="###"><span>8话</span></a></p>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<ul class='clearfix'>
+						<li>
+							<div class="item clearfix">
+								<a href="###"><img src="img/index/funju03.jpg@72w_72h.jpg" alt=""></a>
+								<div class="iteminfo">
+									<a href="###">
+										<p>不要输！！恶之军团！</p>
+									</a>
+									<p class='updatenum'>更新至 <a href="###"><span>8话</span></a></p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item clearfix">
+								<a href="###"><img src="img/index/funju04.jpg@72w_72h.jpg" alt=""></a>
+								<div class="iteminfo">
+									<a href="###">
+										<p>不要输！！恶之军团！</p>
+									</a>
+									<p class='updatenum'>更新至 <a href="###"><span>8话</span></a></p>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<aside class="fun_rank">	
+				<div class="funrank_title clearfix">
+					<div class="left">排行</div>
+					<div class="right">
+						<div class="right_con" id='fr_RightCon'>
+							<span classs='txt'>三日</span>
+							<i class='arrow'></i>
+							<ul class='list'>
+								<li class='hide'>三日</li>
+								<li>一周</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="funrank_con">
+					<ul class='clearfix'>
+						<li><span>1</span><a href="###"><b>博人传 火影忍者新时代</b> <em>更新至第7话</em></a></li>
+						<li><span>2</span><a href="###"><b>从零开始的魔法书</b> <em>更新至第6话</em></a></li>
+						<li><span>3</span><a href="###"><b>夏目友人帐 陆</b> <em>更新至第6话</em></a></li>
+						<li><span>4</span><a href="###"><b>埃罗芒阿老师</b> <em>更新至第6话</em></a></li>
+						<li><span>5</span><a href="###"><b>王室教师海涅</b> <em>更新至第7话</em></a></li>
+						<li><span>6</span><a href="###"><b>怪怪守护神</b> <em>更新至第7话</em></a></li>
+						<li><span>7</span><a href="###"><b>小魔女学园 TV版</b> <em>更新至第19话</em></a></li>
+						<li><span>8</span><a href="###"><b>爱丽丝与藏六</b> <em>更新至第6话</em></a></li>
+						<li><span>9</span><a href="###"><b>Re:CREATORS</b> <em>更新至第6话</em></a></li>
+						<li><span>10</span><a href="###"><b>世界黑暗图鉴世界黑暗图鉴</b> <em>更新至第7话</em></a></li>
+					</ul>
+				</div>
+				<div class="funrank_more"><a href="###">查看更多&gt;</a></div>
+			</aside>
+		</div>
+	</section>
+	
+	<!-- footer底部 -->
+	<footer>
+		<div class="foot_top clearfix">
+			<div class="bilibili">
+				<p>bilibili</p>
+				<div class="about clearfix">
+					<ul>
+						<li><a href="###">关于我们</a></li>
+						<li><a href="###">联系我们</a></li>
+					</ul>
+					<ul>
+						<li><a href="###">友情链接</a></li>
+						<li><a href="###">加入我们</a></li>
+					</ul>
+					<ul>
+						<li><a href="###">哔哩哔哩周边</a></li>
+						<li><a href="###">官方认证</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="fast_link">
+				<p>传送门</p>
+				<div class="about clearfix">
+					<ul>
+						<li><a href="###">帮助中心</a></li>
+						<li><a href="###">侵权申诉</a></li>
+						<li><a href="###">用户反馈论坛</a></li>
+					</ul>
+					<ul>
+						<li><a href="###">高级弹幕</a></li>
+						<li><a href="###">分院帽计划</a></li>
+						<li><a href="###">壁纸站</a></li>
+					</ul>
+					<ul>
+						<li><a href="###">活动专题页</a></li>
+						<li><a href="###">活动中心</a></li>
+						<li><a href="###">名人堂</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="focus clearfix">
+				<a href="###">
+					<dl>
+						<dt class='focus_pic phone'></dt>
+						<dt class='code_pic phone_code'></dt>
+						<dd class='focus_pro'>手机端下载 </dd>
+					</dl>
+				</a>
+				<a href="###">
+					<dl>
+						<dt class='focus_pic sina'></dt>
+						<dt class='code_pic sina_code'></dt>
+						<dd class='focus_pro'>新浪微博</dd>
+					</dl>
+				</a>
+				<a href="###">
+					<dl>
+						<dt class='focus_pic official'></dt>
+						<dt class='code_pic wechat_code'></dt>
+						<dd class='focus_pro'>官方微信</dd>
+					</dl>
+				</a>
+			</div>	 
+		</div>
+		<div class="foot_bottom clearfix">
+			<div class="cooper"><img src="img/index/cooper.png" alt=""></div>
+			<div class="foot_info">
+				<p>广播电视节目制作经营许可证：（沪）字第1248号 | 网络文化经营许可证：沪网文[2013]0480-056号 | 信息网络传播视听节目许可证：0910417 | 互联网ICP备案：沪ICP备13002172号-3 沪ICP证：沪B2-20100043 | 违法不良信息举报邮箱：help@bilibili.com | 违法不良信息举报电话：4000233233转3</p>
+				<p>网上有害信息举报专区： <a href="###">中国互联网违法和不良信息举报中心</a> |  <a href="###">上海互联网举报中心</a> | <a href="###">12318 全国文化市场举报网站</a></p>
+			</div>
+		</div>
+	</footer>
+
+	<!-- 侧边导航条 -->
+	<div class="sidemenu_bar" id='sidemenuBar'>
+		<div class="bar_list" id='barList'>
+			<ul>
+				<li><a href="#mainav_section" class='on'>主导航</a></li>
+				<li><a href="#pro_section">推广</a></li>
+				<li><a href="#live_section">直播</a></li>
+				<li><a href="#cart_section">动画</a></li>
+				<li><a href="#fun_section">番剧</a></li>
+			</ul>
+		</div>
+		<div class="bar_gotop">
+			<div class="b_line"></div>
+			<div class="top_arrow" id='topArrow'></div>
+		</div>
+	</div>
+
+	<script src='js/jquery-3.1.1.min.js'></script>
+	<script src='js/index.js'></script>
+</body>
+</html>

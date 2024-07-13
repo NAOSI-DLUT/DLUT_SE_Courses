@@ -1,0 +1,27 @@
+:root {
+  --space-xxs: 8px;
+  --space-xs: 12px;
+  --space-sm: 14px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-xxl: 48px;
+
+  --background: #fcfdff;
+  --primary-color: #5085e8;
+  --grey-color: #abc1d8;
+  --red-color: #ea0909;
+  --green-color: #0ac06c;
+
+  --border-color: #eaeafa;
+
+  --hover-button-backgrond-color: rgba(0, 0, 0, 0.03);
+
+  --card-shadow-color: rgba(190, 210, 237, 0.5);
+
+  --border-radius: 25px;
+}
+
+:root .dark-theme {
+  /* TODO */
+}

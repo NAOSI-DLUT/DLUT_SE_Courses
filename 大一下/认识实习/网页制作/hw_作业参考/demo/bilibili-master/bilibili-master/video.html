@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>见证者（The Witness）</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/video.css">
+</head>
+<body>
+	<!-- 切换用&&户遮罩层 -->
+	<div class="switch_mask" id='switchMask'></div>
+	<div class="switch_dialog" id='dialog'>
+		<div class="dialog_title" id='dialog_bar' onselectstart="return false">登录</div>
+		<form action="" class="dialog_form">
+			<div class='input1'>
+				<input type="text" placeholder='你的手机号/邮箱' id='textInput' autofocus>
+				<p class='usercheck' id='userCheck'></p>
+			</div>
+			<div class='input2'>
+				<input type="password" placeholder='密码' id='pswdInput'>
+				<p class='pswdcheck' id='pswdCheck'></p>
+			</div>
+			<div class="input3">
+				<a href="###">忘记密码？&gt;</a>
+			</div>
+			<div class="input4">
+				<input type="text" placeholder='验证码'>
+				<img src="img/index/captcha.jpg" alt="点击刷新">
+				<a href="###">换一张</a>
+			</div>
+			<div class="input5">
+				<label><input type="checkbox"> 记住我</label>
+				<span>不是自己的电脑上不要勾选此项</span>
+			</div>
+			<div class="input6">
+				<input type="button" value='登录' id='login'>
+				<input type="button" value='注册'>
+			</div>
+			<div class="input7">
+				<a href="###">微博账号登录</a>
+				<a href="###">QQ账号登录</a>
+			</div>
+		</form>
+	</div>
+	<!-- header顶部 -->
+	<header class='clearfix'>
+		<div class='top_nav'>
+			<div  class='top_nav_con clearfix'>
+				<ul class='left_nav'>
+					<li><a href="index.html">主站</a></li>
+					<li><a href="paint-friend.html">画友</a></li>
+					<li><a href="game.html" target='_blank'>游戏中心</a></li>
+					<li><a href="video.html">直播</a></li>
+					<li><a href="shop.html">周边</a></li>
+					<li><a href="###">移动端</a></li>
+				</ul>
+				
+				<ul class='right_nav'>
+					<li><a href="###">消息</a></li>
+					<li><a href="###">动态</a></li>
+					<li><a href="###">收藏夹</a></li>
+					<li><a href="###">历史</a></li>
+					<li class='tgao_li'>
+						<a href="###" class='tgao'>投稿</a>
+						<ul class='tgao_info'>
+							<li><a href="###"><i class='i1'></i><span>视频投稿</span></a></li>
+							<li><a href="###"><i class='i2'></i><span>投稿管理</span></a></li>
+							<li><a href="###"><i class='i3'></i><span>创作中心</span></a></li>
+						</ul>
+					</li>
+				</ul>
+
+				<div class="user">
+					<a href="###"  class='user_img'></a>
+					<div class="info_box" id='infoBox'>
+						<div class="user_info">
+							<div class="info_top">
+								<p class='username'>Tracy_腾</p>
+								<p class='userdefaure clearfix'>
+									<span class='de_l'>
+										<a href="###" title='硬币'><b>34</b></a>
+										<a href="###" title='B币'><b>0</b></a>
+									</span>
+									<span class='de_r'>
+										<a href="###" class='e_link'><span class='email'>前去绑定邮箱</span><i class='email_i'><em class='email_em'></em></i></a>
+										<a href="###" class='p_link'><span class='phone'>前去绑定手机</span><i><em></em></i></a>
+									</span>
+								</p>
+								<p class='userlevel clearfix'>
+									<span class='levelbox clearfix'>
+										<i>等级</i>
+										<a href="###" id='level_link'>
+											<em class='level_num'></em>
+											<em class='level_line'></em>
+										</a>
+									</span>
+									<span class='ex'><b>0</b>/1500</span>
+									<div class="level_info" id='levelInfo'>
+										<h2>作为<strong>LV2</strong>, 你可以：</h2>
+										<ul>
+											<li>1、发射个性弹幕（彩色、高级）</li>
+											<li>2、参与视频互动（评论）</li>
+											<li>3、投稿成为偶像 </li>
+										</ul>
+										<p><a href="###">会员等级相关说明 &gt;</a></p>
+										<i><em></em></i>
+									</div>
+								</p>
+							</div>
+							<div class="info_mid">
+							<ul class='clearfix'>
+								<li><a href="###">个人中心</a></li>	
+								<li><a href="###">投稿管理</a></li>
+								<li><a href="###">B币钱包</a></li>	
+								<li><a href="###">直播中心</a></li>
+							</ul>
+							</div>
+						</div>
+						<div class="user_out"><a href="###">退出</a></div>
+					</div>
+				</div>
+
+				<div class="switch_user" id='switchUser' >
+					<a href="###">点我切换用户</a>
+				</div>
+			</div>
+		</div>
+		<div class="top_search">
+			<a href="###" class='rank'>排行榜</a>
+			<a href="###" class='input_border'>
+				<input type="text" name='txt' placeholder='少男少女，不传火吗？' id='inputWp'>
+				<button class='search_btn' type='submit'></button>
+			</a>
+			<div class="history_search" id='historySearch'>
+				<div class="history_title">历史搜索</div>
+				<ul>
+					<!-- <li><a href="###">女流66</a></li> -->
+					<!-- <li><a href="###">陈一发儿</a></li> -->
+					<!-- <li><a href="###">大司马</a></li> -->
+				</ul>
+			</div>
+		</div>
+		<div class="top_banner"><a href="###"><img src="img/index/logo.png" alt="哔哩哔哩"></a></div>
+	</header>
+
+	<!-- nav主导航块-->
+	<section class="main_con" id='mainCon'>
+		<div class='main_nav' id='mainav_section'>
+			<div class='nav_top clearfix'>
+				<div class="top_lf">
+					<ul class='clearfix'>
+						<li><a href="###"><em></em>首页</a></li>
+						<li>
+							<a href="###"><span>999+</span>动画</a>
+							<ul class='list'>
+								<li><a href="###">连载动画</a></li>
+								<li><a href="###">完结动画</a></li>
+								<li><a href="###">资讯</a></li>
+								<li><a href="###">官方延伸</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="###"><span>99</span>番剧</a>
+							<ul class='list'>
+								<li><a href="###">连载动画</a></li>
+								<li><a href="###">完结动画</a></li>
+								<li><a href="###">资讯</a></li>
+								<li><a href="###">官方延伸</a></li>
+							</ul>
+						</li>
+						<li><a href="###"><span>200</span>国创</a></li>
+						<li><a href="###"><span>300</span>音乐</a></li>
+						<li><a href="###"><span>400</span>舞蹈</a></li>
+						<li class='on'><a href="###"><span>999+</span>游戏</a></li>
+						<li><a href="###"><span>99</span>科技</a></li>
+						<li><a href="###"><span>10</span>生活</a></li>
+						<li><a href="###"><span>100</span>鬼畜</a></li>
+						<li><a href="###"><span>130</span>时尚</a></li>
+						<li><a href="###"><span>100</span>广告</a></li>
+						<li><a href="###"><span>770</span>娱乐</a></li>
+						<li><a href="###"><span>95</span>影视</a></li>
+					</ul>
+				</div>
+				<div class="top_rt">
+					<ol class='clearfix'>
+						<li>
+							<a href="###"><i class='i_squre'></i>广场</a>
+							<div class="activity">
+								<div class='con_left'>
+									<ul>
+										<li><a href="###"><em class='a'></em>活动中心</a></li>
+										<li><a href="###"><em class='g'></em>游戏中心</a></li>
+										<li><a href="###"><em class='n'></em>新闻中心</a></li>
+										<li><a href="###"><em class='p'></em>画友</a></li>
+										<li><a href="###"><em class='m'></em>芒果TV</a></li>
+									</ul>
+								</div>
+								<div class='con_right'>
+									<a href="###"><img src="img/index/blue.jpg@.webp" alt="bilibili活动" title='bilibili活动'></a>
+									<a href="###"><img src="img/index/red.jpg@.webp" alt="bilibili话题" title='bilibili话题'></a>
+								</div>
+							</div>
+						</li>
+						<li><a href="###"><i class='i_anchor'></i>直播</a></li>
+						<li><a href="###"><i class='i_balckhouse'></i>小黑屋</a></li>
+					</ol>
+					<a href="###"><img src="img/video/img.gif" alt="图片gif" title='日更一图'></a>
+				</div>
+			</div>
+			<div class='nav_bottom clearfix'>
+				<div class='bottom_lf'>
+					<div class='info'>
+						<h2>见证者（The Witness）</h2>
+						<p class='bread_nav'>
+							<span>
+								<a href="index.html">主页</a> &gt;
+								<a href="###">游戏</a> &gt; 
+								<a href="###">单机游戏</a> 
+							</span>
+							<span>2017-06-03 01:05 </span>
+						</p>
+						<p class='video_info'>
+							<span class='watch_num' title='总播放数'>544</span>
+							<span class='danmu_num' title='总弹幕数'>42</span>
+							<span class='bi_num' title='投币个数'><i></i>硬币 10</span>
+							<span class='collect_num' title='收藏人数'><i></i>收藏 5</span>
+						</p>
+					</div>
+					<div class='ad'><a href="###"><img src="img/video/ad.jpg@.webp" alt="广告"></a></div>
+				</div>
+				<div class='bottom_rt'>
+					<div class="author_img">
+						<a href="###">
+							<img src="img/video/nvliu_face.jpg_68x68.jpg">
+						</a>
+					</div>
+					<span>轮播中</span>
+					<div class="author_info">
+						<h4>录像小屋</h4>
+						<p id='authorIntro'>
+							<b id='txtIntro'>我不是女流，我只是女流直播录像的搬运工。天然的弱碱性心灵砒霜，关爱女流从我做起!最新最好玩的小游戏，就在女流66！</b>
+							<a href="###" class='on_btn' style='display: none;'>展开</a>
+						</p>
+						<span>投稿：335</span>
+						<span>粉丝：2.2万</span>
+						<a href="###" class='focus'> + 关注</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- 多part、分享、视频切换 -->
+	<section class='choose'>
+		<div class="item_list clearfix">
+			<ul class='clearfix' id='listUl'>
+				<li><a href="###">1、part1</a></li>
+				<li><a href="###">2、part2</a></li>
+				<li><a href="###">3、part3</a></li>
+				<li><a href="###">4、part4</a></li>
+				<li><a href="###">5、part5</a></li>
+				<li><a href="###">6、part6</a></li>
+				<li><a href="###">7、part7</a></li>
+				<li><a href="###">8、part8</a></li>
+				<li><a href="###">9、part9</a></li>
+				<li><a href="###">10、part10</a></li>
+			</ul>
+			<a href="###" class='show_hide' id='c_btn'>展开</a>
+		</div>
+		<div class="share clearfix" id='shareBox'>
+			<h3>分享</h3>
+			<ul class='clearfix'>
+				<li title="分享到新浪微博"><a href="###" class='weibo'></a></li>
+				<li title="分享到QQ空间"><a href="###" class='qqzone'></a></li>
+				<li title="分享到QQ"><a href="###" class='qq'></a></li>
+				<li title="分享到百度贴吧"><a href="###" class='tieba'></a></li>
+			</ul>
+			<div class="share_link clearfix" id='shareLink'>
+				<div class='urls'>
+					<h4>将视频贴到博客或论坛</h4>
+					<p class='v_url'>
+						<span>视频地址</span>
+						<input type="text" value='https://www.bilibili.com/video/av11025532/' readonly>
+						<button>复制</button>
+					</p>
+					<p class='f_url'>
+						<span>flash地址</span>
+						<input type="text" value='static.hdslb.com/miniloader.swf?aid=11025532&page=1' readonly>
+						<button>复制</button>
+					</p>
+					<p class='h_url'>
+						<span>html地址</span>
+						<input type="text" value='<embed height="415" width="544" quality="high" allowfullscreen="true" type="application/x-shockwave-flash" src="//static.hdslb.com/miniloader.swf" flashvars="aid=11025532&page=1" pluginspage="//www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash"></embed>' readonly>
+						<button>复制</button>
+					</p>
+				</div>
+				<i class='line'></i>
+				<div class='code'>
+					<h4>微信扫一扫分享</h4>
+					<i class='code_img'></i>
+				</div>
+			</div>
+		</div>
+		<div class="another clearfix" id='anotherBox'>
+			<h2>看过该视频的还喜欢</h2>
+			<div class="another_list clearfix" id='anotherList'>
+				<div class='avideo full_op clearfix'>
+					<a href="###" class='clearfix'>
+						<dl>
+							<dt><img src="img/video/name01.jpg" alt=""></dt>
+							<dd>【你的名字。】动画电影原声带)【OST】官方专辑CD公售版</dd>
+						</dl>
+					</a>
+					<a href="###">
+						<dl>
+							<dt><img src="img/video/name02.jpg" alt=""></dt>
+							<dd>你的名字</dd>
+						</dl>
+					</a>
+					<a href="###">
+						<dl>
+							<dt><img src="img/video/name03.jpg" alt=""></dt>
+							<dd>【剧场版】你的名字。热映篇 TVCM</dd>
+						</dl>
+					</a>
+					<a href="###">
+						<dl>
+							<dt><img src="img/video/name04.jpg" alt=""></dt>
+							<dd>【木吉他】超好听！你的名字ost黄昏之时【奏有】</dd>
+						</dl>
+					</a>
+				</div>
+				<div class='avideo clearfix'>
+					<a href="###">
+						<dl>
+							<dt><img src="img/video/name05.jpg" alt=""></dt>
+							<dd>【1080P】十字路口【熟肉】新海诚</dd>
+						</dl>
+					</a>
+					<a href="###">
+						<dl>
+							<dt><img src="img/video/name06.jpg" alt=""></dt>
+							<dd>【你的名字】 后来</dd>
+						</dl>
+					</a>
+					<a href="###">
+						<dl>
+							<dt><img src="img/video/name07.jpg" alt=""></dt>
+							<dd>1987《红楼梦》陈力现场版《紫菱洲歌》《叹香菱》</dd>
+						</dl>
+					</a>
+					<a href="###">
+						<dl>
+							<dt><img src="img/video/name08.jpg" alt=""></dt>
+							<dd>你的名字 黄昏之时</dd>
+						</dl>
+					</a>
+				</div>
+				<div class='avideo clearfix'>
+					<a href="###">
+						<dl>
+							<dt><img src="img/video/name09.jpg" alt=""></dt>
+							<dd>实习老师粉笔画让网友跪服 神还原《你的名字》</dd>
+						</dl>
+					</a>
+					<a href="###">
+						<dl>
+							<dt><img src="img/video/name10.jpg" alt=""></dt>
+							<dd>【你的名字非洲版】你叫什么？我的名字是Uvuvwevwevwe Onyetenyevwe Ugwemuhwem Osas</dd>
+						</dl>
+					</a>
+					<a href="###">
+						<dl>
+							<dt><img src="img/video/name11.jpg" alt=""></dt>
+							<dd>【RADWIMPS】 洗脳 MV (1080P)</dd>
+						</dl>
+					</a>
+					<a href="###">
+						<dl>
+							<dt><img src="img/video/name12.jpg" alt=""></dt>
+							<dd>【YUKIri】前前前世【《你的名字》主题曲】</dd>
+						</dl>
+					</a>
+				</div>
+				<a href="###" class='prev'>&lt;</a>
+				<a href="###" class='next'>&gt;</a>
+			</div>
+
+		</div>
+	</section>
+	
+	<!-- 评论点赞回复 -->
+	<section class='comment'>
+		<div class='com_title'><span>全部评论</span></div>
+		<div class='com_self clearfix'>
+			<div class="my_face"><img src="img/index/userimg.jpg"></div>
+			<div class="com_enter" id='comEnter'>
+				<textarea class='com_area' id='comArea' placeholder="请自觉遵守互联网相关的政策法规，严禁发布色情、暴力、反动的言论。"></textarea>
+				<button class='enter_btn' id='enterBtn'>发表<br>评论</button>
+			</div>
+		</div>
+		<div class='com_content' id='comContent'>
+			<div class="user_comment clearfix">
+				<div class="user_face"><a href="###"><img src="img/video/userface.gif_52x52.gif"></a></div>
+				<div class="user_contxt">
+					<div class="user_txt">
+						<h5 class='userid'><a href="###">zuo死菌</a></h5>
+						<p class='user_maincom'>up主彻底放弃了，根本删不完，越删越多，祝好人们心想事成</p>
+						<p class='operation'>
+							<span class='floor'>#3</span>
+							<span class='time'>2017-04-11 13:14</span>
+							<span><a href='###' class='like' value='409'>(409)</a></span>
+							<span><a href='###' class='unlike'></a></span>
+							<span><a href="###" class='reply main_reply'>参与回复</a></span>	 
+							<span><a href="###" class='report'>举报</a></span>	
+							<span><a href="###" class='backlist'>加入黑名单</a></span>	 
+						</p>
+					</div>
+					<div class="reply_com">
+						<ul id='replyUl'>
+							<li class='clearfix other'>
+								<div class="reply_face"><a href="###"><img src="img/video/uf01.gif_52x52.gif"></a></div>
+								<div class="reply_con">
+									<p class='reply_txt'>
+										<a href="###" class='userid'>塞班机：</a>
+										求第10首的名字,辛苦了！！！
+									</p>
+									<p class='operation'>
+										<span class='replytime'>2016-11-11 10:21</span>
+										<span><a href="###" class='like' value='0'>(0)</a></span>
+										<span><a href="###" class='reply minor_reply'>回复</a></span>
+										<span><a href="###" class='report'>举报</a></span>	
+										<span><a href="###" class='backlist'>加入黑名单</a></span>
+									</p>
+								</div>
+							</li>
+							<li class='clearfix other'>
+								<div class="reply_face"><a href="###"><img src="img/video/uface01.jpg_52x52.jpg"></a></div>
+								<div class="reply_con">
+									<p class='reply_txt'>
+										<a href="###" class='userid'>诺尔瞎：</a>
+										这次听完后，不像以往，若有所思，而是有一个疑问，小野寺律是谁？？这次听完后，不像以往，若有所思，而是有一个疑问，小野寺律是谁？？这次听完后，不像以往，若有所思，而是有一个疑问，小野寺律是谁？？这次听完后，不像以往，若有所思，而是有一个疑问，小野寺律是谁？？这次听完后，不像以往，若有所思，而是有一个疑问，小野寺律是谁？？这次听完后，不像以往，若有所思，而是有一个疑问，小野寺律是谁？？
+									</p>
+									<p class='operation'>
+										<span class='replytime'>2016-11-11 10:21</span>
+										<span><a href="###" class='like' value='0'>(0)</a></span>
+										<span><a href="###" class='reply minor_reply'>回复</a></span>
+										<span><a href="###" class='report'>举报</a></span>	
+										<span><a href="###" class='backlist'>加入黑名单</a></span>
+									</p>
+								</div>
+							</li>
+							<li class='clearfix other'>
+								<div class="reply_face"><a href="###"><img src="img/video/uface02.jpg_52x52.jpg"></a></div>
+								<div class="reply_con">
+									<p class='reply_txt'>
+										<a href="###" class='userid'>穿正装的山羊：</a>
+										这是半年前的视频呀！！！
+									</p>
+									<p class='operation'>
+										<span class='replytime'>2016-11-11 10:21</span>
+										<span><a href="###" class='like' value='0'>(0)</a></span>
+										<span><a href="###" class='reply minor_reply'>回复</a></span>
+										<span><a href="###" class='report'>举报</a></span>	
+										<span><a href="###" class='backlist'>加入黑名单</a></span>
+									</p>
+								</div>
+							</li>
+							<li class='clearfix other'>
+								<div class="reply_face"><a href="###"><img src="img/video/uface03.jpg_52x52.jpg"></a></div>
+								<div class="reply_con">
+									<p class='reply_txt'>
+										<a href="###" class='userid'>穿正装的山羊：</a>
+										这是半年前的视频呀！！！
+									</p>
+									<p class='operation'>
+										<span class='replytime'>2016-11-11 10:21</span>
+										<span><a href="###" class='like' value='0'>(0)</a></span>
+										<span><a href="###" class='reply minor_reply'>回复</a></span>
+										<span><a href="###" class='report'>举报</a></span>	
+										<span><a href="###" class='backlist'>加入黑名单</a></span>
+									</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="user_comment clearfix">
+				<div class="user_face"><a href="###"><img src="img/video/uf01.gif_52x52.gif"></a></div>
+				<div class="user_contxt">
+					<div class="user_txt">
+						<h5 class='userid'><a href="###">修仙教教主</a></h5>
+						<p class='user_maincom'>up主彻底放弃了，根本删不完，越删越多，祝好人们心想事成</p>
+						<p class='operation'>
+							<span class='floor'>#2</span>
+							<span class='time'>2017-04-11 13:14</span>
+							<span><a href="###" class='like' value='409'>(409)</a></span>
+							<span><a href="###" class='unlike'></a></span>
+							<span><a href="###" class='reply main_reply'>参与回复</a></span>	 
+							<span><a href="###" class='report '>举报</a></span>	
+							<span><a href="###" class='backlist '>加入黑名单</a></span>	 
+						</p>
+					</div>
+					<div class="reply_com">
+						<ul>
+							<li class='clearfix other'>
+								<div class="reply_face"><a href="###"><img src="img/video/uface01.jpg_52x52.jpg"></a></div>
+								<div class="reply_con">
+									<p class='reply_txt'>
+										<a href="###" class='userid'>塞班机：</a>
+										求第10首的名字,辛苦了！！！
+									</p>
+									<p class='operation'>
+										<span class='replytime'>2016-11-11 10:21</span>
+										<span><a href="###" class='like' value='19'>(19)</a></span>
+										<span><a href="###" class='reply minor_reply'>回复</a></span>
+										<span><a href="###" class='report'>举报</a></span>	
+										<span><a href="###" class='backlist'>加入黑名单</a></span>
+									</p>
+								</div>
+							</li>
+							<li class='clearfix other'>
+								<div class="reply_face"><a href="###"><img src="img/video/uface03.jpg_52x52.jpg"></a></div>
+								<div class="reply_con">
+									<p class='reply_txt'>
+										<a href="###" class='userid'>诺尔瞎：</a>
+										这次听完后，不像以往，若有所思，而是有一个疑问，小野寺律是谁？？
+									</p>
+									<p class='operation'>
+										<span class='replytime'>2016-11-11 10:21</span>
+										<span><a href="###" class='like' value='12'>(12)</a></span>
+										<span><a href="###" class='reply minor_reply'>回复</a></span>
+										<span><a href="###" class='report'>举报</a></span>	
+										<span><a href="###" class='backlist'>加入黑名单</a></span>
+									</p>
+								</div>
+							</li>
+							<li class='clearfix other'>
+								<div class="reply_face"><a href="###"><img src="img/video/uface01.jpg_52x52.jpg"></a></div>
+								<div class="reply_con">
+									<p class='reply_txt'>
+										<a href="###" class='userid'>穿正装的山羊：</a>
+										这是半年前的视频呀！！！
+									</p>
+									<p class='operation'>
+										<span class='replytime'>2016-11-11 10:21</span>
+										<span><a href="###" class='like' value='72'>(72)</a></span>
+										<span><a href="###" class='reply minor_reply'>回复</a></span>
+										<span><a href="###" class='report'>举报</a></span>	
+										<span><a href="###" class='backlist'>加入黑名单</a></span>
+									</p>
+								</div>
+							</li>
+							<li class='clearfix other'>
+								<div class="reply_face"><a href="###"><img src="img/video/uface02.jpg_52x52.jpg"></a></div>
+								<div class="reply_con">
+									<p class='reply_txt'>
+										<a href="###" class='userid'>穿正装的山羊：</a>
+										这是半年前的视频呀！！！
+									</p>
+									<p class='operation'>
+										<span class='replytime'>2016-11-11 10:21</span>
+										<span><a href="###" class='like' value='72'>(72)</a></span>
+										<span><a href="###" class='reply minor_reply'>回复</a></span>
+										<span><a href="###" class='report'>举报</a></span>	
+										<span><a href="###" class='backlist'>加入黑名单</a></span>
+									</p>
+								</div>
+							</li>
+							<li class='clearfix other'>
+								<div class="reply_face"><a href="###"><img src="img/video/uface02.jpg_52x52.jpg"></a></div>
+								<div class="reply_con">
+									<p class='reply_txt'>
+										<a href="###" class='userid'>穿正装的山羊：</a>
+										这是半年前的视频呀！！！
+									</p>
+									<p class='operation'>
+										<span class='replytime'>2016-11-11 10:21</span>
+										<span><a href="###" class='like' value='72'>(72)</a></span>
+										<span><a href="###" class='reply minor_reply'>回复</a></span>
+										<span><a href="###" class='report'>举报</a></span>	
+										<span><a href="###" class='backlist'>加入黑名单</a></span>
+									</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="user_comment clearfix">
+				<div class="user_face"><a href="###"><img src="img/video/uf01.gif_52x52.gif"></a></div>
+				<div class="user_contxt">
+					<div class="user_txt">
+						<h5 class='userid'><a href="###">马大爷让我毕业吧</a></h5>
+						<p class='user_maincom'>看完之后可以默默离场装作不小心撞到人，然后一脸惊奇盯着他问：可以碰到我！？ 然后愣一下，一脸焦急的向外冲：他们可以碰到我也就是说，你……你还在这个时间段里！</p>
+						<p class='operation'>
+							<span class='floor'>#1</span>
+							<span class='time'>2017-04-11 13:14</span>
+							<span><a href="###" class='like' value='409'>(409)</a></span>
+							<span><a href="###" class='unlike'></a></span>
+							<span><a href="###" class='reply main_reply'>参与回复</a></span>	 
+							<span><a href="###" class='report '>举报</a></span>	
+							<span><a href="###" class='backlist '>加入黑名单</a></span>	 
+						</p>
+					</div>
+					<div class="reply_com">
+						<ul>
+							<li class='clearfix other'>
+								<div class="reply_face"><a href="###"><img src="img/video/uface03.jpg_52x52.jpg"></a></div>
+								<div class="reply_con">
+									<p class='reply_txt'>
+										<a href="###" class='userid'>穿正装的山羊：</a>
+										这是半年前的视频呀！！！
+									</p>
+									<p class='operation'>
+										<span class='replytime'>2016-11-11 10:21</span>
+										<span><a href="###" class='like' value='72'>(72)</a></span>
+										<span><a href="###" class='reply minor_reply'>回复</a></span>
+										<span><a href="###" class='report'>举报</a></span>	
+										<span><a href="###" class='backlist'>加入黑名单</a></span>
+									</p>
+								</div>
+							</li>
+							<li class='clearfix other'>
+								<div class="reply_face"><a href="###"><img src="img/video/uface01.jpg_52x52.jpg"></a></div>
+								<div class="reply_con">
+									<p class='reply_txt'>
+										<a href="###" class='userid'>穿正装的山羊：</a>
+										这是半年前的视频呀！！！
+									</p>
+									<p class='operation'>
+										<span class='replytime'>2016-11-11 10:21</span>
+										<span><a href="###" class='like' value='72'>(72)</a></span>
+										<span><a href="###" class='reply minor_reply'>回复</a></span>
+										<span><a href="###" class='report'>举报</a></span>	
+										<span><a href="###" class='backlist'>加入黑名单</a></span>
+									</p>
+								</div>
+							</li>
+							<li class='clearfix other'>
+								<div class="reply_face"><a href="###"><img src="img/video/uface02.jpg_52x52.jpg"></a></div>
+								<div class="reply_con">
+									<p class='reply_txt'>
+										<a href="###" class='userid'>穿正装的山羊：</a>
+										这是半年前的视频呀！！！
+									</p>
+									<p class='operation'>
+										<span class='replytime'>2016-11-11 10:21</span>
+										<span><a href="###" class='like' value='72'>(72)</a></span>
+										<span><a href="###" class='reply minor_reply'>回复</a></span>
+										<span><a href="###" class='report'>举报</a></span>	
+										<span><a href="###" class='backlist'>加入黑名单</a></span>
+									</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- footer底部 -->
+	<footer>
+		<div class="foot_top clearfix">
+			<div class="bilibili">
+				<p>bilibili</p>
+				<div class="about clearfix">
+					<ul>
+						<li><a href="###">关于我们</a></li>
+						<li><a href="###">联系我们</a></li>
+					</ul>
+					<ul>
+						<li><a href="###">友情链接</a></li>
+						<li><a href="###">加入我们</a></li>
+					</ul>
+					<ul>
+						<li><a href="###">哔哩哔哩周边</a></li>
+						<li><a href="###">官方认证</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="fast_link">
+				<p>传送门</p>
+				<div class="about clearfix">
+					<ul>
+						<li><a href="###">帮助中心</a></li>
+						<li><a href="###">侵权申诉</a></li>
+						<li><a href="###">用户反馈论坛</a></li>
+					</ul>
+					<ul>
+						<li><a href="###">高级弹幕</a></li>
+						<li><a href="###">分院帽计划</a></li>
+						<li><a href="###">壁纸站</a></li>
+					</ul>
+					<ul>
+						<li><a href="###">活动专题页</a></li>
+						<li><a href="###">活动中心</a></li>
+						<li><a href="###">名人堂</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="focus clearfix">
+				<a href="###">
+					<dl>
+						<dt class='focus_pic phone'></dt>
+						<dt class='code_pic phone_code'></dt>
+						<dd class='focus_pro'>手机端下载 </dd>
+					</dl>
+				</a>
+				<a href="###">
+					<dl>
+						<dt class='focus_pic sina'></dt>
+						<dt class='code_pic sina_code'></dt>
+						<dd class='focus_pro'>新浪微博</dd>
+					</dl>
+				</a>
+				<a href="###">
+					<dl>
+						<dt class='focus_pic official'></dt>
+						<dt class='code_pic wechat_code'></dt>
+						<dd class='focus_pro'>官方微信</dd>
+					</dl>
+				</a>
+			</div>	 
+		</div>
+		<div class="foot_bottom clearfix">
+			<div class="cooper"><img src="img/index/cooper.png" alt=""></div>
+			<div class="foot_info">
+				<p>广播电视节目制作经营许可证：（沪）字第1248号 | 网络文化经营许可证：沪网文[2013]0480-056号 | 信息网络传播视听节目许可证：0910417 | 互联网ICP备案：沪ICP备13002172号-3 沪ICP证：沪B2-20100043 | 违法不良信息举报邮箱：help@bilibili.com | 违法不良信息举报电话：4000233233转3</p>
+				<p>网上有害信息举报专区： <a href="###">中国互联网违法和不良信息举报中心</a> |  <a href="###">上海互联网举报中心</a> | <a href="###">12318 全国文化市场举报网站</a></p>
+			</div>
+		</div>
+	</footer>
+	<!-- 返回顶部 -->
+	<div class="top_arrow" id='toTop'></div>
+
+	<script src='js/jquery-3.1.1.min.js'></script>
+	<script src='js/video.js'></script>
+</body>
+</html>
