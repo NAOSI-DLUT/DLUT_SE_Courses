@@ -1,0 +1,233 @@
+          /*遇到的问题，input和button好像有默认的border,设置border:none;之后就正常了*/
+          *{
+		        margin:0px;padding:0px;
+			}
+  
+		  body{
+		        font:12px/1.5 "Microsoft YaHei",tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif;
+		  }
+
+		  a{
+		        text-decoration:none;
+				color: #404040;
+			}
+
+		  a:hover{
+                color:red;		        
+		  }
+
+
+        /*整个页面的布局css*/
+		/*header*/
+		  .header,.footer{
+			  width:100%;
+			  padding:23px;
+		  }
+
+           .headerContainer,.footerContainer{
+		         width:1200px;
+		         margin:0 auto; 
+		   }
+
+            
+		   .headerContainer a.advice{
+		         padding:13px;
+		         float:right;
+		   }
+
+		   .headerContainer a.advice img,.loginbox img{
+		         vertical-align:text-bottom;
+		   }
+
+          /*ad*/
+           .ad{
+		         height:600px;
+		         background:url("../images/ad.jpg") no-repeat -600px 0; 
+		   }
+ 
+           
+          /*登录框css*/
+	      .box{
+				  width:350px;	 
+				  position:absolute;
+				  left:865px;
+				  top:170px;
+				  background:#E8E8E9;
+              
+		    }
+
+		   .container{
+		          width:300px;
+				  margin:0 auto;
+				  
+			}
+
+			.tips1{
+			      width:300px;
+				  padding-top:30px;
+				  font-weight:bold; 
+				  font-size:16px;
+			}
+
+			.form{
+			      width:300px; 
+			}
+
+			.form .userbox{
+			      width:300px;
+				   position:relative;
+			}
+
+			.userbox label{
+			      width:41px;
+				  height:42px;
+			      background:url("../images/user.png");
+				  position:absolute;
+				  left:0px;
+				  top:1px;
+			}
+
+
+			.userbox input#username,.passwdbox input#passwd{
+			     width: 249px;
+				 height: 42px;
+				 margin: 32px 0 0 41px;
+				 padding-left: 10px;
+				 display:block;
+				 border: none;
+			}
+
+			.userbox span{
+				 position: absolute;
+				 left: 51px;
+				 top: 14px;
+				 font-size: 14px;
+				 color: #999;
+			}
+            
+            .form .passwdbox{
+			      width:300px;
+				  position:relative;
+			}
+
+			.passwdbox label{
+			      width:41px;
+				  height:42px;
+			      background:url("../images/password.png");
+				  position:absolute;
+				  left:0px;
+				  top:1px;
+			}
+
+
+			/*.passwdbox input#passwd{
+			      width:300px;
+				  height:42px;
+				  margin-top:32px;
+				  display:block;
+			}*/
+            
+			.form .submitbox{
+			      width:300px;
+			}
+
+			.submitbox button{
+			      width:300px;
+				  height:44px;
+				  margin-top:32px;
+				  font-size:16px;
+				  font-weight:600;
+				  color:#fff;
+				  text-align:center;
+				  letter-spacing:5px;
+				  background:#f40;
+				  border: none;
+				  border-radius: 3.2px;
+			}
+
+
+            
+			.form .loginbox{
+			      width:300px;
+				  margin-top:24px;
+			}
+
+            
+            .loginbox a.sina,.loginbox a.alipay{
+			     margin-right:26px;
+			     display:inline-block;
+				 margin:0;
+				 padding:0;
+				 
+			}
+
+			.forget-register{
+			      width:300px;
+				  padding: 18px 0 40px 0;
+			 }  
+             
+			 .forget-register a.register{
+			     float:right;
+			}
+
+			.forget-register a.forget{
+                 margin-right:12px;
+			     float:right;
+			}
+
+			/*footer*/
+
+           ul.contactCompany{
+			   margin-top:36px;
+			   padding: 12px 0 29px 0;
+			   border-top:1px solid #ddd; 
+			   border-bottom:1px solid #ddd;; 
+		   }
+
+           ul.contactCompany li{
+		       border-right:1px solid #ddd;
+			   padding:0 8px;
+			   list-style:none;
+			   float:left;
+		   }
+
+		   ul.explain{
+                padding: 10px 0px 30px 0;
+		   }
+
+		   ul.explain li{
+			   padding:0 3px;
+			   list-style:none;
+			   float:left;
+		   }
+           
+		   ul.explain li.copy{
+		       padding-left: 23px;
+		   }
+           
+		   ul.admit{
+		     padding-bottom:20px;
+		   }
+
+		   ul.admit li{
+		       border-right:1px solid #ddd;
+			   list-style:none;
+			   float:left;
+		   }
+           
+		   ul.admit li.admit1{
+		      padding-right:10px;
+		   }
+
+		   ul.admit li.admit2{
+		      padding: 0 10px 0 10px;
+		   }
+
+          ul.explain li.copy,ul.admit li{
+		      color:#666;
+		  }
+		
+          
+		  .footer img{
+		      margin-bottom:20px;
+		  }

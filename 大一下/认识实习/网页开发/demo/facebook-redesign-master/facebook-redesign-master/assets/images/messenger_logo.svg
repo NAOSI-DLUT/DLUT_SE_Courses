@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 30">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectángulo_8" data-name="Rectángulo 8" width="30" height="30" transform="translate(1568 103)" fill="none" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Messenger" transform="translate(-1568 -103)" clip-path="url(#clip-path)">
+    <g id="messenger-2" data-name="messenger" transform="translate(1568 103)">
+      <g id="Grupo_10" data-name="Grupo 10">
+        <path id="Trazado_40047" data-name="Trazado 40047" d="M15,0C6.716,0,0,6.217,0,13.888A13.5,13.5,0,0,0,5.589,24.7V30L10.7,27.2a16.132,16.132,0,0,0,4.3.581c8.284,0,15-6.217,15-13.888S23.284,0,15,0Zm1.491,18.7-3.819-4.074L5.218,18.7l8.2-8.7,3.913,4.074L24.69,10Z" fill="#abc1d8"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,628 @@
+.top {
+    height: 47px;
+    width: 100%;
+    background: #0768CA;
+    position: fixed;
+    z-index: 20;
+}
+
+.title {
+    font-size: 29px;
+    color: white;
+    float: left;
+    line-height: 44px;
+    margin: 0 0 12px 198px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.kw {
+    float: left;
+    height: 29px;
+    width: 328px;
+    margin: 6px 0 0 12px;
+    background: #E1EAF2;
+    border: 1px solid #045bb2;
+    border-radius: 4px;
+    outline: 0;
+    font-size: 14px;
+}
+
+.kw:hover {
+    background-color: #FFFFFF;
+}
+
+.kw:active {
+    background-color: #FFFFFF;
+}
+
+.submit {
+    height: 28px;
+    width: 35px;
+    padding: 4px 0 0 0;
+    float: left;
+    background: #0D78E9;
+    margin-top: 6px;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: 0;
+}
+
+.head_middle ul li {
+    float: left;
+    margin-left: 32px;
+    font-size: 15px;
+    line-height: 44px;
+    cursor: auto;
+    display: block;
+}
+
+.head_middle ul li:hover {
+    background-color: #085FB4;
+}
+
+.head_middle ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.head_end {
+    display: inline-block;
+    line-height: 44px;
+}
+
+.head_end .btn {
+    font-size: 15px;
+    background: #0E77E5;
+    color: #FFFFFF;
+    height: 32px;
+    width: 62px;
+    border: none;
+    border: 1px solid #045bb2;
+    border-radius: 4px;
+    margin: 6px 0 0 103px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.head_end .logo {
+    margin: 11px 0 0 30px;
+    cursor: pointer;
+    float: right;
+}
+
+.name {
+    float: right;
+    margin: 3px 0 0 10px;
+    color: white;
+    font-size: 15px;
+}
+
+.content {
+    float: left;
+    margin: 45px 0 0 250px;
+}
+
+.big_logo {
+    margin: 27px 0 0 -55px;
+    border-radius: 4px;
+    float: left;
+    width: 40px;
+    height: 40px;
+}
+
+.HomeEntry-list {
+    float: left;
+}
+
+.HomeEntry-box {
+    margin: 25px 0 0 0;
+    height: 48px;
+    line-height: 48px;
+    background: #fafafa;
+    border: 1px solid #f0f0f0;
+    border-radius: 4px;
+    position: relative;
+}
+
+.HomeEntry-box ul li a {
+    text-decoration: none;
+    color: #6C829F;
+    font-size: 15px;
+    color: #698EBF;
+}
+
+.HomeEntry-box .HomeEntry-list .HomeEntry-item {
+    float: left;
+    padding: 0 25px 0 25px;
+}
+
+.HomeEntry-item i {
+    display: inline-block;
+    vertical-align: middle;
+    padding-top: 5px;
+}
+
+.HomeEntry-box a:hover {
+    color: #259;
+}
+
+.caogao {
+    text-decoration: none;
+    color: #6C829F;
+    font-size: 13px;
+    margin: 0 20px 0 200px;
+}
+
+.new {
+    padding-top: 5px;
+    margin: 35px 0 0 0;
+}
+
+.new .update {
+    float: left;
+    margin-right: 450px;
+    font-weight: bold;
+    font-size: 15px;
+    color: #666666;
+}
+
+.new .update .text_update {
+    margin: -15px 0 0 -30px;
+}
+
+.new .setting {
+    float: left;
+    margin-left: 70px;
+    font-size: 10px;
+    color: #6C829F;
+}
+
+.new .update i {
+    margin-top: -2px;
+    margin-left: -55px;
+}
+
+.new .setting i {
+    margin-top: -2px;
+    float: left;
+}
+
+.divder {
+    width: 650px;
+    border-bottom: 1px solid #ccc;
+    margin: 27px 0 0 -52px;
+}
+
+.message_acount {
+    width: 650px;
+    height: 35px;
+    background: #E5F1FD;
+    margin: 10px 0 0 -52px;
+    border-radius: 5px;
+}
+
+.message_acount:hover {
+    background-color: #DAEDF5;
+    cursor: pointer;
+}
+
+.message_num {
+    line-height: 35px;
+    font-size: 13px;
+    color: #666666;
+    text-align: center;
+}
+
+.peo_info {
+    display: block;
+}
+
+.like_num {
+    width: 40px;
+    height: 23px;
+    margin: 4px 0 0 -55px;
+    background-color: #DAEDF5;
+    color: #6D97CA;
+    border-radius: 4px;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    padding-right: 10px;
+}
+
+.like_num:hover {
+    background-color: #699BD3;
+}
+
+.peo_desc ul li a {
+    text-decoration: none;
+    color: #698EBF;
+}
+
+.peo_desc {
+    margin: -68px 0 0 -2px;
+}
+
+.peo_desc .base_comment {
+    font-size: 13px;
+    color: #999999;
+}
+
+.peo_desc .title_comment {
+    font-weight: bold;
+    font-size: 15px;
+    color: #2255B2;
+    margin-top: 10px;
+}
+
+.peo_desc .name_comment {
+    margin-top: 11px;
+    font-size: 13px;
+    color: #999999;
+}
+
+.peo_desc .name_comment p {
+    float: left;
+    margin-top: 4px;
+}
+
+.peo_desc .name_comment .name {
+    font-weight: bold;
+    font-size: 10px;
+    color: black;
+    padding-right: 10px;
+    float: left;
+}
+
+.comment .peo_desc a:hover {
+    text-decoration: underline;
+    color: #698EBF;
+}
+
+.comment_logo {
+    margin: 15px 0 0 -55px;
+    border-radius: 4px;
+    width: 40px;
+    height: 40px;
+}
+
+.comment_content .content_logo {
+    margin: 10px 10px 0 -300px;
+    border-radius: 4px;
+    float: left;
+}
+
+.comment_content .content_area .show_all {
+    text-decoration: none;
+    color: #698EBF;
+    font-size: 13px;
+    border-radius: 2px;
+}
+
+.comment_content .content_area .show_all:hover {
+    background-color: #DAEDF5;
+}
+
+.content_area {
+    height: 112px;
+    width: 600px;
+    font-size: 13px;
+    padding: 15px 0 0 0;
+}
+
+.content_bottom {
+    font-size: 13px;
+}
+
+.content_bottom ul li {
+    float: left;
+    padding-left: 10px;
+    margin: 10px 0 0 0px;
+}
+
+.content_bottom ul li a {
+    text-decoration: none;
+    color: #999999;
+}
+
+.content_bottom ul li a:hover {
+    color: #698EBF;
+    text-decoration: underline
+}
+
+.content_item i {
+    display: inline-block;
+    vertical-align: middle;
+    padding-top: 5px;
+}
+
+.sprite {
+    background-image: url(../image/sprites.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-answer {
+    width: 21px;
+    height: 19px;
+    background-position: -5px -5px;
+    transition: all 0.6s;
+}
+
+.sprite-answer:hover {
+    background-position: -36px -5px;
+}
+
+.sprite-ask {
+    width: 18px;
+    height: 18px;
+    background-position: -65px -5px;
+    transition: all 0.6s;
+}
+
+.sprite-ask:hover {
+    background-position: -93px -5px;
+}
+
+.sprite-banquan {
+    width: 19px;
+    height: 21px;
+    background-position: -122px -5px;
+}
+
+.sprite-care {
+    width: 21px;
+    height: 19px;
+    background-position: -5px -36px;
+}
+
+.sprite-comment {
+    width: 21px;
+    height: 23px;
+    background-position: -36px -36px;
+}
+
+.sprite-community {
+    width: 17px;
+    height: 23px;
+    background-position: -122px -36px;
+}
+
+.sprite-guanzhu {
+    width: 20px;
+    height: 18px;
+    background-position: -5px -69px;
+    transition: all 0.6s;
+}
+
+.sprite-guanzhu:hover {
+    background-position: -35px -69px;
+}
+
+.sprite-invite {
+    width: 20px;
+    height: 24px;
+    background-position: -61px -69px;
+    transition: all 0.6s;
+}
+
+.sprite-invite:hover {
+    background-position: -91px -69px;
+}
+
+.sprite-love {
+    width: 20px;
+    height: 19px;
+    background-position: -119px -69px;
+    transition: all 0.6s;
+}
+
+.sprite-love:hover {
+    background-position: -5px -98px;
+}
+
+.sprite-mark {
+    width: 18px;
+    height: 20px;
+    background-position: -119px -98px;
+    transition: all 0.6s;
+}
+
+.sprite-mark:hover {
+    background-position: -151px -5px;
+}
+
+.sprite-new {
+    width: 20px;
+    height: 18px;
+    background-position: -67px -39px;
+}
+
+.sprite-public {
+    width: 26px;
+    height: 19px;
+    background-position: -34px -128px;
+    transition: all 0.6s;
+}
+
+.sprite-public:hover {
+    background-position: -70px -128px;
+}
+
+.sprite-setting {
+    width: 20px;
+    height: 18px;
+    background-position: -149px -39px;
+}
+
+.sprite-share {
+    width: 19px;
+    height: 20px;
+    background-position: -149px -67px;
+    transition: all 0.6s;
+}
+
+.sprite-share:hover {
+    background-position: -149px -97px;
+}
+
+.sprite-write {
+    width: 19px;
+    height: 20px;
+    background-position: -147px -126px;
+    transition: all 0.6s;
+}
+
+.sprite-write:hover {
+    background-position: -178px -5px;
+}
+
+.right_content {
+    width: 420px;
+    height: 1100px;
+    float: right;
+    margin: 75px 20px 0 0;
+    font-size: 13px;
+}
+
+.right_content ul li {
+    width: 250px;
+    height: 33px;
+    padding-left: 10px;
+    
+}
+
+.right_content ul li:hover {
+    background-color: #DAEDF5;
+    border-radius: 4px;
+    line-height: 35px;
+}
+
+.right_content ul li a {
+    text-decoration: none;
+    color: #666666;
+}
+
+.right_content i {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 5px 0 0 5px;
+}
+
+.right_content .divder_another {
+    width: 260px;
+    border-top: 1px solid #EEEEEE;
+    margin: 10px 0 10px 15px;
+}
+
+.special_item .special_item_name {
+    font-weight: bold;
+    font-size: 15px;
+    margin: 15px 0 10px 18px;
+}
+
+.special_item .special_item_logo {
+    width: 25px;
+    height: 25px;
+    margin: 5px 0 0 18px;
+    float: left;
+}
+
+.special_item .special_item_content a {
+    text-decoration: none;
+    color: #666666;
+    text-align: center;
+    float: left;
+    margin: 13px 0 0 10px;
+}
+
+.special_item .special_item_content {
+    width: 270px;
+    height: 33px;
+    margin-bottom: 10px;
+}
+
+.special_item .special_item_content:hover {
+    background-color: #DAEDF5;
+    border-radius: 4px;
+    margin: 10px 0 0 10px;
+}
+
+.check_all {
+    text-decoration: none;
+    color: #698EBF;
+    float: right;
+    margin: -20px 150px 20px 0;
+}
+
+.check_all:hover {
+    text-decoration: underline;
+}
+
+.zhihu_live .live_title .live_item_name {
+    font-size: 15px;
+    font-weight: bold;
+    margin: 10px 0 10px 20px;
+}
+
+.zhihu_live .live_item_content .live_item_logo {
+    margin: 5px 0 0 20px;
+    float: left;
+}
+
+.zhihu_live .live_item_content {
+    display: inline-block;
+    margin-top: 3px;
+    width: 270px;
+    height: 30px;
+}
+
+.zhihu_live .live_item_content .live_artical {
+    text-decoration: none;
+    color: #666666;
+    text-align: center;
+    float: left;
+    margin: 10px 0 10px 10px;
+}
+
+.zhihu_live .live_item_content:hover {
+    background-color: #DAEDF5;
+    margin-left: 5px;
+    border-radius: 4px;
+}
+
+.zhihu_live .live_item_content .live_artical:hover {
+    color: #698EBF;
+}
+
+.about .about_list1 {
+    padding: 15px 5px 15px 15px;
+}
+
+.about .about_list2 {
+    padding: 0 5px 15px 15px;
+}
+
+.about .about_list1 span a {
+    text-decoration: none;
+    color: #999999;
+}
+
+.about .about_list1 span a:hover {
+    text-decoration: underline;
+}
+
+.about .about_list2 span a {
+    text-decoration: none;
+    color: #999999;
+}
+
+.about .about_list2 span a:hover {
+    text-decoration: underline;
+}
+
+.about .about_bottom {
+    color: #999999;
+    margin-left: 15px;
+}

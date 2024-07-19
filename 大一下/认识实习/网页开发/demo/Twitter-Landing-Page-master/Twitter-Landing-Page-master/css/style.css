@@ -1,0 +1,888 @@
+@font-face {
+  font-family: "TwitterChirpBold";
+  src: url("../fonts/chirp-bold-web.woff") format("woff");
+}
+
+@font-face {
+  font-family: "TwitterChirpRegular";
+  src: url("../fonts/chirp-regular-web.woff") format("woff");
+}
+
+@font-face {
+  font-family: "TwitterChirpExtendedHeavy";
+  src: url("../fonts/chirp-extended-heavy-web.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Open Sans Medium";
+  src: url(../fonts/OpenSans-Medium.ttf);
+}
+
+@font-face {
+  font-family: "Open Sans Light";
+  src: url(../fonts/OpenSans-Light.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  top: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.container .signin-window {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 123vh;
+  background-color: rgba(255, 255, 255, 0.200);
+}
+
+.auth-window {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 45vw;
+  height: 90vh;
+  background-color: black;
+  z-index: 1;
+  border-radius: 15px;
+}
+
+.blue-mode {
+  background-color: rgb(29, 155, 240);
+  color: #fff;
+}
+
+.dark-button {
+  background-color: black;
+  color: white;
+}
+
+.auth-window .top-icons {
+  padding: 10px;
+  width: 55%;
+  height: 8%;
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+}
+
+.top-icons .close {
+  width: 9.5%;
+  height: 100%;
+  border-radius: 50%;
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.close:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.top-icons .twitter-icon {
+  width: 16%;
+  height: 100%;
+  margin-top: 10px;
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close i {
+  font-size: 24px;
+}
+
+.twitter-icon img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.auth-window .sign-in-form {
+  width: 50%;
+  height: 70%;
+  margin: 25px auto;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: space-around;
+  /* background-color: red; */
+  /* text-align: left; */
+}
+
+.sign-in-form h2 {
+  font-family: "TwitterChirpBold";
+  color: #fff;
+  font-size: 30px;
+}
+
+.sign-in-form .auth {
+  width: 100%;
+  height: 9%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.signin-google {
+  background-color: white;
+}
+
+.signin-apple {
+  background-color: white;
+}
+
+.auth .logo {
+  width: 8.5%;
+  height: 70%;
+  margin-top: 8px;
+}
+
+.auth img {
+  height: 70%;
+  object-fit: cover;
+}
+
+.sign-in-form .user-input {
+  width: 100%;
+  height: 12%;
+  position: relative;
+}
+
+.user-input input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #333639;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+}
+
+.user-input input:focus {
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+  border-color: #449eef;
+}
+
+.next-button {
+  background-color: white;
+}
+
+.forgot-pwd {
+  border: 1px solid #333639;
+  background-color: black;
+  color: #fff;
+}
+
+.auth:hover {
+  transition: opacity cubic-bezier(0.19, 1, 0.22, 1) 0.6s;
+  opacity: 0.9;
+}
+
+.sign-in h3 {
+  position: absolute;
+  top: 90%;
+  color: #72767b;
+  font-family: "TwitterChirpRegular";
+  font-size: 15px;
+  font-weight: 400;
+  text-align: left;
+}
+
+.auth-window h3 a {
+  color: #449eef;
+  cursor: pointer;
+}
+
+.auth-window h3 a:hover {
+  text-decoration: underline;
+}
+
+.sign-up {
+  display: none;
+}
+
+.sign-up .sign-up-form {
+  width: 50%;
+  height: 50%;
+  margin: 25px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.sign-up-form h2 {
+  font-family: "TwitterChirpBold";
+  color: #fff;
+  font-size: 30px;
+}
+
+.sign-up-form .auth {
+  width: 100%;
+  height: 13%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: 2px solid #dad9d9;
+}
+
+.sign-up h3 {
+  color: #72767b;
+  font-family: "TwitterChirpRegular";
+  font-size: 12px;
+  font-weight: 400;
+  text-align: left;
+}
+
+#login-text {
+  font-size: 15px;
+  margin-bottom: -100px;
+}
+
+.section1 {
+  background-image: url(../img/background1.png);
+  background-position: center;
+  width: 50%;
+  height: 85vh;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+}
+
+.section1 img {
+  height: 50%;
+  max-width: 100%;
+  margin: auto;
+  display: inline-block;
+  padding: 0 1rem;
+}
+
+/*Section 2*/
+.section2 {
+  width: 50%;
+  padding: 0 1rem;
+  color: white;
+  text-align: center;
+}
+
+.box1 {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.box1 img {
+  height: 50px;
+  margin: 20px 20px;
+}
+
+.box1 h1 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin: 10px 20px;
+  margin-top: 0;
+  font-size: 65px;
+  font-weight: 900;
+}
+
+.box1 h2 {
+  margin: 10px 20px;
+  margin-bottom: 50px;
+  font-size: 32px;
+  font-weight: 900;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/*Box2*/
+
+.box2 {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  color: black;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+button:hover {
+  background-color: rgb(222, 222, 222);
+  border: 3px solid rgb(222, 222, 222);
+}
+
+.btn1 {
+  width: 100%;
+  padding: 1rem;
+  max-width: 250px;
+  font-weight: 600;
+  border-radius: 30px;
+  text-align: center;
+  margin-right: 10px;
+  line-height: 25px;
+  border: 3px solid rgb(218, 217, 217);
+  cursor: pointer;
+  font-size: 1vw;
+  height: 45px;
+  transition: 200ms ease;
+}
+
+.btn1 img {
+  height: 20px;
+  margin: 2px 10px;
+}
+
+/*Btn2*/
+.btn2 {
+  width: 100%;
+  padding: 1rem;
+  max-width: 250px;
+  margin-left: 10px;
+  border: 3px solid rgb(218, 217, 217);
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  line-height: 25px;
+  font-size: 1vw;
+  height: 45px;
+  transition: 200ms ease;
+}
+
+.btn2 img {
+  height: 20px;
+  margin: 2px 10px;
+}
+
+.htab {
+  display: flex;
+  /* width:; */
+  justify-content: center;
+  margin: 4px 0;
+}
+
+.htab .left,
+.htab .right {
+  margin: auto 4px;
+  background-color: rgb(47, 51, 54);
+  height: 1px;
+  width: 19vw;
+}
+
+.htab .center span {
+  margin: 0 4px;
+  color: rgb(231, 233, 234);
+  font-size: 15px;
+  text-decoration: none;
+  cursor: text;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.email {
+  display: inline-block;
+  color: white;
+  padding: 10px 40px;
+  border: 3px solid rgb(29, 155, 240);
+  border-radius: 30px;
+  font-weight: 600;
+  background-color: rgb(29, 155, 240);
+  cursor: pointer;
+  transition: 200ms ease;
+}
+
+.email:hover {
+  background-color: rgb(14, 127, 202);
+  border: 3px solid rgb(14, 127, 202);
+}
+
+.signin {
+  transition: 200ms ease;
+}
+
+.signin:hover {
+  background-color: rgb(14, 127, 202);
+  border: 3px solid rgb(14, 127, 202);
+}
+
+p {
+  font-size: 12px;
+
+  color: rgb(115, 131, 134);
+  margin-top: 20px;
+  text-align: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+span {
+  color: rgb(29, 155, 240);
+  cursor: pointer;
+}
+
+span:hover {
+  text-decoration: underline;
+  text-decoration-color: rgb(29, 155, 240);
+}
+
+footer {
+  position: relative;
+}
+
+.account {
+  font-weight: 900;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.account button {
+  margin: auto;
+  max-width: 350px;
+  width: 100%;
+  margin-top: 28px;
+  color: white;
+  /*change needed*/
+  padding: 10px 0px;
+  border: 2px solid rgb(29, 155, 240);
+  /*change needed*/
+  border-radius: 30px;
+  font-weight: 600;
+  background-color: rgb(29, 155, 240);
+  /*change needed*/
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.account button:hover {
+  background-color: rgb(23, 130, 201);
+  /*change needed*/
+  border: 2px solid rgb(23, 130, 201);
+  /*change needed*/
+}
+
+.container2 {
+  /* padding: 10px auto 0 auto !important; */
+  display: flex;
+  /* background: black; */
+  background: transparent;
+  /*changed just remove this*/
+  padding: 20px 10px;
+  padding-bottom: 0px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 14px;
+}
+
+.container2 a {
+  margin: 4px 0;
+  padding-right: 16px;
+  color: grey;
+  text-decoration: none;
+  /* margin-bottom: 10px; */
+}
+
+.container2 a:hover {
+  text-decoration: underline;
+  transition: 1s;
+}
+
+.account button {
+  width: 100%;
+}
+
+.Phone {
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  text-align: center;
+}
+
+.Phone p {
+  margin-top: 8px;
+  margin-bottom: 20px;
+}
+
+/*Media Queries (FOR MOBILE)*/
+
+@media (max-width: 820px) {
+  .btn1 {
+    width: 250px;
+    height: 30px;
+    font-size: 13px;
+  }
+
+  .btn2 {
+    width: 250px;
+    height: 30px;
+    font-size: 13px;
+  }
+
+  .box1 img {
+    height: 35px;
+    margin: 10px 10px;
+  }
+
+  .box1 h1 {
+    font-size: 45px;
+  }
+
+  .box1 h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  .account button {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 550px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .container2 {
+    width: 100%;
+    padding: 10px 10px;
+  }
+
+  .section1 {
+    width: 100%;
+    display: none;
+  }
+
+  .section2 {
+    height: 754px;
+    width: 100%;
+  }
+
+  #twit {
+    height: 19%;
+  }
+
+  .box1 {
+    margin-left: 0;
+  }
+
+  .box1 h1 {
+    font-size: 37px;
+  }
+
+  .box2 {
+    display: block;
+  }
+
+  .btn1,
+  .btn2 {
+    margin: 10px auto;
+  }
+
+  .email {
+    display: block;
+    margin: auto;
+  }
+
+  .account {
+    display: block;
+    margin: 22px auto;
+  }
+
+  /* .auth text {
+    display: none;
+  } */
+
+  .container .signin-window {
+    display: none;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  .auth-window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    z-index: 1;
+    border-radius: 15px;
+  }
+
+  .auth-window .top-icons {
+    padding: 10px;
+    width: 55%;
+    height: 6%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+  }
+
+  .top-icons .close {
+    width: 9.5%;
+    height: 100%;
+    border-radius: 50%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .top-icons .twitter-icon {
+    width: 16%;
+    height: 100%;
+    margin-top: 10px;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .close i {
+    font-size: 24px;
+  }
+
+  .auth-window .sign-in-form {
+    padding-top: 60px;
+    width: 80%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* background-color: red; */
+  }
+
+  .form h2 {
+    font-family: "TwitterChirpBold";
+    color: #fff;
+    font-size: 30px;
+  }
+
+  .sign-in-form .auth {
+    width: 100%;
+    height: 9%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 2px solid #dad9d9;
+  }
+
+  .signin-google {
+    background-color: white;
+  }
+
+  .signin-apple {
+    background-color: white;
+  }
+
+  .auth .logo {
+    width: 9%;
+    height: 70%;
+    margin-top: 8px;
+  }
+
+  .auth img {
+    height: 70%;
+    object-fit: cover;
+  }
+
+  .sign-in-form .user-input {
+    width: 100%;
+    height: 12%;
+    position: relative;
+  }
+
+  .sign-in h3 {
+    position: absolute;
+    top: 85%;
+    color: #72767b;
+    font-family: "TwitterChirpRegular";
+    font-size: 15px;
+    font-weight: 400;
+    text-align: left;
+  }
+
+  .sign-up .sign-up-form {
+    padding-top: 100px;
+    width: 80%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* background-color: red; */
+  }
+
+  .sign-up-form h2 {
+    font-family: "TwitterChirpBold";
+    color: #fff;
+    font-size: 30px;
+  }
+
+  .sign-up-form .auth {
+    width: 100%;
+    height: 13%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 2px solid #dad9d9;
+  }
+
+  #login-text {
+    font-size: 15px;
+    margin-bottom: -100px;
+  }
+}
+
+/*FOR Tab*/
+@media screen and (max-width: 820px) {
+  .container {
+    flex-direction: column-reverse;
+    gap: 0;
+  }
+
+  .section2 {
+    width: 100vw;
+  }
+
+  .section1 {
+    width: 100%;
+    height: 45vh;
+    overflow: hidden;
+  }
+
+  .section1 {
+    background-size: unset;
+  }
+
+  .section2 {
+    height: unset;
+  }
+
+  .box1 {
+    margin-left: 0px;
+  }
+
+  .box2 {
+    display: block;
+    /* height: 100px; */
+  }
+
+  .btn1,
+  .btn2 {
+    margin: 10px auto;
+  }
+
+  .account {
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 1140px) {
+  .Phone {
+    align-items: center;
+  }
+
+  .Phone p,
+  .email,
+  .account {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/*HUBS*/
+
+/* COLOR TOGGLE */
+
+.toggle__button {
+  background-color: rgb(180, 180, 180);
+  height: 2.5rem;
+  width: 2.5rem;
+  position: fixed;
+  top: 1.5rem;
+  right: 1.5rem;
+  border-radius: 50%;
+  z-index: 2000;
+  border: 2px solid black;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+.fa-sun:before {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.dark-mode {
+  background-color: white !important;
+  color: black !important;
+}
+
+.dark-mode .center span {
+  color: black;
+}
+
+.black {
+  color: black;
+}
+
+.blue {
+  background-color: rgb(29, 155, 240);
+}
+
+.invert {
+  filter: invert(1);
+}

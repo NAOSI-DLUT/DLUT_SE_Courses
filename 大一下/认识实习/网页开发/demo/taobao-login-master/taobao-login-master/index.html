@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+  <head>
+  	<!--我在这一块解决了编码的问题，是在EditPlus里面弄的，		
+  	          因为这里如果要解决代码乱码问题，需要代码设置编码和文件内置编码一样，
+  	          这里设置成了utf-8，所以我把文件另存为了html文件，然后在页面右下方的编码位置处，将默认改成了utf-8-->
+     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	 <meta name="keywo rds" content="淘宝" />
+	 <meta name="description" content="淘宝是一个大型的购物网站" />
+	 <title>淘宝网-淘！我喜欢</title>
+	 <link type="text/css" rel="stylesheet" href="css/base.css" />
+	 <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	 <style type="text/css">
+	 	.userbox .delete{
+	 		width: 16px;
+	 		height: 16px;
+			border-radius: 10px;
+			background-color: #000;
+			color: #fff;
+			text-align: center;
+			font-size: 9.5px;
+			font-weight: bold;
+			left: 276px;
+	 	}
+	 </style>
+  </head>
+
+  <body> 
+		<script>
+		  	$(document).ready(function(){
+				$("#username").focus();
+			})
+		</script>
+		
+      	<div class="taobaoBox">
+	        <!--header-->
+	        <div class="header">
+			   <div class="headerContainer">
+			     <a href="#"><img src="images/taobaologo.png" /></a>
+				 <a href="#" class="advice"><img src="images/message.png">"登录界面"改进建议</a>
+			   </div>
+			</div>  
+
+             <!--ad-->
+			<div class="ad">
+                  <div class="box">
+						 <div class="container">
+							 <div class="tips1">
+								密码登录
+							 </div>
+							 <div class="form">
+								<div class="userbox"> 
+								   <label for="username"></label>
+								   <input type="text" name="username" id="username" placeholder="会员名/手机号/邮箱" />
+								   <span class="delete">x</span>
+								  <!--  <span class="usertips" id="username">会员名/邮箱/手机号</span> -->
+								</div>
+
+								<div class="passwdbox"> 
+								   <label for="password"></label>
+								   <input type="password" name="password" id="passwd" />
+								</div>
+
+								<div class="submitbox">
+									<button type="submit" name="submit">登录</button>
+								</div>
+
+								<div class="loginbox">
+									
+									<a href="#" class="sina"><img src="images/weibo.png">&nbsp;微博登录</a>
+									<a href="#" class="alipay"><img src="images/alipay.png">&nbsp;支付宝登录</a>
+									
+								</div>
+								<div class="forget-register">
+									<a href="#" class="register">免费注册</a>
+									<a href="#" class="forget">忘记密码</a>
+								</div>
+							 </div>
+		                  </div>
+	             </div>
+			</div>
+
+            <!--footer-->
+			<div class="footer">
+				<div class="footerContainer">
+					 <ul class="contactCompany">
+					     <li><a href="#">阿里巴巴集团</a></li>
+						 <li><a href="#">阿里巴巴国际站</a></li>
+						 <li><a href="#">阿里巴巴中国站</a></li>
+						 <li><a href="#">全球速卖通</a></li>
+						 <li><a href="#">淘宝网</a></li>
+						 <li><a href="#">天猫</a></li>
+						 <li><a href="#">聚划算</a></li>
+						 <li><a href="#">一淘</a></li>
+						 <li><a href="#">阿里妈妈</a></li>
+						 <li><a href="#">淘宝旅行</a></li>
+						 <li><a href="#">虾米</a></li>
+						 <li><a href="#">阿里云计算</a></li>
+						 <li><a href="#">云OS</a></li>
+						 <li><a href="#">万网</a></li>
+						 <li><a href="#">支付宝</a></li>
+						 <li><a href="#">来往</a></li>
+					 </ul>
+					 <ul class="explain">
+					     <li><a href="#">关于淘宝</a></li>
+						 <li><a href="#">合作伙伴</a></li>
+						 <li><a href="#">营销中心</a></li>
+						 <li><a href="#">廉正举报</a></li>
+						 <li><a href="#">联系客服</a></li>
+						 <li><a href="#">开放平台</a></li>
+						 <li><a href="#">诚征英才</a></li>
+						 <li><a href="#">联系我们</a></li>
+						 <li><a href="#">网站地图</a></li>
+						 <li><a href="#">法律声明</a></li>
+						 <li class="copy">&copy;&nbsp;2017 Taobao.com 版权所有</li>
+					 </ul>
+					 <ul class="admit">
+					     <li class="admit1">&nbsp;网络文化经营许可证：<a href="#">文网文[2010]040号</a></li>
+						 <li class="admit2">增值电信业务经营许可证：浙B2-20080224-1</li>
+						 <li class="admit2">信息网络传播视听节目许可证：1109364号</li>
+					 </ul>
+					 <div class="footerimage">
+					     <a href="#"><img src="images/footer.gif" /></a>
+					 </div>
+				</div>
+			</div>
+	  </div>
+
+  </body>
+</html>

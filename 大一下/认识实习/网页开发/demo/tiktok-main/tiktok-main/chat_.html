@@ -1,0 +1,205 @@
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/app.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+
+  <script src="assets/js/jquery-3.6.0.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/common.js"></script>
+  <script src="assets/js/chat.js"></script>
+
+  <title>SwipSwop</title>
+</head>
+
+<body class="antialiased font-confortaa">
+  <header class="bg-white fixed mx-auto w-screen z-50 shadow-lg">
+    <div class="flex justify-between nav-header p-4 h-20 items-center  mx-auto pr-8">
+      <a href="index.html" class="cursor-pointer">
+        <img src="assets/images/logo.svg" alt="logo" class="w-36 h-8" />
+      </a>
+      <div class="hidden sm:flex divide-x-2 divide-gray-300 p-2 rounded-full bg-gray-200 gap-4">
+        <input type="text" class="px-2 py-1 bg-gray-200 outline-none w-64" placeholder="Find accounts" />
+        <button>
+          <img src="assets/images/ic_search.svg" alt="serch" class="mx-2 w-5" />
+        </button>
+      </div>
+      <div class="sm:flex items-center gap-4 hidden">
+        <a href="chat.html">
+          <img src="assets/images/ico_chat_active.svg" alt="chat icon" class="w-6 h-6" />
+        </a>
+        <a href="notification.html">
+          <img src="assets/images/icons/ic_notif.svg" alt="chat icon" class="w-6 h-6" />
+        </a>
+        <div class="flex items-center gap-2 relative">
+          <div class="rounded-full border-red-500 border w-10 h-10 flex-shrink-0">
+            <img src="assets/images/man3.png" alt="user avatar" />
+          </div>
+          <div class="btn-menu flex gap-1 cursor-pointer">
+            <span class="font-confortaa text-md font-bold">Edshreean</span>
+            <img src="assets/images/icons/angle_down.svg" alt="down icon" class="icon-menu" />
+          </div>
+          <div
+            class="hidden toggle-menu bg-white absolute right-0 bottom-0 transform translate-y-full px-8 py-2 shadow-xl mt-4 border">
+            <ul>
+              <li>
+                <a href="myprofile.html">Profile</a>
+              </li>
+              <li>
+                <button class="btn-logout">Log out</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- <button class="sm:flex px-8 xl:px-16 bg-red-500 rounded-md text-white hover:bg-red-700 py-2">Register</button> -->
+      <button class="flex sm:hidden absolute right-5 menu-button" id="">
+        <img src="assets/images/menu.svg" alt="menu icon" id="menu-icon" />
+      </button>
+    </div>
+    <div class="hidden absolute bg-white flex flex-col h-full left-0 min-h-screen items-center right-0 shadow-lg gap-4"
+      id="menu-mobile">
+      <div class="category-list flex flex-col  gap-4"></div>
+      <button class="px-8 xl:px-16 bg-red-500 rounded-md text-white hover:bg-red-700 py-2">Register</button>
+    </div>
+  </header>
+
+  <main class="flex xl:mx-auto md:pl-7  bg-white lg:py-0 min-h-screen">
+    <div
+      class="lg:px-20 hidden sm:flex sm:w-5/12 md:w-4/12 divide-y-2 mt-15 justify-center items-center flex-col gap-10 overflow-y-auto">
+      <div class="sidebar bottom-0 fixed flex h-3/4 justify-center mt-32 mb-20 overflow-y-auto top-0 ">
+        <div class="flex items-start flex-col px-10 divide-y-2">
+          <div id="" class="category-list flex flex-col gap-4 xl:gap-6 pb-10">
+          </div>
+          <div class="pt-10 flex flex-col gap-5">
+            <span class="text-gray-500">Suggest People</span>
+            <div id="user-list" class="flex flex-col gap-4 xl:gap-5">
+            </div>
+            <span class="text-red-500 cursor-pointer">See all</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-full sm:w-8/12 min-h-screen ">
+      <div class="w-full sm:w-full">
+        <div class="pt-5 px-10 flex flex-col h-full list-container overflow-y-auto bg-white mx-auto " >
+          <div class="bg-white h-24"></div>
+          <div class="sm:flex flex-col bg-white divide-y hidden">
+            <div class="cursor-pointer gap-3 flex py-4 px-3">
+              <img src="assets/images/icons/angle_left.svg" alt="back icon" />
+              <span class="text-xl font-bold text-center sm:text-left w-full">Chat</span>
+            </div>
+          </div>
+          <div class="flex">
+            <div class="chat-users h-full overflow-x-hidden divide-y border overflow-y-auto flex-shrink-0 hidden sm:flex flex-col"
+              style="width: 300px; height: calc(100vh - 160px);">
+            </div>
+            <div
+              class="chat-users chat-mobile h-full divide-y overflow-x-hidden border overflow-y-auto flex-shrink-0 hidden flex-col"
+              style="width: 100%; height: calc(100vh - 90px);">
+            </div>
+            <div class="w-full relative chat-view">
+              <div class="flex justify-between items-center w-full py-2 px-8 bg-white border">
+                <div class="flex gap-4 btn-contact cursor-pointer ">
+                  <img src="assets/images/icons/angle_left.svg" alt="back icon" class="sm:hidden" />
+                  <div class="flex items-center gap-4 ">
+                    <img src="assets/images/man5.png" alt="user" class="selected-user-image" />
+                    <div>
+                      <span class="text-md font-bold selected-user-name">Andrew Parker</span>
+                      <p class="sm:hidden text-gray-400">Tap for the contact info</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex gap-4 relative">
+                  <button>
+                    <img src="assets/images/icons/ic_vcall.svg" alt="vcall" />
+                  </button>
+                  <button>
+                    <img src="assets/images/icons/ic_call.svg" alt="call" />
+                  </button>
+                  <button class="chat-menu">
+                    <img src="assets/images/icons/ic_more_vertical.svg" alt="more" />
+                  </button>
+                  <div class="expand-menu absolute right-0 bottom-0 transform translate-y-full hidden">
+                    <ul class="divide-y border bg-white w-48 mt-2 font-semibold">
+                      <li class="cursor-pointer px-6 py-2">Mute</li>
+                      <li class="cursor-pointer px-6 py-2">Contact Info</li>
+                      <li class="cursor-pointer px-6 py-2">Clear Chat</li>
+                      <li class="cursor-pointer px-6 py-2 text-red-500">Delete Chat</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="chat-box mb-20 overflow-y-auto px-2 pt-4 flex sm:hidden flex-col gap-2 "
+                style=" height: calc(100vh - 240px);">
+              </div>
+              <div class="chat-box mb-20 overflow-y-auto px-2 pt-4 hidden sm:flex flex-col gap-2 "
+                style=" height: calc(100vh - 320px);">
+              </div>
+              <div
+                class="menu-attach absolute bg-white shadow-lg p-6 rounded-md top-1/2 transform -translate-y-1/2 sm:bottom-20 mx-8 left-0 right-0 hidden font-bold">
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-2">
+                  <button class="flex items-center jusitfy-center py-4 flex-col border gap-2 px-6">
+                    <img src="assets/images/icons/ic_camera.svg" alt="camera" />
+                    <span class="text-sm font-bold">Camera</span>
+                  </button>
+                  <button class="flex items-center jusitfy-center py-4 flex-col border gap-2 px-6">
+                    <img src="assets/images/icons/ic_file_picture.svg" alt="camera" />
+                    <span class="text-sm font-bold">Photos</span>
+                  </button>
+                  <button class="flex items-center jusitfy-center py-4 flex-col border gap-2 px-6">
+                    <img src="assets/images/icons/ic_file_video.svg" alt="camera" />
+                    <span class="text-sm font-bold">Videos</span>
+                  </button>
+                  <button class="flex items-center jusitfy-center py-4 flex-col border gap-2 px-6">
+                    <img src="assets/images/icons/ic_file_file.svg" alt="camera" />
+                    <span class="text-sm font-bold">Document</span>
+                  </button>
+                  <button class="flex items-center jusitfy-center py-4 flex-col border gap-2 px-6">
+                    <img src="assets/images/icons/ic_location.svg" alt="camera" />
+                    <span class="text-sm font-bold">Location</span>
+                  </button>
+                  <button class="flex items-center jusitfy-center py-4 flex-col border gap-2 px-6">
+                    <img src="assets/images/icons/ic_contact.svg" alt="camera" />
+                    <span class="text-sm font-bold">Contact</span>
+                  </button>
+                </div>
+                <div class="w-full py-2 bg-gray-200 rounded-md text-center mt-4 btn-cancel">Cancel</div>
+              </div>
+
+              <div class="absolute left-5 right-5 bottom-0 flex items-center justify-between pb-4 gap-4">
+                <div
+                  class="bg-gray-100 rounded-full border justify-between flex items-center pl-6 pr-1 py-2 border-gray-300 w-full border">
+                  <input type="text" class="outline-none bg-transparent w-full" placeholder="Type a message..." />
+                  <button class="flex-shrink-0">
+                    <img src="assets/images/icons/ic_emoji.svg" alt="emoji" />
+                  </button>
+                </div>
+                <div class="flex gap-2 items-center flex-shrink-0">
+                  <button>
+                    <img src="assets/images/icons/ic_mic.svg" alt="mic" />
+                  </button>
+                  <button class="btn-attach">
+                    <img src="assets/images/icons/ic_attach.svg" alt="mic" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="fixed top-20 h-screen left-0 z-0 w-screen mask hidden"
+        style="background:rgba(0, 0, 0, 0.5); z-index: 1;"></div>
+    </div>
+  </main>
+</body>
+
+</html>

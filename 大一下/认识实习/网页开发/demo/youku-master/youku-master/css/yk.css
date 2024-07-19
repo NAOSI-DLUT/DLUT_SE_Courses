@@ -1,0 +1,120 @@
+*{
+    /* 
+    初始化
+    */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    /* 100%窗口宽高 */
+    height: 100vh;
+    /* 弹性布局 居中 显示*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+}
+
+.container{
+    width: 100%;
+    height: 592px;
+    position: relative;
+}
+
+.shades{
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* 元素不对指针事件作出反应 */
+    pointer-events: none;
+}
+
+/* 容器四边的渐变黑 */
+.shades.left{
+    width: 100px;
+    height: 100%;
+    background:linear-gradient(to left,transparent,#16161a);
+    position:absolute;
+    left: 0;
+    top: 0;
+}
+.shades.right{
+    width: 160px;
+    height: 100%;
+    background:linear-gradient(to right,transparent,#16161a);
+    position:absolute;
+    right: 0;
+    top: 0;
+}
+.shades.top{
+    width: 100%;
+    height: 90px;
+    background:linear-gradient(to top,transparent,#16161a);
+    position:absolute;
+    right: 0;
+    top: 0;
+}
+.shades.bottom{
+    width: 100%;
+    height: 220px;
+    background:linear-gradient(to bottom,transparent,#16161a);
+    position:absolute;
+    left: 0;
+    bottom: 0;
+}
+.imgs{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.imgs img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+}
+.imgs a{
+    opacity: 0;
+    transition: 0.2s;
+}
+.imgs a.active{
+    opacity: 1;
+}
+.titles{
+    width: 297px;
+    height: 416px;
+    position: absolute;
+    top: 19%;
+    right: 5%;
+    background:linear-gradient(to bottom,transparent,#16161a 22%,#16161a 81%,transparent);
+}
+.titles a{
+    display: block;
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    width: 100%;
+    padding: 12px 20px ;
+}
+.titles .title2{
+    font-size: 12px;
+    margin-top: 8px;
+    font-weight: normal;
+    /* 副标题默认隐藏 */
+    display: none;
+}
+/* 标题活动态 */
+.titles a.active{
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    background: linear-gradient(to right,rgba(255,255,255,0.25)20%,transparent 90%);
+}
+.titles a.active .title2{
+    /* 活动态下副标题显示 */
+    display: block;
+}
