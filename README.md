@@ -1,5 +1,10 @@
 # 大连理工大学软件学院（软件工程、网络工程）课程攻略
 
+> [!important]
+> 如果您发现我们使用了您的资料的话，您可以及时通知我们，我们将对您的资料署名（您意愿的名字或nickname），并再次询问您是否愿意公开。
+> 如果曾经的公开对您造成的困扰的话，我们十分抱歉，并承诺立即删除并更改 git_cached 中的内容，我们将尽我们所能弥补您
+> 同时希望上传资料的同好们，可以把自己的资料标注上作者，十分感谢
+
 Github 使用请自行查阅CSDN，或参考 [官方教程](https://guides.github.com/activities/hello-world/)。如果想对项目进行贡献，推荐学习 Git 工具 bash 命令行的使用 - [ProGit](https://www.progit.cn/)
 
 ## 文件下载
@@ -25,7 +30,8 @@ Github 使用请自行查阅CSDN，或参考 [官方教程](https://guides.githu
 
 ## 感谢-欢迎贡献！！ 欢迎贡献！！ 欢迎贡献！！
 
-感谢对本项目贡献的同学（无论排名）：[徐志](https://github.com/1999John)、[张恩泽](https://github.com/FrancisGrace)、崔良睍、武文轩、方念华、[于汛](https://github.com/JFJ-yx)、[王琪瑞](https://github.com/ChrisWang13)、[张亦弛](https://github.com/Augists)……以及电脑前的您！
+> [!important]
+> 感谢对本项目贡献的同学（无论排名）：[徐志](https://github.com/1999John)、[张恩泽](https://github.com/FrancisGrace)、崔良睍、武文轩、方念华、[于汛](https://github.com/JFJ-yx)、[王琪瑞](https://github.com/ChrisWang13)、[张亦弛](https://github.com/Augists)……以及电脑前的您！
 
 ## 前言
 
