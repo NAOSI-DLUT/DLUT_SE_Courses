@@ -1,0 +1,11 @@
+ALTER TABLE LY.LY_dept
+ADD CONSTRAINT LY_PK_DEPT PRIMARY KEY(deptno);
+ALTER TABLE LY.LY_emp
+ADD CONSTRAINT LY_FK_EMP FOREIGN KEY(deptno) REFERENCES LY.LY_dept(deptno);
+ALTER TABLE LY.LY_emp
+ADD CONSTRAINT unique_ename UNIQUE (ename);
+INSERT INTO LY.LY_emp(empno, ename)
+values(1000, 'LY');
+INSERT INTO LY.LY_emp(empno, ename)
+values(2000, 'LY');
+ALTER TABLE LY.LY_emp DROP CONSTRAINT unique_ename;
