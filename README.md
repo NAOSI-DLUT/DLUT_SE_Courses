@@ -1,3 +1,7 @@
+> [!note]
+> 
+> 本仓库内容已迁移至 [pan.naosi.org](https://pan.naosi.org)，提供更快且免流的浏览体验
+
 # 大连理工大学软件学院（软件工程、网络工程）课程攻略
 
 > [!important]
